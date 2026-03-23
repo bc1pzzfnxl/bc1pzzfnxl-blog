@@ -1,14 +1,13 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-// 1. Import the Icon here, once and for all
 import { Icon } from "astro-icon/components";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
-    // Don't forget the mdx pattern
     const posts = import.meta.glob("../content/*.{md,mdx}", { eager: true });
-    return Object.values(posts).map((post) => {
-        // Cleanly handle the filename (md or mdx)
-        const slug = post.file.split("/").pop().split(".").shift();
+    return Object.entries(posts).map(([path, post]) => {
+        const slug = path.split("/").pop().replace(/\.(md|mdx)$/, "");
         return {
             params: { slug },
             props: { post },
@@ -17,15 +16,13 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const filename = post.file
-    .split("/")
-    .pop()
-    .replace(/\.mdx?$/, "");
-const title = filename
+const { Content } = post;
+
+// Extract title from filename (last part of path, without extension)
+const slug = Astro.params.slug;
+const title = decodeURIComponent(slug)
     .replace(/-/g, " ")
     .replace(/\b\w/g, (l) => l.toUpperCase());
-
-const { Content } = post;
 ---
 
 <MainLayout title={title}>
