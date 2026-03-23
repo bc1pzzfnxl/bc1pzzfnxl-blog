@@ -1,0 +1,37 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+// 1. Import the Icon here, once and for all
+import { Icon } from "astro-icon/components";
+
+export async function getStaticPaths() {
+    // Don't forget the mdx pattern
+    const posts = import.meta.glob("../content/*.{md,mdx}", { eager: true });
+    return Object.values(posts).map((post) => {
+        // Cleanly handle the filename (md or mdx)
+        const slug = post.file.split("/").pop().split(".").shift();
+        return {
+            params: { slug },
+            props: { post },
+        };
+    });
+}
+
+const { post } = Astro.props;
+const filename = post.file
+    .split("/")
+    .pop()
+    .replace(/\.mdx?$/, "");
+const title = filename
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (l) => l.toUpperCase());
+
+const { Content } = post;
+---
+
+<MainLayout title={title}>
+    <article>
+        <h1>{title}</h1>
+        <Content components={{ Icon }} />
+    </article>
+    <a href="/" class="back-link">← Back</a>
+</MainLayout>

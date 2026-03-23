@@ -1,0 +1,41 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+// Retrieve all files with the new import.meta.glob API
+const postsData = import.meta.glob("../content/*.{md,mdx}", { eager: true });
+const posts = Object.values(postsData);
+---
+
+<MainLayout title="Home">
+    <section>
+        <h3
+            style="font-size: 0.9rem; text-transform: uppercase; color: #666; margin-bottom: 20px;"
+        >
+            Posts
+        </h3>
+        {
+            posts.length > 0 ? (
+                <ul>
+                    {posts.map((post) => {
+                        const slug = post.file
+                            .split("/")
+                            .pop()
+                            .replace(/\.mdx?$/, "");
+                        // Format the title from the filename
+                        const title = slug
+                            .replace(/-/g, " ")
+                            .replace(/\b\w/g, (l) => l.toUpperCase());
+
+                        return (
+                            <li>
+                                <a href={`/${slug}`}>{title}</a>
+                            </li>
+                        );
+                    })}
+                </ul>
+            ) : (
+                <p>No posts yet.</p>
+            )
+        }
+    </section>
+</MainLayout>

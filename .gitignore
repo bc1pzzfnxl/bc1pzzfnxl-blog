@@ -1,0 +1,17 @@
+# Astro
+.astro/
+dist/
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Tooling
+.vscode/
+.wrangler/
+.DS_Store
+
+# Env
+.env
+.env.*
+!.env.example

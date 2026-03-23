@@ -1,0 +1,23 @@
+{
+  "name": "bc1pzzfnxl's blog",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "deploy": "astro build && wrangler pages deploy ./dist",
+    "wrangler:dev": "astro dev --host --port 4321 & wrangler pages dev ./dist --proxy 4321"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^13.1.3",
+    "@astrojs/mdx": "^5.0.2",
+    "@iconify-json/heroicons-solid": "^1.2.1",
+    "astro": "^6.0.8",
+    "astro-icon": "^1.1.5"
+  },
+  "devDependencies": {
+    "wrangler": "^4.76.0"
+  }
+}
