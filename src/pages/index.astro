@@ -5,9 +5,11 @@ import MainLayout from "../layouts/MainLayout.astro";
 const postsData = import.meta.glob("../content/*.{md,mdx}", { eager: true });
 const posts = Object.entries(postsData).map(([path, post]) => {
     const slug = path.split("/").pop().replace(/\.(md|mdx)$/, "");
+    // On nettoie le titre proprement : tout en minuscules, puis majuscule au début de chaque mot
     const title = slug
+        .toLowerCase()
         .replace(/-/g, " ")
-        .replace(/\b\w/g, (l) => l.toUpperCase());
+        .replace(/\b([a-zà-ÿ])/g, (l) => l.toUpperCase());
     return { slug, title, post };
 });
 ---
