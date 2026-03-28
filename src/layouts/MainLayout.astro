@@ -1,20 +1,56 @@
 ---
 // src/layouts/MainLayout.astro
 import { Icon } from "astro-icon/components";
+import { ClientRouter } from "astro:transitions";
 import "@fontsource/geist-sans/400.css";
 import "@fontsource/geist-sans/500.css";
 import "@fontsource/geist-sans/700.css";
 import "@fontsource/geist-mono/400.css";
 
-const { title } = Astro.props;
+interface Props {
+	title: string;
+	description?: string;
+	ogImage?: string;
+}
+
+const {
+	title,
+	description = "blog, theology, IT, AI",
+	ogImage = "/favicon-dark.svg",
+} = Astro.props;
+
+const siteTitle = "bc1pzzfnxl";
+const fullTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{title}</title>
+
+        <!-- Primary Meta Tags -->
+        <title>{fullTitle}</title>
+        <meta name="title" content={fullTitle} />
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalURL} />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={fullTitle} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={new URL(ogImage, Astro.url)} />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta property="twitter:title" content={fullTitle} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={new URL(ogImage, Astro.url)} />
+
         <link id="favicon-link" rel="icon" type="image/svg+xml" href="/favicon-dark.svg" />
+        <ClientRouter />
         <script is:inline>
             (function() {
                 const theme = localStorage.getItem('theme');

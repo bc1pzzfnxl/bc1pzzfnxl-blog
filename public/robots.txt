@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bc1pzzfnxl.com/sitemap-index.xml

@@ -1,0 +1,20 @@
+{
+  "name": "Workspace",
+  "tabs": [
+    {
+      "name": "Tab 1",
+      "layout": {
+        "Terminal": 1
+      },
+      "terminals": {
+        "1": {
+          "shell": "Default",
+          "cwd": "/home/bc1pzzfnxl/Documents/project/bc1pzzfnxl-blog/src/content",
+          "title": "Terminal 1"
+        }
+      }
+    }
+  ],
+  "floating_windows": [],
+  "active_tab_index": 0
+}

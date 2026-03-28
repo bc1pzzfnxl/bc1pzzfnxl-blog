@@ -4,7 +4,7 @@ Dans la Bible, rien n'est laissé au hasard. Chaque mot et chaque phrase ont un 
 
 ## Qui est Barabbas ?
 
-Barabbas est un prisonnier romain d'origine juive. Il est détenu car il a commis un meurtre durant une révolte (Marc 15:7). Les révoltes et les manifestations publiques étaient sévèrement punies par l'autorité romaine.
+Barabbas est un prisonnier romain d'origine juive. Il est détenu car il a commis un meurtre durant une révolte (Marc 15:7). Les révoltes et les manifestations publiques étaient sévèrement punies par l'autorité romaine.dd
 
 ## Lien avec Jésus-Christ
 
@@ -76,7 +76,7 @@ On va donc chercher un mot qui a pour valeur 386, celui-ci est _Lashon_ :
 
 - Lamed = 30
     
-- Shin = 300
+- Shin = 300d
     
 - Vav = 6
     
@@ -141,8 +141,8 @@ On a réussi a établir un lien claire en le prisonnier, Yeshoua Barrabas et Jes
 
 Le prisonnier est victime de la grace de Jésus-Christ car il a été sauvé par son sacrifice, il était l'un des derniers représentant de la loi car a cause de son meurtre, il a été jeter en prison éternellement, symbole de la mort.
 
-On peut aussi dire que le prisonnier est un "faux Yeshoua" car il a désobéi a son supérieur, les Romains, en se rebellant, or le "vrai Yeshoua" lui n'a pas refusé le sacrifice ç la croix car le père en était l’initiateur.
+On peut aussi dire que le prisonnier est un "faux Yeshoua" car il a désobéi a son supérieur, les Romains, en se rebellant, or le "vrai Yeshoua" lui n'a pas refusé le sacrifice à la croix car le père en était l’initiateur.
 
 La gématria et l'isopséphie nous ont aussi aidés à transposer l'hébreu au grec, simplement grâce à la valeur numérique des mots. C'est ici que le lien fort entre les lettres et les mathématiques prend tout son sens. Les langues changent, les alphabets diffèrent, mais les nombres restent intouchables. C'est un véritable pont : une valeur encodée dans le texte du Tanakh vient trouver son écho parfait, au chiffre près, dans le Nouveau Testament. Cela prouve que le hasard n'a absolument pas sa place dans la Bible. L'auteur divin utilise la logique mathématique comme un fil rouge pour traverser les barrières linguistiques et unifier les textes.
 
-Finalement, tout un tas d'autres grilles de lecture peuvent être proposées, à condition bien sûr qu'elles soient rigoureusement documentées et expliquées. La gématria est un puits sans fond. Aborder les Écritures de cette manière, c'est un peu comme lire le code source de la création : chaque mot cache une équation, chaque verset est une fractale qui renferme un sens spirituel plus profond. On ne fait plus que lire un texte, on le déchiffre. La Bible révèle alors un réseau de connexions inépuisable, où l'exploration est littéralement infinie.
+Finalement, tout un tas de schémas de lecture peuvent être proposées, à condition bien sûr qu'elles soient rigoureusement documentées et expliquées. La gématria est un puits sans fond. Aborder les Écritures de cette manière, c'est un peu comme lire le code source de la création : chaque mot cache une équation, chaque verset est une fractale qui renferme un sens spirituel plus profond. On ne fait plus que lire un texte, on le déchiffre. La Bible révèle alors un réseau de connexions inépuisable, où l'exploration est littéralement infinie.
