@@ -16,8 +16,6 @@ const { title } = Astro.props;
         <title>{title}</title>
         <link id="favicon-link" rel="icon" type="image/svg+xml" href="/favicon-dark.svg" />
         <script is:inline>
-            // This script is placed in the head to prevent FOUC (Flash of Unstyled Content)
-            // It runs before the page is rendered to apply the correct theme.
             (function() {
                 const theme = localStorage.getItem('theme');
                 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -26,7 +24,6 @@ const { title } = Astro.props;
                     document.documentElement.classList.add('dark-mode');
                 }
                 
-                // Update favicon based on theme
                 window.addEventListener('DOMContentLoaded', () => {
                     const favicon = document.getElementById('favicon-link');
                     if (favicon) {
@@ -48,14 +45,13 @@ const { title } = Astro.props;
                 font-family: var(--body-font);
                 font-size: 18px;
                 line-height: 1.65;
-                color: #374151; /* Dark gray for less harsh reading */
+                color: #374151;
                 background-color: #ffffff;
                 transition: background-color 0.3s ease, color 0.3s ease;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
             }
 
-            /* Minimalist Header */
             header {
                 margin-bottom: 80px;
                 display: flex;
@@ -77,7 +73,7 @@ const { title } = Astro.props;
             html.dark-mode .bear-white { display: block; }
 
             h1, h2, h3, h4, .site-title a {
-                color: #111827; /* Pure dark for titles */
+                color: #111827;
                 font-weight: 600;
                 letter-spacing: -0.02em;
                 line-height: 1.25;
@@ -109,7 +105,6 @@ const { title } = Astro.props;
                 color: #111;
             }
 
-            /* Links and list */
             a {
                 color: #111;
                 text-decoration: underline;
@@ -133,7 +128,6 @@ const { title } = Astro.props;
                 align-items: baseline;
             }
 
-            /* Article Typography */
             article h1 {
                 font-size: 2.25rem;
                 margin-top: 2rem;
@@ -163,10 +157,9 @@ const { title } = Astro.props;
                 opacity: 0.6;
             }
             
-            /* Dark Mode Styles */
             html.dark-mode body {
                 background-color: #111111; 
-                color: #d1d5db; /* Softer gray for dark mode body text */
+                color: #d1d5db;
             }
             html.dark-mode h1, 
             html.dark-mode h2, 
@@ -174,96 +167,11 @@ const { title } = Astro.props;
             html.dark-mode h4,
             html.dark-mode h1.site-title a,
             html.dark-mode a {
-                color: #ffffff; /* Bright white for titles/links */
+                color: #ffffff;
             }
             html.dark-mode a:hover {
                 background-color: #ffffff;
                 color: #111;
-            }
-            html.dark-mode .theme-toggle-button .icon {
-                color: #fff;
-            }
-            .moon-icon { display: none; }
-            .sun-icon { display: block; }
-            html.dark-mode .moon-icon { display: block; }
-            html.dark-mode .sun-icon { display: none; }
-        </style>
-    </head>
-            .theme-toggle-button {
-                background: none;
-                border: none;
-                cursor: pointer;
-                padding: 5px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .theme-toggle-button .icon {
-                width: 24px;
-                height: 24px;
-                color: #111;
-            }
-
-            /* Links and list */
-            a {
-                color: #111;
-                text-decoration: underline;
-                text-decoration-thickness: 1px;
-                text-underline-offset: 3px;
-            }
-            a:hover {
-                background-color: #000;
-                color: #fff;
-                text-decoration: none;
-            }
-
-            ul {
-                list-style: none;
-                padding: 0;
-            }
-            li {
-                margin-bottom: 12px;
-                display: flex;
-                align-items: baseline;
-            }
-
-            /* Article Typography */
-            article h1 {
-                font-size: 1.8rem;
-                margin-bottom: 0.5rem;
-                letter-spacing: -1px;
-            }
-            article p {
-                margin-bottom: 1.5rem;
-            }
-            article ul {
-                list-style: disc;
-                padding-left: 20px;
-                margin-bottom: 1.5rem;
-            }
-            article li {
-                display: list-item;
-                margin-bottom: 0.5rem;
-            }
-            .back-link {
-                display: inline-block;
-                margin-top: 40px;
-                font-size: 0.9rem;
-                opacity: 0.6;
-            }
-            
-            /* Dark Mode Styles */
-            html.dark-mode body {
-                background-color: #111; /* Black background */
-                color: #eee; /* Off-white text (less harsh) */
-            }
-            html.dark-mode h1.site-title a,
-            html.dark-mode a {
-                color: #fff; /* White links */
-            }
-            html.dark-mode a:hover {
-                color: #d946ef; /* Keep your accent color */
             }
             html.dark-mode .theme-toggle-button .icon {
                 color: #fff;
@@ -291,12 +199,9 @@ const { title } = Astro.props;
         </main>
         <script>
             const themeToggle = document.getElementById('theme-toggle');
-            
             themeToggle.addEventListener('click', () => {
                 const isDarkMode = document.documentElement.classList.toggle('dark-mode');
                 localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-                
-                // Update favicon when toggled
                 const favicon = document.getElementById('favicon-link');
                 if (favicon) {
                     favicon.href = isDarkMode ? '/favicon-light.svg' : '/favicon-dark.svg';
