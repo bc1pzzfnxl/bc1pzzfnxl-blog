@@ -1,6 +1,11 @@
 ---
 // src/layouts/MainLayout.astro
 import { Icon } from "astro-icon/components";
+import "@fontsource/geist-sans/400.css";
+import "@fontsource/geist-sans/500.css";
+import "@fontsource/geist-sans/700.css";
+import "@fontsource/geist-mono/400.css";
+
 const { title } = Astro.props;
 ---
 
@@ -31,28 +36,28 @@ const { title } = Astro.props;
             })();
         </script>
         <style is:global>
-            @font-face {
-                font-family: '0xProtoNerd';
-                src: url('../assets/fonts/0xProto-Regular.woff2') format('woff2');
-                font-weight: normal;
-                font-style: normal;
-                font-display: swap;
+            :root {
+                --body-font: 'Geist Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+                --mono-font: 'Geist Mono', monospace;
             }
 
             body {
                 max-width: 680px;
                 margin: 0 auto;
-                padding: 40px 20px;
-                font-family: '0xProtoNerd', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-                    Arial, sans-serif;
-                color: #111;
-                line-height: 1.6;
+                padding: 60px 24px;
+                font-family: var(--body-font);
+                font-size: 18px;
+                line-height: 1.65;
+                color: #374151; /* Dark gray for less harsh reading */
+                background-color: #ffffff;
                 transition: background-color 0.3s ease, color 0.3s ease;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
             }
 
             /* Minimalist Header */
             header {
-                margin-bottom: 60px;
+                margin-bottom: 80px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -71,13 +76,119 @@ const { title } = Astro.props;
             html.dark-mode .bear-black { display: none; }
             html.dark-mode .bear-white { display: block; }
 
-            h1.site-title a {
-                color: #111;
-                text-decoration: none;
-                font-size: 1.2rem;
-                font-weight: 700;
-                letter-spacing: -0.5px;
+            h1, h2, h3, h4, .site-title a {
+                color: #111827; /* Pure dark for titles */
+                font-weight: 600;
+                letter-spacing: -0.02em;
+                line-height: 1.25;
             }
+
+            h1.site-title a {
+                text-decoration: none;
+                font-size: 1.25rem;
+            }
+
+            .theme-toggle-button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 5px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0.7;
+                transition: opacity 0.2s ease;
+            }
+            .theme-toggle-button:hover {
+                opacity: 1;
+            }
+            .theme-toggle-button .icon {
+                width: 22px;
+                height: 22px;
+                color: #111;
+            }
+
+            /* Links and list */
+            a {
+                color: #111;
+                text-decoration: underline;
+                text-decoration-thickness: 1.5px;
+                text-underline-offset: 4px;
+                transition: color 0.2s ease, background-color 0.2s ease;
+            }
+            a:hover {
+                background-color: #111;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+            li {
+                margin-bottom: 16px;
+                display: flex;
+                align-items: baseline;
+            }
+
+            /* Article Typography */
+            article h1 {
+                font-size: 2.25rem;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+            article h2 {
+                font-size: 1.75rem;
+                margin-top: 2.5rem;
+                margin-bottom: 0.75rem;
+            }
+            article p {
+                margin-bottom: 1.75rem;
+            }
+            article ul {
+                list-style: disc;
+                padding-left: 24px;
+                margin-bottom: 2rem;
+            }
+            article li {
+                display: list-item;
+                margin-bottom: 0.75rem;
+            }
+            .back-link {
+                display: inline-block;
+                margin-top: 60px;
+                font-size: 0.95rem;
+                opacity: 0.6;
+            }
+            
+            /* Dark Mode Styles */
+            html.dark-mode body {
+                background-color: #111111; 
+                color: #d1d5db; /* Softer gray for dark mode body text */
+            }
+            html.dark-mode h1, 
+            html.dark-mode h2, 
+            html.dark-mode h3, 
+            html.dark-mode h4,
+            html.dark-mode h1.site-title a,
+            html.dark-mode a {
+                color: #ffffff; /* Bright white for titles/links */
+            }
+            html.dark-mode a:hover {
+                background-color: #ffffff;
+                color: #111;
+            }
+            html.dark-mode .theme-toggle-button .icon {
+                color: #fff;
+            }
+            .moon-icon { display: none; }
+            .sun-icon { display: block; }
+            html.dark-mode .moon-icon { display: block; }
+            html.dark-mode .sun-icon { display: none; }
+        </style>
+    </head>
             .theme-toggle-button {
                 background: none;
                 border: none;
