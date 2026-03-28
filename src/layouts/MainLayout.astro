@@ -9,15 +9,25 @@ const { title } = Astro.props;
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{title}</title>
+        <link id="favicon-link" rel="icon" type="image/svg+xml" href="/favicon-dark.svg" />
         <script is:inline>
             // This script is placed in the head to prevent FOUC (Flash of Unstyled Content)
             // It runs before the page is rendered to apply the correct theme.
             (function() {
                 const theme = localStorage.getItem('theme');
                 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                if (theme === 'dark' || (!theme && prefersDark)) {
+                const isDark = theme === 'dark' || (!theme && prefersDark);
+                if (isDark) {
                     document.documentElement.classList.add('dark-mode');
                 }
+                
+                // Update favicon based on theme
+                window.addEventListener('DOMContentLoaded', () => {
+                    const favicon = document.getElementById('favicon-link');
+                    if (favicon) {
+                        favicon.href = isDark ? '/favicon-light.svg' : '/favicon-dark.svg';
+                    }
+                });
             })();
         </script>
         <style is:global>
@@ -47,6 +57,20 @@ const { title } = Astro.props;
                 justify-content: space-between;
                 align-items: center;
             }
+            .header-left {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+            .site-logo {
+                width: 32px;
+                height: 32px;
+            }
+            .bear-black { display: block; }
+            .bear-white { display: none; }
+            html.dark-mode .bear-black { display: none; }
+            html.dark-mode .bear-white { display: block; }
+
             h1.site-title a {
                 color: #111;
                 text-decoration: none;
@@ -141,7 +165,11 @@ const { title } = Astro.props;
     </head>
     <body>
         <header>
-            <div class="site-title"><a href="/">bc1pzzfnxl</a></div>
+            <div class="header-left">
+                <img src="/favicon-dark.svg" alt="Bear icon" class="site-logo bear-black" />
+                <img src="/favicon-light.svg" alt="Bear icon" class="site-logo bear-white" />
+                <div class="site-title"><a href="/">bc1pzzfnxl</a></div>
+            </div>
             <button class="theme-toggle-button" id="theme-toggle">
                 <Icon name="heroicons-solid:sun" class="sun-icon icon" />
                 <Icon name="heroicons-solid:moon" class="moon-icon icon" />
@@ -156,6 +184,12 @@ const { title } = Astro.props;
             themeToggle.addEventListener('click', () => {
                 const isDarkMode = document.documentElement.classList.toggle('dark-mode');
                 localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+                
+                // Update favicon when toggled
+                const favicon = document.getElementById('favicon-link');
+                if (favicon) {
+                    favicon.href = isDarkMode ? '/favicon-light.svg' : '/favicon-dark.svg';
+                }
             });
         </script>
     </body>
