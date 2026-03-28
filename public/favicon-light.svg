@@ -1,6 +1,6 @@
 <svg width="2039" height="1837" viewBox="0 0 2039 1837" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="2039" height="1837" fill="black" />
+  <!-- Background matches site #111 -->
+  <rect width="2039" height="1837" fill="#111" />
   
   <!-- Bear head shape -->
   <path d="M 1020, 1600 
@@ -17,25 +17,25 @@
            Z" 
         fill="white" />
   
-  <!-- Left Eye (Slanted/Mean) -->
+  <!-- Left Eye -->
   <path d="M 720, 950 
            Q 820, 940, 880, 1080 
            Q 780, 1050, 720, 950 
            Z" 
-        fill="black" />
+        fill="#111" />
   
-  <!-- Right Eye (Slanted/Mean) -->
+  <!-- Right Eye -->
   <path d="M 1320, 950 
            Q 1220, 940, 1160, 1080 
            Q 1260, 1050, 1320, 950 
            Z" 
-        fill="black" />
+        fill="#111" />
   
-  <!-- Nose/Snout (Sharper) -->
+  <!-- Nose/Snout -->
   <path d="M 940, 1250 
            L 1020, 1220 
            L 1100, 1250 
            L 1020, 1320 
            Z" 
-        fill="black" />
+        fill="#111" />
 </svg>
