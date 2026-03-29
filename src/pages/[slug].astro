@@ -21,8 +21,9 @@ const { Content } = post;
 // Extract title from filename (last part of path, without extension)
 const slug = Astro.params.slug;
 const title = decodeURIComponent(slug)
+    .toLowerCase()
     .replace(/-/g, " ")
-    .replace(/\b\w/g, (l) => l.toUpperCase());
+    .replace(/\b([a-zà-ÿ])/g, (l) => l.toUpperCase());
 ---
 
 <MainLayout title={title}>
