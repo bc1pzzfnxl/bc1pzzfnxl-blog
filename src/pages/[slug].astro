@@ -16,18 +16,24 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = post;
+const { Content, rawContent } = post;
 
-// Extract title from filename (last part of path, without extension)
+// Extract title from filename
 const slug = Astro.params.slug;
 const title = decodeURIComponent(slug || "")
     .toLowerCase()
     .split("-")
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
+
+// Create a clean description from the first 160 characters of the content
+const description = rawContent()
+    .replace(/[#*`_\[\]]/g, '') // Remove basic markdown syntax
+    .trim()
+    .substring(0, 160) + "...";
 ---
 
-<MainLayout title={title}>
+<MainLayout title={title} description={description}>
     <article>
         <h1>{title}</h1>
         <Content components={{ Icon }} />
