@@ -58,6 +58,7 @@ The project is optimized for search engines and social media sharing:
 *   **Sitemap**: Automatically generated using `@astrojs/sitemap` at `https://bc1pzzfnxl.com/sitemap-index.xml`.
 *   **Robots.txt**: Configured in `public/robots.txt` to allow indexing and point to the sitemap.
 *   **Meta Tags**: Dynamic `<meta>` tags for `title`, `description`, and `canonical` URL in `MainLayout.astro`.
+*   **Automatic Descriptions**: Blog post descriptions are automatically generated from the first 160 characters of the article's content to improve search engine result previews.
 *   **Open Graph / Twitter Cards**: Full support for social previews with absolute image URLs.
 *   **OG Image**: Custom branded image at `public/og-image.png` for consistent social sharing.
 *   **View Transitions**: Enabled with `ClientRouter` and fixed theme toggle reliability across page navigations.
