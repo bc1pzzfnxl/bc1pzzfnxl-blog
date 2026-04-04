@@ -15,13 +15,14 @@ interface Props {
 
 const {
 	title,
-	description = "Bienvenue sur mon blog personnel. Explorez mes écrits sur la théologie biblique, l'exégèse et la pensée juive, ainsi que mes réflexions sur l'informatique et l'intelligence artificielle.",
+	description = "Bienvenue sur mon blog perso. Explorez mes écrits sur la théologie biblique, l'exégèse et la pensée juive, ainsi que mes réflexions sur l'IA et des concepts DevOps.",
 	ogImage = "/og-image.svg",
 } = Astro.props;
 
 const siteTitle = "bc1pzzfnxl";
 const fullTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
 ---
 
 <html lang="en">
@@ -40,14 +41,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <meta property="og:url" content={Astro.url} />
         <meta property="og:title" content={fullTitle} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={new URL(ogImage, Astro.url)} />
+        <meta property="og:image" content={ogImageURL} />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={Astro.url} />
         <meta property="twitter:title" content={fullTitle} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={new URL(ogImage, Astro.url)} />
+        <meta property="twitter:image" content={ogImageURL} />
 
         <link id="favicon-link" rel="icon" type="image/svg+xml" href="/favicon-dark.svg" />
         <ClientRouter />
