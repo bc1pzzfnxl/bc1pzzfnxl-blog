@@ -1,0 +1,21 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond -->
+  <rect width="1200" height="630" fill="white" />
+  
+  <!-- Logo Ours (centré et redimensionné) -->
+  <g transform="translate(600, 220) scale(0.22) translate(-1020, -1000)">
+    <path d="M 1020, 1600 C 700, 1600, 450, 1400, 450, 1050 C 450, 850, 500, 750, 550, 700 C 500, 600, 520, 450, 650, 400 C 780, 350, 850, 450, 880, 550 C 920, 540, 970, 530, 1020, 530 C 1070, 530, 1120, 540, 1160, 550 C 1190, 450, 1260, 350, 1390, 400 C 1520, 450, 1540, 600, 1490, 700 C 1540, 750, 1590, 850, 1590, 1050 C 1590, 1400, 1340, 1600, 1020, 1600 Z" fill="black" />
+    <path d="M 720, 950 Q 820, 940, 880, 1080 Q 780, 1050, 720, 950 Z" fill="white" />
+    <path d="M 1320, 950 Q 1220, 940, 1160, 1080 Q 1260, 1050, 1320, 950 Z" fill="white" />
+    <path d="M 940, 1250 L 1020, 1220 L 1100, 1250 L 1020, 1320 Z" fill="white" />
+  </g>
+  
+  <!-- Texte : Nom du site -->
+  <text x="600" y="440" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-weight="700" font-size="56" fill="black">bc1pzzfnxl.com</text>
+  
+  <!-- Texte : Thématiques -->
+  <text x="600" y="520" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-weight="400" font-size="28" fill="#4B5563" letter-spacing="0.1em">THÉOLOGIE | IA | INFORMATIQUE</text>
+
+  <!-- Ligne de décoration minimaliste -->
+  <rect x="500" y="470" width="200" height="2" fill="#E5E7EB" />
+</svg>
