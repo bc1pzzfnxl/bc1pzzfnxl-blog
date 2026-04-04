@@ -234,15 +234,25 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             <slot />
         </main>
         <script>
-            const themeToggle = document.getElementById('theme-toggle');
-            themeToggle.addEventListener('click', () => {
-                const isDarkMode = document.documentElement.classList.toggle('dark-mode');
-                localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-                const favicon = document.getElementById('favicon-link');
-                if (favicon) {
-                    favicon.href = isDarkMode ? '/favicon-light.svg' : '/favicon-dark.svg';
-                }
-            });
+            function setupThemeToggle() {
+                const themeToggle = document.getElementById('theme-toggle');
+                if (!themeToggle) return;
+
+                themeToggle.addEventListener('click', () => {
+                    const isDarkMode = document.documentElement.classList.toggle('dark-mode');
+                    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+                    const favicon = document.getElementById('favicon-link');
+                    if (favicon) {
+                        favicon.href = isDarkMode ? '/favicon-light.svg' : '/favicon-dark.svg';
+                    }
+                });
+            }
+
+            // Initial setup
+            setupThemeToggle();
+
+            // Re-setup after each page navigation (Astro View Transitions)
+            document.addEventListener('astro:page-load', setupThemeToggle);
         </script>
     </body>
 </html>
