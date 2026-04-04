@@ -44,8 +44,26 @@ The project uses `bun` for package management and running scripts.
     bun preview
     ```
 
+## Hosting & Deployment
+
+*   **Platform**: Cloudflare Pages (Server-side rendering mode).
+*   **Domain**: `https://bc1pzzfnxl.com`
+*   **Adapter**: `@astrojs/cloudflare`
+*   **Wrangler**: Configured via `wrangler.jsonc`.
+
+## SEO & Open Graph
+
+The project is optimized for search engines and social media sharing:
+
+*   **Sitemap**: Automatically generated using `@astrojs/sitemap` at `https://bc1pzzfnxl.com/sitemap-index.xml`.
+*   **Robots.txt**: Configured in `public/robots.txt` to allow indexing and point to the sitemap.
+*   **Meta Tags**: Dynamic `<meta>` tags for `title`, `description`, and `canonical` URL in `MainLayout.astro`.
+*   **Open Graph / Twitter Cards**: Full support for social previews with absolute image URLs.
+*   **OG Image**: Custom branded image at `public/og-image.png` for consistent social sharing.
+*   **View Transitions**: Enabled with `ClientRouter` and fixed theme toggle reliability across page navigations.
+
 ## Development Conventions
 
-*   **Creating a New Post**: To create a new blog post, add a new `.mdx` file to the `src/content/` directory. The filename will be used as the URL slug (e.g., `my-new-post.mdx` becomes `/my-new-post`).
-*   **Post Titles**: The title of a blog post is automatically generated from its filename by capitalizing the words.
-*   **Styling**: All global styles are located in a `<style is:global>` tag within `src/layouts/MainLayout.astro`.
+*   **Creating a New Post**: To create a new blog post, add a new `.md` or `.mdx` file to the `src/content/` directory. The filename will be used as the URL slug (e.g., `my-new-post.md` becomes `/my-new-post`).
+*   **Post Titles**: The title of a blog post is automatically generated from its filename with robust capitalization handling (including accents).
+*   **Styling**: All global styles are located in a `<style is:global>` tag within `src/layouts/MainLayout.astro`. Includes a minimalist dark/light mode.
