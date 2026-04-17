@@ -222,9 +222,13 @@ const ogImageURL = new URL(ogImage, Astro.site);
     <body>
         <header>
             <div class="header-left">
-                <img src="/favicon-dark.svg" alt="Bear icon" class="site-logo bear-black" />
-                <img src="/favicon-light.svg" alt="Bear icon" class="site-logo bear-white" />
-                <div class="site-title"><a href="/">bc1pzzfnxl</a></div>
+                <img src="/favicon-dark.svg" alt="Logo bc1pzzfnxl - Blog Théologie, IA et DevOps" class="site-logo bear-black" />
+                <img src="/favicon-light.svg" alt="Logo bc1pzzfnxl - Blog Théologie, IA et DevOps" class="site-logo bear-white" />
+                {title === "Home" ? (
+                    <h1 class="site-title"><a href="/">bc1pzzfnxl</a></h1>
+                ) : (
+                    <div class="site-title"><a href="/">bc1pzzfnxl</a></div>
+                )}
             </div>
             <button class="theme-toggle-button" id="theme-toggle">
                 <Icon name="heroicons-solid:sun" class="sun-icon icon" />
