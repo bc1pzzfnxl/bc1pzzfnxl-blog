@@ -16,13 +16,13 @@ interface Props {
 const {
 	title,
 	description = "Bienvenue sur mon blog perso. Explorez mes écrits sur la théologie biblique, l'exégèse et la pensée juive, ainsi que mes réflexions sur l'IA et des concepts DevOps.",
-	ogImage = "/og-image.png",
+	ogImage = "",
 } = Astro.props;
 
 const siteTitle = "bc1pzzfnxl";
 const fullTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogImageURL = new URL(ogImage, Astro.site);
+const ogImageURL = ogImage ? new URL(ogImage, Astro.site) : null;
 ---
 
 <html lang="en">
@@ -41,14 +41,14 @@ const ogImageURL = new URL(ogImage, Astro.site);
         <meta property="og:url" content={Astro.url} />
         <meta property="og:title" content={fullTitle} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImageURL} />
+        {ogImageURL && <meta property="og:image" content={ogImageURL} />}
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={Astro.url} />
         <meta property="twitter:title" content={fullTitle} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={ogImageURL} />
+        {ogImageURL && <meta property="twitter:image" content={ogImageURL} />}
 
         <link id="favicon-link" rel="icon" type="image/svg+xml" href="/favicon-dark.svg" />
         <ClientRouter />
@@ -100,14 +100,6 @@ const ogImageURL = new URL(ogImage, Astro.site);
                 align-items: center;
                 gap: 12px;
             }
-            .site-logo {
-                width: 32px;
-                height: 32px;
-            }
-            .bear-black { display: block; }
-            .bear-white { display: none; }
-            html.dark-mode .bear-black { display: none; }
-            html.dark-mode .bear-white { display: block; }
 
             h1, h2, h3, h4, .site-title a {
                 color: #111827;
@@ -222,8 +214,6 @@ const ogImageURL = new URL(ogImage, Astro.site);
     <body>
         <header>
             <div class="header-left">
-                <img src="/favicon-dark.svg" alt="Logo bc1pzzfnxl - Blog Théologie, IA et DevOps" class="site-logo bear-black" />
-                <img src="/favicon-light.svg" alt="Logo bc1pzzfnxl - Blog Théologie, IA et DevOps" class="site-logo bear-white" />
                 {title === "Home" ? (
                     <h1 class="site-title"><a href="/">bc1pzzfnxl</a></h1>
                 ) : (
