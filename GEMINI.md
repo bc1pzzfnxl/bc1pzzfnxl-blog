@@ -59,8 +59,7 @@ The project is optimized for search engines and social media sharing:
 *   **Robots.txt**: Configured in `public/robots.txt` to allow indexing and point to the sitemap.
 *   **Meta Tags**: Dynamic `<meta>` tags for `title`, `description`, and `canonical` URL in `MainLayout.astro`.
 *   **Automatic Descriptions**: Blog post descriptions are automatically generated from the first 160 characters of the article's content to improve search engine result previews.
-*   **Open Graph / Twitter Cards**: Full support for social previews with absolute image URLs.
-*   **OG Image**: Custom branded image at `public/og-image.png` for consistent social sharing.
+*   **Open Graph / Twitter Cards**: Full support for social previews.
 *   **View Transitions**: Enabled with `ClientRouter` and fixed theme toggle reliability across page navigations.
 
 ## Development Conventions
