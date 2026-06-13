@@ -136,4 +136,4 @@ Le prisonnier est victime de la grace de Jésus-Christ car il a été sauvé par
 
 On peut aussi dire que le prisonnier est un "faux Yeshoua" car il a désobéi a son supérieur, les Romains, en se rebellant, or le "vrai Yeshoua" lui n'a pas refusé le sacrifice à la croix car le père en était l’initiateur.
 
-Finalement, tout un tas de schémas de lecture peuvent être proposées, à condition bien sûr qu'elles soient rigoureusement documentées et expliquées. La gématria est un puits sans fond. Aborder les Écritures de cette manière, c'est un peu comme lire le code source de la création : chaque mot cache une équation, chaque verset est une fractale qui renferme un sens spirituel plus profond. On ne fait plus que lire un texte, on le déchiffre. La Bible révèle alors un réseau de connexions inépuisable, où l'exploration est littéralement infinie.
+Finalement, tout un tas de lecture, de leçon, d'enseignement peuvement émerger, je ne detiens pas toute la vérité et je suis ouvert au débat et a toute remarques, avis, correction etc..
