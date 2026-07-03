@@ -1,7 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 
-// Retrieve all files with the new import.meta.glob API
+export const prerender = true;
+
 const postsData = import.meta.glob("../content/*.{md,mdx}", { eager: true });
 const posts = Object.entries(postsData).map(([path, post]) => {
     const slug = path.split("/").pop().replace(/\.(md|mdx)$/, "");
