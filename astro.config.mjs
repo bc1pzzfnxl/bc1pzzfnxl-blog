@@ -6,10 +6,14 @@ import cloudflare from "@astrojs/cloudflare";
 
 import sitemap from "@astrojs/sitemap";
 
-// https://astro.build/config
 export default defineConfig({
   site: "https://bc1pzzfnxl.com",
   output: "server",
   adapter: cloudflare(),
   integrations: [mdx(), icon(), sitemap()],
+  vite: {
+    ssr: {
+      noExternal: ["debug"],
+    },
+  },
 });
