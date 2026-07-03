@@ -6,14 +6,18 @@ import cloudflare from "@astrojs/cloudflare";
 
 import sitemap from "@astrojs/sitemap";
 
+import { fileURLToPath } from "node:url";
+
 export default defineConfig({
   site: "https://bc1pzzfnxl.com",
   output: "server",
   adapter: cloudflare(),
   integrations: [mdx(), icon(), sitemap()],
   vite: {
-    ssr: {
-      noExternal: ["debug"],
+    resolve: {
+      alias: {
+        debug: fileURLToPath(new URL("./src/debug-mock.js", import.meta.url)),
+      },
     },
   },
 });
