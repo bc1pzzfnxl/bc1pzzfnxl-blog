@@ -1,3 +1,8 @@
+---
+author: bc1pzzfnxl
+date: 2026-07-03
+---
+
 ## Contexte
 
 En écoutant **Rav Ron Chaya**, j'ai appris pas mal de choses sur la Torah et ses **613 lois**. Je vais essayer d'expliquer quelques concepts clés tout en ajoutant un peu de **Gematria**, parce que je suis fan et c'est utile. Il y a aussi un lien entre le jardin d'Éden et les 2 types de lois : Faire et ne pas Faire.

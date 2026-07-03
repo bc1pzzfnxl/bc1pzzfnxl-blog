@@ -1,3 +1,8 @@
+---
+author: bc1pzzfnxl
+date: 2026-07-03
+---
+
 ## Contexte
 
 Dans la Bible, rien n'est laissé au hasard. Chaque mot et chaque phrase ont un sens particulier et sont là pour une raison. J'aimerais m'attarder ici sur Barabbas, car je pensais autrefois au prisonnier qui fut échangé contre Jésus-Christ par le gouverneur Pilate, sans aucune raison particulière, simplement une pensée soudaine.

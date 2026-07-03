@@ -18,11 +18,11 @@ const {
 } = Astro.props;
 
 const siteTitle = "bc1pzzfnxl";
-const fullTitle = title === "Home" ? siteTitle : `${title} | ${siteTitle}`;
+const fullTitle = title === "Home" ? `${siteTitle} | Théologie biblique, exégèse et réflexions DevOps` : `${title} | ${siteTitle}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
