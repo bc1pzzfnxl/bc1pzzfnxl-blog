@@ -215,21 +215,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             <slot />
         </main>
         <script>
-            function setupThemeToggle() {
-                const themeToggle = document.getElementById('theme-toggle');
-                if (!themeToggle) return;
-
-                themeToggle.addEventListener('click', () => {
-                    const isDarkMode = document.documentElement.classList.toggle('dark-mode');
-                    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-                });
-            }
-
-            // Initial setup
-            setupThemeToggle();
-
-            // Re-setup after each page navigation (Astro View Transitions)
-            document.addEventListener('astro:page-load', setupThemeToggle);
+            document.addEventListener('click', (event) => {
+                if (event.target instanceof Element) {
+                    const themeToggle = event.target.closest('#theme-toggle');
+                    if (themeToggle) {
+                        const isDarkMode = document.documentElement.classList.toggle('dark-mode');
+                        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+                    }
+                }
+            });
         </script>
     </body>
 </html>
