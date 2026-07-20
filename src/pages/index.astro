@@ -28,7 +28,7 @@ const posts = Object.entries(postsData).map(([path, post]) => {
                 <ul>
                     {posts.map(({ slug, title }) => (
                         <li>
-                            <a href={`/${slug}`}>{title}</a>
+                            <a href={`/${slug}/`}>{title}</a>
                         </li>
                     ))}
                 </ul>
