@@ -4,10 +4,10 @@
 
 This is a personal blog created with the [Astro](https://astro.build/) framework. It's a minimal setup designed for publishing articles written in MDX.
 
-*   **Framework**: Astro
+*   **Framework**: Astro v7.0
 *   **Content**: Posts are written in MDX (`.mdx`), allowing for the use of components within Markdown.
 *   **Styling**: Global CSS is defined directly within the main layout file. It includes a basic dark mode.
-*   **Dependencies**: Key dependencies include `@astrojs/mdx` for content. The project uses `bun` as its package manager.
+*   **Dependencies**: Key dependencies include `@astrojs/mdx` for content. The project uses `bun` as its package manager and compiles with the new Rust-based compiler.
 
 ## Project Structure
 
