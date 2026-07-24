@@ -26,7 +26,11 @@ const title = decodeURIComponent(slug || "")
     .join(" ");
 
 const description = rawContent()
-    .replace(/[#*`_\[\]]/g, '')
+    .replace(/^---[\s\S]*?---\s*/m, '')
+    .replace(/[#*`_\[\]>]/g, '')
+    .replace(/!\[.*?\]\(.*?\)/g, '')
+    .replace(/\n+/g, ' ')
+    .replace(/\s+/g, ' ')
     .trim()
     .substring(0, 160) + "...";
 
@@ -35,9 +39,15 @@ const schema = {
     "@type": "BlogPosting",
     "headline": title,
     "description": description,
+    "url": Astro.url.href,
+    "inLanguage": "fr",
     "author": {
         "@type": "Person",
         "name": frontmatter.author || "bc1pzzfnxl"
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "bc1pzzfnxl"
     },
     "datePublished": frontmatter.date || "2026-07-03",
     "dateModified": frontmatter.date || "2026-07-03",
@@ -48,7 +58,7 @@ const schema = {
 };
 ---
 
-<MainLayout title={title} description={description}>
+<MainLayout title={title} description={description} ogType="article">
     <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
     <article>
         <h1>{title}</h1>

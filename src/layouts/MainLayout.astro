@@ -10,11 +10,13 @@ import "@fontsource/geist-mono/400.css";
 interface Props {
 	title: string;
 	description?: string;
+	ogType?: string;
 }
 
 const {
 	title,
 	description = "Blog perso | Théologie Chrétienne et Juive | Pensée personnelle",
+	ogType = "website",
 } = Astro.props;
 
 const siteTitle = "bc1pzzfnxl";
@@ -34,7 +36,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <link rel="canonical" href={canonicalURL} />
 
         <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content={ogType} />
         <meta property="og:url" content={Astro.url} />
         <meta property="og:title" content={fullTitle} />
         <meta property="og:description" content={description} />

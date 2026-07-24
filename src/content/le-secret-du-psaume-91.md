@@ -3,15 +3,15 @@ author: bc1pzzfnxl
 date: 2026-07-04
 ---
 
-# Contexte :
+## Contexte :
 
 J'ai écouté le sermon d'un prédicateur à Singapour, Joseph Prince qui fait une explication du Psaume 91 et de son lien avec Genèse. J'ai donc pris des notes et je vais expliquer à l'écrit son enseignement tout en rajoutant d'autres éléments, comme la guématria ou des explications rabbiniques.
 
-# Texte utilisé :
+## Texte utilisé :
 
 Je vais utiliser 2 textes, le Psaume 91 ainsi que Genèse. J'utiliserai diverses traductions comme Louis Segond 21 (SG21), André Chouraqui et Biblia Hebraica Stuttgartensia (BHS).
 
-# Psaume 91 :
+## Psaume 91 :
 
 Le psaume 91 est un chapitre très connu des psaumes, il raconte une promesse divine envers ses fidèles. Ce psaume n'a pas d'auteur connu mais le précédent, 90, lui a un auteur : Moïse, donc le suivant, 91, est du même auteur (tradition rabbinique). De plus le style d'écriture du Psaume 91 est très proche du style d'écriture du Psaume 90 ce qui confirme le fait que Moïse en soit l'auteur. Donc dans notre cas, on va partir du fait que Moïse est l'auteur, puisque l'on va aussi étudier Genèse, écrit aussi par Moïse.
 *Talmud de Babylone (Bava Batra 14b)*
@@ -24,13 +24,13 @@ Le passage qui va nous intéresser est le 91:1 :
 
 ![Image](https://pbs.twimg.com/media/HIgnLBFWEAAzqS4?format=png&name=900x900)
 
-# Genèse :
+## Genèse :
 
 Genèse (Bereshit) est le 1er livre de la Torah révélé à Moïse par YHWH, il évoque la création du monde, la chute de l'Homme, le déluge, la tour de Babel, la vie des patriarches Abraham, Jacob, Joseph.
 
 Je vais utiliser 2 versets :
 
-## Genèse 14:18
+### Genèse 14:18
 
 - Melchisédek, roi de Salem, fit apporter du pain et du vin: il était sacrificateur du Dieu Très-Haut. (SG21)
 - Malki-Sèdèq, roi de Shalèm, a fait sortir le pain et le vin, lui, le desservant d'Él 'Éliôn (André Chouraqui)
@@ -38,7 +38,7 @@ Je vais utiliser 2 versets :
 
 ![Image](https://pbs.twimg.com/media/HIgoxw6XcAARU-o?format=jpg&name=medium)
 
-## Genèse 17:1
+### Genèse 17:1
 
 - Lorsque Abram fut âgé de quatre-vingt-dix-neuf ans, l'Éternel apparut à Abram, et lui dit: Je suis le Dieu tout-puissant. Marche devant ma face, et sois intègre. (SG21)
 - Et c'est Abrâm : il a quatre-vingt-dix-neuf ans. YHWH se fait voir à Abrâm et lui dit : "Moi, Él Shaddaï ; va en faces de moi : sois intègre ! (André Chouraqui)
@@ -46,11 +46,11 @@ Je vais utiliser 2 versets :
 
 <img title="" src="https://pbs.twimg.com/media/HIgpt5mWMAA3unw?format=jpg&name=large" alt="Image" width="734">
 
-## Pourquoi ces 2 versets de Genèse ?
+### Pourquoi ces 2 versets de Genèse ?
 
 Ces 2 versets de Genèse contiennent les 1ères mentions de "Elyon" = Dieu Très-Haut dans Genèse 14:18 ainsi que "Shaddaï" = Dieu Tout-Puissant dans Genèse 17:1. On retrouve ensuite ces 2 mentions dans 1 seul et même verset : Psaume 91:1.
 
-# Psaume 91:1
+## Psaume 91:1
 
 On va donc analyser le Psaume 91:1 :
 
@@ -62,7 +62,7 @@ Il y a cette notion de position, être sous l'abri du Très-Haut, donc être dan
 
 La Bible évoque très souvent des adjectifs et verbes de position, Dieu élève les faibles et rabaisse les orgueilleux.
 
-## Qui est le "celui" ?
+### Qui est le "celui" ?
 
 Le "Celui" évoqué dans le Psaume représente donc Moïse, car au moment de monter sur le Sinaï, Moïse est rentré dans l'abri du Très-Haut. (Midrash Tehillim). Maintenant, tout Chrétien peut accéder à l'abri du Très-Haut et demeurer à l'ombre du Tout-Puissant par la relation en Jésus qui amène directement au Père qui est le propriétaire de l'abri. Jean 12:44-46 :
 
@@ -70,7 +70,7 @@ Le "Celui" évoqué dans le Psaume représente donc Moïse, car au moment de mon
 
 On retrouve le mot "demeure" du verbe demeurer, habiter, mot utilisé dans le Psaume 91 : Yoshev (יֹשֵׁב - demeurer/s'asseoir). C'est un état perpétuel, pas temporaire, on s'assoit et on se repose.
 
-## Elyon (עֶלְיוֹן), analyse du mot :
+### Elyon (עֶלְיוֹן), analyse du mot :
 
 Melchisédek utilise ce mot dans le verset Genèse 14:19 :
 
@@ -78,27 +78,27 @@ Melchisédek utilise ce mot dans le verset Genèse 14:19 :
 
 Le Talmud, chapitre Nedarim 32b, nous dit que Melchisédek est identifié à Sem, fils de Noé, car il bénit Abraham au nom du Très-Haut, il faut donc qu'il ait déjà reçu une bénédiction de la part de Dieu pour bénir Abraham. Sem étant le 1er à avoir reçu la bénédiction de Dieu Genèse 9:26. Mais je ne pense pas que Melchisédek soit Sem, mais plutot une préfiguration du Fils de Dieu (Trinité).
 
-### Monter (ע-ל-ה)
+#### Monter (ע-ל-ה)
 
 Elyon partage la même racine que le mot monter "Alah". La racine trilitère est "ע-ל-ה" car en hébreu chaque racine de mot est formée de 3 lettres, puis on en fait des déclinaisons en ajoutant des voyelles. Elyon matérialise la grandeur de Dieu, celui qui est au-dessus de toutes choses.
 
-## Shaddaï (שַׁדַּי), analyse du mot :
+### Shaddaï (שַׁדַּי), analyse du mot :
 
 C'est le nom que choisit Dieu pour se révéler à Abraham lors de la circoncision. Le mot a 2 racines possibles :
 
-### Puissance (ש-ד-ד)
+#### Puissance (ש-ד-ד)
 
 On peut utiliser cette racine pour donner au mot Shaddaï le sens de Tout-Puissant, c'est celui qui est utilisé dans le Tanakh.
 
-### Le sein maternel (ש-ד-ה)
+#### Le sein maternel (ש-ד-ה)
 
 Le midrash relie le mot Shaddaï au mot Shad (שַׁד) qui signifie le sein maternel, en ajoutant le suffixe "Daï" on obtient celui qui nourrit, celui qui suffit. C'est une autre interprétation, recevable ou non, elle a le mérite d'exister puisqu'elle insiste sur le fait que Dieu nous suffit, celui qui nous nourrit spirituellement, et ça rejoint ce que Jésus affirme en disant qu'il est la Parole de Dieu et donc le pain de vie, car la parole de Dieu nous nourrit spirituellement.
 
-### Synthèse du Psaume 91:1
+#### Synthèse du Psaume 91:1
 
 Donc pour être à l'ombre du Tout-Puissant (Shaddaï) il faut **monter** sous l'abri du Très-Haut (Elyon). Il y a la mention des 2 noms divins : Elyon et Shaddaï. Elyon cité la 1ère fois dans Genèse 14:18 et Shaddaï cité la 1ère fois dans Genèse 17:1. Le bonheur, l'intimité avec Dieu se trouve donc entre ces 2 versets.
 
-# Genèse 14:18 -> 17:1
+## Genèse 14:18 -> 17:1
 
 Le bonheur, l'intimité avec Dieu se trouve donc entre le Elyon et le Shaddaï, entre Genèse 14:18 et 17:1.
 
@@ -130,11 +130,11 @@ Entre Genèse 14:18 et Genèse 17:1, voici les promesses que Dieu fait Abram pen
 
 Le reste des bénédictions sont après Genèse 17:1 donc plus entre le Elyon et le Shaddaï. Apres 17:1 intervient la circoncision d'Abraham donc des promesses reservés aux hébreux. Paul affirme que les bénédictions d'Abraham sont valables pour les circoncis et non-circonscis, donc je vais écouter et appliquer ce que Paul dit. Vous irez lire les bénédictions apres Genèse 17:1.
 
-# Gematria (Mispar Hechrachi), analyse des mots clés :
+## Gematria (Mispar Hechrachi), analyse des mots clés :
 
-## Elyon et Shaddaï :
+### Elyon et Shaddaï :
 
-### El Elyon :
+#### El Elyon :
 
 Nombre cible : 197
 
@@ -157,7 +157,7 @@ Decomposition :
 
 Calcul : 1 + 30 + 70 + 30 + 10 + 6 + 50 = 197
 
-### El Shaddaï :
+#### El Shaddaï :
 
 Nombre cible : 345
 
@@ -176,7 +176,7 @@ Decomposition :
 
 Calcul : 1 + 30 + 300 + 4 + 10 = 345
 
-#### Addition des 2 mots :
+##### Addition des 2 mots :
 
 En additionant El Shaddaï + El Elyon on trouve 542, qui a pour mot Mevaser :
 
@@ -200,7 +200,7 @@ Le Très-Haut et Tout-Puissant vient donc sur Terre pour nous offrir la vie éte
 
 Matthieu 28:18 (SG21)
 
-## La Cène :
+### La Cène :
 
 Pain = Lehem et a pour valeur 78, YHWH vaut 26, 3x26 = 78. 3xDieu = la Trinité.
 
@@ -210,7 +210,7 @@ Vin = Yayin et a pour valeur 70, même valeur que le Sod, qui est le secret de D
 
 Talmud de Babylone (Bava Batra 14b)
 
-# Conclusion :
+## Conclusion :
 
 Pour atteindre les promesses du Psaume 91, il faut être dans l'abri du Très-Haut, et Abram nous montre directement comment y accéder : accepter la Cène et offrir la Dîme. Rien de compliqué, Dieu fait grâce.
 
@@ -218,7 +218,7 @@ En demeurant dans l'abri du Très-Haut, on a connaissance du Tout-Puissant et l'
 
 Cette analyse est purement personnelle, je suis ouvert à toutes remarques construites, merci pour votre lecture.
 
-###### Source :
+##### Source :
 
 [Talmud | Sefaria Library](https://www.sefaria.org/texts/Talmud)
 
