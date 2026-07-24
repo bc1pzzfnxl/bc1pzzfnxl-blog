@@ -13,6 +13,9 @@ export default defineConfig({
   output: "server",
   adapter: cloudflare(),
   trailingSlash: "always",
+  redirects: {
+    "/le-mystère-de-barabbas/": "/le-mystere-de-barabbas/",
+  },
   integrations: [mdx(), icon(), sitemap()],
   vite: {
     resolve: {
