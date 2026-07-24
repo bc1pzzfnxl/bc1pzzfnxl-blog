@@ -100,7 +100,7 @@ Le mot **cultiver** (*Le'ovdah* - לעבדה) et **garder** (*Uleshomrah* - ול
 * **Cultiver** peut faire référence à l'âme : cultiver son âme, c'est en apprendre plus de Dieu et se consacrer à Lui par le respect des **248 lois positives**.
 * **Garder** peut faire référence au fait de se contrôler : se préserver de mauvaises actions et donc respecter les **365 lois d'interdiction** pour ne pas être chassé du lieu Saint qu'est le Jardin d'Éden.
 
-# Conclusion :
+## Conclusion :
 
 Les 613 commandements ont une profondeur spirituelle bien plus grande que ce que l'on pense. Abraham avait déjà connaissance de ces lois et il les appliquait d'une certaine manière. Le Jardin d'Éden est aussi le reflet de ces 613 lois. J'aurais aimé aller plus en détail, notamment sur le Pardès, en incluant une lecture Derash et Sod, mais c'est un niveau bien plus compliqué pour moi ; les réponses se trouvent dans le Zohar.
 
