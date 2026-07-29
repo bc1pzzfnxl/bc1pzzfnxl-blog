@@ -3,8 +3,9 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import icon from "astro-icon";
 import cloudflare from "@astrojs/cloudflare";
-
 import sitemap from "@astrojs/sitemap";
+import react from "@astrojs/react";
+import tailwindcss from "@tailwindcss/vite";
 
 import { fileURLToPath } from "node:url";
 
@@ -16,10 +17,12 @@ export default defineConfig({
   redirects: {
     "/le-mystère-de-barabbas/": "/le-mystere-de-barabbas/",
   },
-  integrations: [mdx(), icon(), sitemap()],
+  integrations: [mdx(), icon(), sitemap(), react()],
   vite: {
+    plugins: [tailwindcss()],
     resolve: {
       alias: {
+        "@": fileURLToPath(new URL("./src", import.meta.url)),
         debug: fileURLToPath(new URL("./src/debug-mock.js", import.meta.url)),
       },
     },
