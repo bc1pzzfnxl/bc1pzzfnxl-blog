@@ -49,7 +49,9 @@ const ScrollProgress = ({
     }
 
     const detectSections = () => {
-      const headings = Array.from(document.querySelectorAll<HTMLElement>("article h2, article h3, main h2"))
+      const headings = Array.from(
+        document.querySelectorAll<HTMLElement>("article h2, article h3, main h2, main h3")
+      )
       const autoSections: ScrollProgressSection[] = headings
         .map((h, i) => {
           if (!h.id) {
@@ -60,9 +62,15 @@ const ScrollProgress = ({
         })
         .filter((s) => s.label.length > 0)
 
-      if (autoSections.length > 0) {
-        setSections(autoSections)
-      }
+      setSections((prev) => {
+        if (
+          prev.length === autoSections.length &&
+          prev.every((item, idx) => item.id === autoSections[idx]?.id && item.label === autoSections[idx]?.label)
+        ) {
+          return prev
+        }
+        return autoSections
+      })
     }
 
     detectSections()
@@ -86,7 +94,10 @@ const ScrollProgress = ({
   const scrollLockTimer = React.useRef<ReturnType<typeof setTimeout>>(undefined)
 
   React.useEffect(() => {
-    setActiveId(sections[0]?.id)
+    setActiveId((prev) => {
+      if (prev && sections.some((s) => s.id === prev)) return prev
+      return sections[0]?.id
+    })
   }, [sections])
 
   React.useEffect(() => {
@@ -109,7 +120,9 @@ const ScrollProgress = ({
           }
         }
       }
-      setActiveId(active?.id ?? sections[0]?.id)
+      if (active?.id) {
+        setActiveId((prev) => (prev === active?.id ? prev : active?.id))
+      }
     }
 
     update()
@@ -121,7 +134,8 @@ const ScrollProgress = ({
     }
   }, [sections, containerRef, offset])
 
-  const label = sections.find((s) => s.id === activeId)?.label || "Déroulement"
+  const currentSection = sections.find((s) => s.id === activeId)
+  const label = currentSection?.label || (sections.length > 0 ? sections[0].label : "Déroulement")
 
   const labelVersion = React.useRef(0)
   const prevLabel = React.useRef(label)
@@ -141,18 +155,23 @@ const ScrollProgress = ({
 
   useIsoLayoutEffect(() => {
     const measure = () => {
-      if (labelRef.current) setLabelWidth(labelRef.current.offsetWidth)
+      if (labelRef.current) {
+        const w = labelRef.current.offsetWidth
+        setLabelWidth((prev) => (prev === w ? prev : w))
+      }
       if (collapsedRef.current) {
-        setCollapsedSize({
-          width: collapsedRef.current.offsetWidth,
-          height: collapsedRef.current.offsetHeight,
-        })
+        const w = collapsedRef.current.offsetWidth
+        const h = collapsedRef.current.offsetHeight
+        if (w > 0 && h > 0) {
+          setCollapsedSize((prev) => (prev?.width === w && prev?.height === h ? prev : { width: w, height: h }))
+        }
       }
       if (openRef.current) {
-        setOpenSize({
-          width: openRef.current.offsetWidth,
-          height: openRef.current.offsetHeight,
-        })
+        const w = openRef.current.offsetWidth
+        const h = openRef.current.offsetHeight
+        if (w > 0 && h > 0) {
+          setOpenSize((prev) => (prev?.width === w && prev?.height === h ? prev : { width: w, height: h }))
+        }
       }
     }
 
@@ -201,8 +220,13 @@ const ScrollProgress = ({
     })
   }
 
-  const size = open ? openSize : collapsedSize
-  const radius = open ? 26 : (collapsedSize?.height ?? 32) / 2
+  const measuredSize = open ? openSize : collapsedSize
+  const fallbackSize = open
+    ? { width: 220, height: Math.min(sections.length * 36 + 16, 280) }
+    : { width: (labelWidth || 100) + 48, height: 36 }
+  const size = measuredSize || fallbackSize
+
+  const radius = open ? 22 : 18
   const squircle = "[corner-shape:squircle]"
 
   return (
@@ -238,178 +262,176 @@ const ScrollProgress = ({
         </div>
       </div>
 
-      {size && (
-        <motion.div
-          data-slot="scroll-progress-surface"
-          className={cn(
-            "absolute bottom-0 left-1/2 -translate-x-1/2 overflow-hidden border border-border/60 bg-background/70 shadow-lg backdrop-blur-md",
-            squircle
-          )}
-          initial={false}
-          animate={{
-            width: size.width,
-            height: size.height,
-            borderRadius: radius,
-          }}
-          transition={reduceMotion ? { duration: 0 } : SIZE_SPRING}
-        >
-          <AnimatePresence initial={false} mode="popLayout">
-            {open && sections.length > 0 ? (
-              <motion.ul
-                key="list"
-                className="absolute inset-0 flex flex-col p-1.5 overflow-y-auto max-h-[60vh]"
-                initial={{
-                  opacity: 0,
-                  filter: reduceMotion ? undefined : "blur(4px)",
-                }}
-                animate={{ opacity: 1, filter: "blur(0px)" }}
-                exit={{
-                  opacity: 0,
-                  filter: reduceMotion ? undefined : "blur(4px)",
-                }}
-                transition={LAYER_FADE}
-              >
-                {sections.map((s, i) => {
-                  const isActive = s.id === activeId
-                  return (
-                    <li key={s.id}>
-                      <button
-                        type="button"
-                        onClick={() => selectSection(s.id)}
-                        className={cn(
-                          "relative flex w-full items-center gap-3 rounded-[14px] px-3 py-2 text-left text-sm font-medium leading-none transition-colors",
-                          squircle,
-                          isActive
-                            ? "text-foreground"
-                            : "text-foreground/55 hover:text-foreground/80"
-                        )}
-                      >
-                        {isActive && (
-                          <motion.span
-                            layoutId={`${layoutId}-active`}
-                            className={cn(
-                              "absolute inset-0 rounded-[14px] bg-foreground/10",
-                              squircle
-                            )}
-                            transition={
-                              reduceMotion ? { duration: 0 } : SIZE_SPRING
-                            }
-                          />
-                        )}
+      <motion.div
+        data-slot="scroll-progress-surface"
+        className={cn(
+          "absolute bottom-0 left-1/2 -translate-x-1/2 overflow-hidden border border-neutral-200/80 dark:border-neutral-800/80 bg-white/85 dark:bg-neutral-900/85 text-neutral-900 dark:text-neutral-100 shadow-xl backdrop-blur-md",
+          squircle
+        )}
+        initial={false}
+        animate={{
+          width: size.width,
+          height: size.height,
+          borderRadius: radius,
+        }}
+        transition={reduceMotion ? { duration: 0 } : SIZE_SPRING}
+      >
+        <AnimatePresence initial={false} mode="popLayout">
+          {open && sections.length > 0 ? (
+            <motion.ul
+              key="list"
+              className="absolute inset-0 flex flex-col p-1.5 overflow-y-auto max-h-[60vh]"
+              initial={{
+                opacity: 0,
+                filter: reduceMotion ? undefined : "blur(4px)",
+              }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              exit={{
+                opacity: 0,
+                filter: reduceMotion ? undefined : "blur(4px)",
+              }}
+              transition={LAYER_FADE}
+            >
+              {sections.map((s, i) => {
+                const isActive = s.id === activeId
+                return (
+                  <li key={s.id}>
+                    <button
+                      type="button"
+                      onClick={() => selectSection(s.id)}
+                      className={cn(
+                        "relative flex w-full items-center gap-3 rounded-[14px] px-3 py-2 text-left text-sm font-medium leading-none transition-colors",
+                        squircle,
+                        isActive
+                          ? "text-neutral-900 dark:text-white"
+                          : "text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
+                      )}
+                    >
+                      {isActive && (
                         <motion.span
+                          layoutId={`${layoutId}-active`}
                           className={cn(
-                            "relative h-1.5 w-1.5 shrink-0 rounded-full",
-                            isActive ? "bg-foreground" : "bg-foreground/30"
+                            "absolute inset-0 rounded-[14px] bg-neutral-100 dark:bg-neutral-800",
+                            squircle
                           )}
-                          initial={
-                            reduceMotion
-                              ? undefined
-                              : { opacity: 0, y: 4, filter: "blur(3px)" }
+                          transition={
+                            reduceMotion ? { duration: 0 } : SIZE_SPRING
                           }
-                          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                          transition={{
-                            duration: 0.3,
-                            ease: EASE_IN_OUT,
-                            delay: reduceMotion ? 0 : 0.04 + i * 0.03,
-                          }}
                         />
-                        <motion.span
-                          className="relative whitespace-nowrap"
-                          initial={
-                            reduceMotion
-                              ? undefined
-                              : { opacity: 0, y: 4, filter: "blur(3px)" }
-                          }
-                          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                          transition={{
-                            duration: 0.3,
-                            ease: EASE_IN_OUT,
-                            delay: reduceMotion ? 0 : 0.04 + i * 0.03,
-                          }}
-                        >
-                          {s.label}
-                        </motion.span>
-                      </button>
-                    </li>
-                  )
-                })}
-              </motion.ul>
-            ) : (
-              <motion.button
-                key="pill"
-                type="button"
-                onClick={() => {
-                  if (sections.length > 0) setOpen(true)
-                }}
-                aria-label="Show sections"
-                className="absolute inset-0 flex items-center gap-2.5 py-1.5 pl-2 pr-4"
-                initial={{
-                  opacity: 0,
-                  filter: reduceMotion ? undefined : "blur(4px)",
-                }}
-                animate={{ opacity: 1, filter: "blur(0px)" }}
-                exit={{
-                  opacity: 0,
-                  filter: reduceMotion ? undefined : "blur(4px)",
-                }}
-                transition={LAYER_FADE}
-              >
-                <span className="shrink-0">
-                  <svg viewBox="0 0 24 24" className="h-5 w-5 -rotate-90" aria-hidden>
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      fill="none"
-                      strokeWidth="2.5"
-                      className="stroke-foreground/15"
-                    />
-                    <motion.circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      fill="none"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      className="stroke-foreground"
-                      style={{ pathLength: progress }}
-                    />
-                  </svg>
-                </span>
-
-                <span
-                  className="relative h-5 shrink-0"
-                  style={{ width: labelWidth }}
-                >
-                  <AnimatePresence initial={false}>
-                    {label && (
+                      )}
                       <motion.span
-                        key={labelVersion.current}
-                        data-slot="scroll-progress-label"
-                        className="absolute inset-y-0 left-0 flex items-center whitespace-nowrap text-sm font-medium leading-none text-foreground"
+                        className={cn(
+                          "relative h-1.5 w-1.5 shrink-0 rounded-full",
+                          isActive ? "bg-neutral-900 dark:bg-white" : "bg-neutral-300 dark:bg-neutral-600"
+                        )}
                         initial={
                           reduceMotion
-                            ? { opacity: 0 }
-                            : { opacity: 0, filter: "blur(1.5px)" }
+                            ? undefined
+                            : { opacity: 0, y: 4, filter: "blur(3px)" }
                         }
-                        animate={{ opacity: 1, filter: "blur(0px)" }}
-                        exit={
+                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                        transition={{
+                          duration: 0.3,
+                          ease: EASE_IN_OUT,
+                          delay: reduceMotion ? 0 : 0.04 + i * 0.03,
+                        }}
+                      />
+                      <motion.span
+                        className="relative whitespace-nowrap"
+                        initial={
                           reduceMotion
-                            ? { opacity: 0 }
-                            : { opacity: 0, filter: "blur(1.5px)" }
+                            ? undefined
+                            : { opacity: 0, y: 4, filter: "blur(3px)" }
                         }
-                        transition={LABEL_CROSSFADE}
+                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                        transition={{
+                          duration: 0.3,
+                          ease: EASE_IN_OUT,
+                          delay: reduceMotion ? 0 : 0.04 + i * 0.03,
+                        }}
                       >
-                        {label}
+                        {s.label}
                       </motion.span>
-                    )}
-                  </AnimatePresence>
-                </span>
-              </motion.button>
-            )}
-          </AnimatePresence>
-        </motion.div>
-      )}
+                    </button>
+                  </li>
+                )
+              })}
+            </motion.ul>
+          ) : (
+            <motion.button
+              key="pill"
+              type="button"
+              onClick={() => {
+                if (sections.length > 0) setOpen(true)
+              }}
+              aria-label="Show sections"
+              className="absolute inset-0 flex items-center gap-2.5 py-1.5 pl-2 pr-4 cursor-pointer"
+              initial={{
+                opacity: 0,
+                filter: reduceMotion ? undefined : "blur(4px)",
+              }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              exit={{
+                opacity: 0,
+                filter: reduceMotion ? undefined : "blur(4px)",
+              }}
+              transition={LAYER_FADE}
+            >
+              <span className="shrink-0">
+                <svg viewBox="0 0 24 24" className="h-5 w-5 -rotate-90" aria-hidden>
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    fill="none"
+                    strokeWidth="2.5"
+                    className="stroke-neutral-300 dark:stroke-neutral-700"
+                  />
+                  <motion.circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    fill="none"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    className="stroke-neutral-900 dark:stroke-white"
+                    style={{ pathLength: progress }}
+                  />
+                </svg>
+              </span>
+
+              <span
+                className="relative h-5 shrink-0"
+                style={{ width: labelWidth }}
+              >
+                <AnimatePresence initial={false}>
+                  {label && (
+                    <motion.span
+                      key={labelVersion.current}
+                      data-slot="scroll-progress-label"
+                      className="absolute inset-y-0 left-0 flex items-center whitespace-nowrap text-sm font-medium leading-none text-neutral-900 dark:text-white"
+                      initial={
+                        reduceMotion
+                          ? { opacity: 0 }
+                          : { opacity: 0, filter: "blur(1.5px)" }
+                      }
+                      animate={{ opacity: 1, filter: "blur(0px)" }}
+                      exit={
+                        reduceMotion
+                          ? { opacity: 0 }
+                          : { opacity: 0, filter: "blur(1.5px)" }
+                      }
+                      transition={LABEL_CROSSFADE}
+                    >
+                      {label}
+                    </motion.span>
+                  )}
+                </AnimatePresence>
+              </span>
+            </motion.button>
+          )}
+        </AnimatePresence>
+      </motion.div>
     </div>
   )
 }
