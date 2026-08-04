@@ -142,3 +142,9 @@ Le prisonnier est victime de la grace de Jésus-Christ car il a été sauvé par
 On peut aussi dire que le prisonnier est un "faux Yeshoua" car il a désobéi a son supérieur, les Romains, en se rebellant, or le "vrai Yeshoua" lui n'a pas refusé le sacrifice à la croix car le père en était l’initiateur.
 
 Finalement, tout un tas de lecture, de leçon, d'enseignement peuvement émerger, je ne detiens pas toute la vérité et je suis ouvert au débat et a toute remarques, avis, correction etc..
+
+##### Source :
+
+[Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
+
+[bible.com](https://www.bible.com/)

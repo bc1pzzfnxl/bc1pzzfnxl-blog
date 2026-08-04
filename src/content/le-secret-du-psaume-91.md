@@ -226,4 +226,4 @@ Cette analyse est purement personnelle, je suis ouvert à toutes remarques const
 
 https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/
 
-https://www.bible.com/
+[bible.com](https://www.bible.com/)

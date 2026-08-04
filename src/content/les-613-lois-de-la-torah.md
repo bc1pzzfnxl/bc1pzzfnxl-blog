@@ -116,4 +116,4 @@ Merci pour votre lecture, je suis ouvert à toutes formes de critiques construit
 
 [Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
 
-[https://www.bible.com/](https://www.bible.com/)
+[bible.com](https://www.bible.com/)
