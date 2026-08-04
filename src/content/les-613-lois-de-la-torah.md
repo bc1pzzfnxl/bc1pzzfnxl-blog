@@ -105,3 +105,15 @@ Le mot **cultiver** (*Le'ovdah* - לעבדה) et **garder** (*Uleshomrah* - ול
 Les 613 commandements ont une profondeur spirituelle bien plus grande que ce que l'on pense. Abraham avait déjà connaissance de ces lois et il les appliquait d'une certaine manière. Le Jardin d'Éden est aussi le reflet de ces 613 lois. J'aurais aimé aller plus en détail, notamment sur le Pardès, en incluant une lecture Derash et Sod, mais c'est un niveau bien plus compliqué pour moi ; les réponses se trouvent dans le Zohar.
 
 Merci pour votre lecture, je suis ouvert à toutes formes de critiques construites et d'améliorations.
+
+##### Source :
+
+[Rav Ron Chaya](https://myleava.fr/)
+
+[Talmud | Sefaria Library](https://www.sefaria.org/texts/Talmud)
+
+[Midrash Tehillim | Sefaria Library](https://www.sefaria.org/Midrash_Tehillim)
+
+[Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
+
+[https://www.bible.com/](https://www.bible.com/)

@@ -224,6 +224,6 @@ Cette analyse est purement personnelle, je suis ouvert à toutes remarques const
 
 [Midrash Tehillim | Sefaria Library](https://www.sefaria.org/Midrash_Tehillim)
 
-[Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
+https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/
 
 https://www.bible.com/
