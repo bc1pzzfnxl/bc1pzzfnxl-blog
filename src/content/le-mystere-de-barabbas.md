@@ -77,7 +77,7 @@ On va donc chercher un mot qui a pour valeur 386, celui-ci est _Lashon_ :
 
 - Lamed = 30
 
-- Shin = 300d
+- Shin = 300
 
 - Vav = 6
 
@@ -133,18 +133,17 @@ Donc "Yeshoua Barabbas" signifie la "Divinité" en grec Koinè, en utilisant la 
 
 ## Conclusion
 
-En adoptant cette lecture particulière du Tanakh et du nouveau testament, on se rend compte qu'il n'y pas de barrière de langue, tout est transposable de manière mathématique car Dieu en est le créateur.
+En adoptant cette lecture particulière du Tanakh et du Nouveau Testament, on se rend compte qu'il n'y a pas de barrière de langue, tout est transposable de manière mathématique car Dieu en est le créateur. La 
 
-On a réussi a établir un lien claire en le prisonnier, Yeshoua Barrabas et Jesus Christ. Si le nom du prisonnier est donné c'est qu'il y'a une utilité pour nous, lecteur. On pourrait creuser encore plus, notamment sur la période du procès de Jésus-Christ, en pleine pâque juive.
+On a réussi à établir un lien clair entre le prisonnier, Yeshoua Barabbas et Jésus-Christ. Si le nom du prisonnier est donné c'est qu'il y a une utilité pour nous, lecteur. On pourrait creuser encore plus, notamment sur la période du procès de Jésus-Christ, en pleine Pâque juive.
 
-Le prisonnier est victime de la grace de Jésus-Christ car il a été sauvé par son sacrifice, il était l'un des derniers représentant de la loi car a cause de son meurtre, il a été jeter en prison éternellement, symbole de la mort.
+Le prisonnier est victime de la grâce de Jésus-Christ car il a été sauvé par son sacrifice, il était l'un des derniers représentants de la loi car à cause de son meurtre, il a été jeté en prison éternellement, symbole de la mort.
 
-On peut aussi dire que le prisonnier est un "faux Yeshoua" car il a désobéi a son supérieur, les Romains, en se rebellant, or le "vrai Yeshoua" lui n'a pas refusé le sacrifice à la croix car le père en était l’initiateur.
+On peut aussi dire que le prisonnier est un "faux Yeshoua" car il a désobéi à son supérieur, les Romains, en se rebellant, or le "vrai Yeshoua" lui n'a pas refusé le sacrifice à la croix car le Père en était l’initiateur.
 
-Finalement, tout un tas de lecture, de leçon, d'enseignement peuvement émerger, je ne detiens pas toute la vérité et je suis ouvert au débat et a toute remarques, avis, correction etc..
+Finalement, tout un tas de lectures, de leçons, d'enseignements peuvent émerger, je ne détiens pas toute la vérité et je suis ouvert au débat et à toutes remarques, avis, corrections etc.
 
-##### Source :
+## Sources
 
-[Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
-
-[bible.com](https://www.bible.com/)
+- [Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
+- [bible.com](https://www.bible.com/)

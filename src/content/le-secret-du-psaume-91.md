@@ -22,7 +22,7 @@ Le passage qui va nous intéresser est le 91:1 :
 - Assis au secret du Suprême, il nuite à l'ombre de Shaddaï (André Chouraqui)
 - יֹשֵׁב בְּסֵתֶר **עֶלְיוֹן** בְּצֵל **שַׁדַּי** יִתְלוֹנָן׃ (BHS)
 
-![Image](https://pbs.twimg.com/media/HIgnLBFWEAAzqS4?format=png&name=900x900)
+![Psaume 91:1 en hébreu BHS et traductions français](https://pbs.twimg.com/media/HIgnLBFWEAAzqS4?format=png&name=900x900)
 
 ## Genèse :
 
@@ -36,7 +36,7 @@ Je vais utiliser 2 versets :
 - Malki-Sèdèq, roi de Shalèm, a fait sortir le pain et le vin, lui, le desservant d'Él 'Éliôn (André Chouraqui)
 - וּמַלְכִּי־צֶדֶק מֶלֶךְ שָׁלֵם הוֹצִיא לֶחֶם וָיָיִן וְהוּא־כֹהֵן **לְאֵל עֶלְיוֹן**׃ (BHS)
 
-![Image](https://pbs.twimg.com/media/HIgoxw6XcAARU-o?format=jpg&name=medium)
+![Genèse 14:18 El Elyon en hébreu](https://pbs.twimg.com/media/HIgoxw6XcAARU-o?format=jpg&name=medium)
 
 ### Genèse 17:1
 
@@ -44,7 +44,7 @@ Je vais utiliser 2 versets :
 - Et c'est Abrâm : il a quatre-vingt-dix-neuf ans. YHWH se fait voir à Abrâm et lui dit : "Moi, Él Shaddaï ; va en faces de moi : sois intègre ! (André Chouraqui)
 - וַיְהִי אַבְרָם בֶּן־תִשְׁעִים שָׁנָה וְתֵשַׁע שָׁנִים וַיֵּרָא יְהוָה אֶל־אַבְרָם וַיֹּאמֶר אֵלָיו אֲנִי־**אֵל שַׁדַּי** הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים׃ (BHS)
 
-<img title="" src="https://pbs.twimg.com/media/HIgpt5mWMAA3unw?format=jpg&name=large" alt="Image" width="734">
+![Genèse 17:1 El Shaddai en hébreu](https://pbs.twimg.com/media/HIgpt5mWMAA3unw?format=jpg&name=large)
 
 ### Pourquoi ces 2 versets de Genèse ?
 
@@ -58,7 +58,7 @@ On va donc analyser le Psaume 91:1 :
 
 Il y a cette notion de position, être sous l'abri du Très-Haut, donc être dans la tente tout en étant à l'ombre du Tout-Puissant :
 
-![Image](https://pbs.twimg.com/media/HIgqDuyWYAA-qHp?format=png&name=360x360)
+![Schéma de position sous l'abri du Très-Haut et à l'ombre du Tout-Puissant](https://pbs.twimg.com/media/HIgqDuyWYAA-qHp?format=png&name=360x360)
 
 La Bible évoque très souvent des adjectifs et verbes de position, Dieu élève les faibles et rabaisse les orgueilleux.
 
@@ -218,12 +218,9 @@ En demeurant dans l'abri du Très-Haut, on a connaissance du Tout-Puissant et l'
 
 Cette analyse est purement personnelle, je suis ouvert à toutes remarques construites, merci pour votre lecture.
 
-##### Source :
+## Sources
 
-[Talmud | Sefaria Library](https://www.sefaria.org/texts/Talmud)
-
-[Midrash Tehillim | Sefaria Library](https://www.sefaria.org/Midrash_Tehillim)
-
-https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/
-
-[bible.com](https://www.bible.com/)
+- [Talmud | Sefaria Library](https://www.sefaria.org/texts/Talmud)
+- [Midrash Tehillim | Sefaria Library](https://www.sefaria.org/Midrash_Tehillim)
+- [Biblica Hebraica Stuttgartensia - SBL Digital Texts](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
+- [bible.com](https://www.bible.com/)
