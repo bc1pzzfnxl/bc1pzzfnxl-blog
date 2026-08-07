@@ -1,6 +1,10 @@
 ---
 author: bc1pzzfnxl
 date: 2026-07-03
+dateModified: 2026-08-07
+url: https://bc1pzzfnxl.com/le-mystere-de-barabbas/
+image: https://upload.wikimedia.org/wikipedia/commons/d/de/Ecce_homo_by_Antonio_Ciseri_%281%29.jpg
+imageAlt: Antonio Ciseri – Ecce Homo (1871)
 ---
 
 ## Contexte
@@ -77,7 +81,7 @@ On va donc chercher un mot qui a pour valeur 386, celui-ci est _Lashon_ :
 
 - Lamed = 30
 
-- Shin = 300
+- Shin = 300d
 
 - Vav = 6
 
@@ -133,17 +137,18 @@ Donc "Yeshoua Barabbas" signifie la "Divinité" en grec Koinè, en utilisant la 
 
 ## Conclusion
 
-En adoptant cette lecture particulière du Tanakh et du Nouveau Testament, on se rend compte qu'il n'y a pas de barrière de langue, tout est transposable de manière mathématique car Dieu en est le créateur. La 
+En adoptant cette lecture particulière du Tanakh et du nouveau testament, on se rend compte qu'il n'y pas de barrière de langue, tout est transposable de manière mathématique car Dieu en est le créateur.la 
 
-On a réussi à établir un lien clair entre le prisonnier, Yeshoua Barabbas et Jésus-Christ. Si le nom du prisonnier est donné c'est qu'il y a une utilité pour nous, lecteur. On pourrait creuser encore plus, notamment sur la période du procès de Jésus-Christ, en pleine Pâque juive.
+On a réussi a établir un lien claire en le prisonnier, Yeshoua Barrabas et Jesus Christ. Si le nom du prisonnier est donné c'est qu'il y'a une utilité pour nous, lecteur. On pourrait creuser encore plus, notamment sur la période du procès de Jésus-Christ, en pleine pâque juive.
 
-Le prisonnier est victime de la grâce de Jésus-Christ car il a été sauvé par son sacrifice, il était l'un des derniers représentants de la loi car à cause de son meurtre, il a été jeté en prison éternellement, symbole de la mort.
+Le prisonnier est victime de la grace de Jésus-Christ car il a été sauvé par son sacrifice, il était l'un des derniers représentant de la loi car a cause de son meurtre, il a été jeter en prison éternellement, symbole de la mort.
 
-On peut aussi dire que le prisonnier est un "faux Yeshoua" car il a désobéi à son supérieur, les Romains, en se rebellant, or le "vrai Yeshoua" lui n'a pas refusé le sacrifice à la croix car le Père en était l’initiateur.
+On peut aussi dire que le prisonnier est un "faux Yeshoua" car il a désobéi a son supérieur, les Romains, en se rebellant, or le "vrai Yeshoua" lui n'a pas refusé le sacrifice à la croix car le père en était l’initiateur.
 
-Finalement, tout un tas de lectures, de leçons, d'enseignements peuvent émerger, je ne détiens pas toute la vérité et je suis ouvert au débat et à toutes remarques, avis, corrections etc.
+Finalement, tout un tas de lecture, de leçon, d'enseignement peuvement émerger, je ne detiens pas toute la vérité et je suis ouvert au débat et a toute remarques, avis, correction etc..
 
-## Sources
+##### Source :
 
-- [Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
-- [bible.com](https://www.bible.com/)
+[Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
+
+[bible.com](https://www.bible.com/)

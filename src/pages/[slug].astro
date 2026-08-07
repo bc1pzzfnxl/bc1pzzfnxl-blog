@@ -34,34 +34,54 @@ const description = rawContent()
     .trim()
     .substring(0, 160) + "...";
 
+const postUrl = frontmatter.url || new URL(Astro.url.pathname, Astro.site || "https://bc1pzzfnxl.com").href;
+const postImage = frontmatter.image || "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c";
+
 const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": title,
     "description": description,
-    "url": Astro.url.href,
+    "image": [postImage],
+    "url": postUrl,
     "inLanguage": "fr",
     "author": {
         "@type": "Person",
-        "name": frontmatter.author || "bc1pzzfnxl"
+        "name": frontmatter.author || "bc1pzzfnxl",
+        "url": "https://bc1pzzfnxl.com"
     },
     "publisher": {
         "@type": "Person",
-        "name": "bc1pzzfnxl"
+        "name": "bc1pzzfnxl",
+        "url": "https://bc1pzzfnxl.com"
     },
     "datePublished": frontmatter.date || "2026-07-03",
-    "dateModified": frontmatter.date || "2026-07-03",
+    "dateModified": frontmatter.dateModified || frontmatter.date || "2026-08-07",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": Astro.url.href
+        "@id": postUrl
     }
 };
 ---
 
-<MainLayout title={title} description={description} ogType="article">
+<MainLayout title={title} description={description} ogType="article" image={postImage}>
     <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
     <article>
         <h1>{title}</h1>
+        {frontmatter.image && (
+            <figure class="article-cover-wrapper">
+                <img
+                    src={frontmatter.image}
+                    alt={frontmatter.imageAlt || title}
+                    class="article-cover"
+                    loading="eager"
+                    decoding="async"
+                />
+                {frontmatter.imageAlt && (
+                    <figcaption class="article-cover-caption">{frontmatter.imageAlt}</figcaption>
+                )}
+            </figure>
+        )}
         <Content components={{ Icon }} />
     </article>
     <a href="/" class="back-link">← Back</a>

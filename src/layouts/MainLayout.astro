@@ -13,12 +13,14 @@ interface Props {
 	title: string;
 	description?: string;
 	ogType?: string;
+	image?: string;
 }
 
 const {
 	title,
 	description = "Blog perso | Théologie Chrétienne et Juive | Pensée personnelle",
 	ogType = "website",
+	image = "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c",
 } = Astro.props;
 
 const siteTitle = "bc1pzzfnxl";
@@ -42,12 +44,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <meta property="og:url" content={Astro.url} />
         <meta property="og:title" content={fullTitle} />
         <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={Astro.url} />
         <meta property="twitter:title" content={fullTitle} />
         <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={image} />
 
         <ClientRouter />
         <script is:inline>
@@ -169,6 +173,32 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                 display: list-item;
                 margin-bottom: 0.75rem;
             }
+            article img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin: 1.5rem 0 2rem 0;
+                display: block;
+            }
+            .article-cover-wrapper {
+                margin: 1rem 0 2rem 0;
+            }
+            .article-cover {
+                width: 100%;
+                height: auto;
+                max-height: 400px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin: 0;
+                display: block;
+            }
+            .article-cover-caption {
+                font-size: 0.85rem;
+                color: #6b7280;
+                margin-top: 0.5rem;
+                text-align: center;
+                font-style: italic;
+            }
             .back-link {
                 display: inline-block;
                 margin-top: 60px;
@@ -179,6 +209,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             html.dark-mode body {
                 background-color: #111111; 
                 color: #d1d5db;
+            }
+            html.dark-mode .article-cover-caption {
+                color: #9ca3af;
             }
             html.dark-mode h1, 
             html.dark-mode h2, 

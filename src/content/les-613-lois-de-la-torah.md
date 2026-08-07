@@ -1,13 +1,15 @@
 ---
 author: bc1pzzfnxl
 date: 2026-07-03
+dateModified: 2026-08-07
+url: https://bc1pzzfnxl.com/les-613-lois-de-la-torah/
+image: https://www.marcchagall.net/assets/img/paintings/solitude.jpg
+imageAlt: 5. Marc Chagall – Solitude (1933) & La Synagogue de Wilna (1914)
 ---
 
 ## Contexte
 
 En écoutant **Rav Ron Chaya**, j'ai appris pas mal de choses sur la Torah et ses **613 lois**. Je vais essayer d'expliquer quelques concepts clés tout en ajoutant un peu de **Gematria**, parce que je suis fan et c'est utile. Il y a aussi un lien entre le jardin d'Éden et les 2 types de lois : Faire et ne pas Faire.
-
----
 
 ## La Torah c'est quoi ?
 
@@ -37,8 +39,6 @@ Dieu parle à son peuple et annonce les "10 Paroles", les fameux 10 commandement
 
 À noter que le préambule peut être la 1ère loi et que la 1ère et 2ème peuvent être rassemblées en une. Moïse rencontre Dieu au Sinaï et reçoit la **Torah shebikhtab** (Torah écrite) et la **Torah shebe al Pe** (Torah orale), compilée ensuite dans le Talmud. Certains courants judaïques ne suivent pas le Talmud.
 
----
-
 ## Analyse des Commandements
 
 Les 10 commandements sont découpés en 2 tables : relation Homme-Dieu (**Bein Adam Lakom**) et relation Homme et l'autre (**Bein Adam Lahavero**). À noter qu'honorer son père et sa mère se trouve dans la 1ère table. Dieu souligne que le respect des parents est primordial : si tu ne respectes pas tes propres parents, comment veux-tu respecter Dieu qui est bien plus grand que toi ? Si tu n'es pas soumis à tes parents, tu ne peux l'être devant Dieu. Plusieurs interprétations peuvent émerger.
@@ -51,8 +51,6 @@ Donc sur les 10 commandements, seulement 2 ont été entendus du peuple, les 8 a
 
 1. **"Moi, YHWH, ton Elohîm"** : le fondement des *Mitzvot Asseh* (commandements positifs), 248.
 2. **"Il n’y aura pour toi d’autres Elohîm en face de moi"** : le fondement des *Mitzvot Lo Ta'asseh* (commandements négatifs), 365.
-
----
 
 ## Gematria de la Torah (Mispar Hechrachi)
 
@@ -70,8 +68,6 @@ Donc sur les 10 commandements, seulement 2 ont été entendus du peuple, les 8 a
 * **Orot** (אורות) = **613** (Signifie "Lumière"). La Torah est la lumière dans la vie du croyant, elle est Dieu révélé à l'Homme avant la personne de Jésus-Christ.
 * **Moshe Rabbeinu** (משה רבינו) = **613** (Signifie "Moïse notre maître").
 
----
-
 ## Gematria des Mitzvot
 
 ### Mitzvot Lo Ta'asseh (Interdictions)
@@ -84,8 +80,6 @@ Les 248 obligations correspondent au nombre total d'organes présents dans le co
 
 * **Bamidbar** (במדבר) = **248** (Le livre du désert, l'endroit où a été reçue la Torah).
 * **Abraham** (אברהם) = **248**. Le Talmud (Yoma 28b) nous dit qu'Abraham a accompli la Torah avant même qu'elle ne soit donnée.
-
----
 
 ## Lien entre le jardin d'Éden et les 613 commandements
 
@@ -106,10 +100,14 @@ Les 613 commandements ont une profondeur spirituelle bien plus grande que ce que
 
 Merci pour votre lecture, je suis ouvert à toutes formes de critiques construites et d'améliorations.
 
-## Sources
+##### Source :
 
-- [Rav Ron Chaya](https://myleava.fr/)
-- [Talmud | Sefaria Library](https://www.sefaria.org/texts/Talmud)
-- [Midrash Tehillim | Sefaria Library](https://www.sefaria.org/Midrash_Tehillim)
-- [Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
-- [bible.com](https://www.bible.com/)
+[Rav Ron Chaya](https://myleava.fr/)
+
+[Talmud | Sefaria Library](https://www.sefaria.org/texts/Talmud)
+
+[Midrash Tehillim | Sefaria Library](https://www.sefaria.org/Midrash_Tehillim)
+
+[Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
+
+[bible.com](https://www.bible.com/)

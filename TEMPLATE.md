@@ -1,6 +1,10 @@
 ---
 author: bc1pzzfnxl
 date: YYYY-MM-DD
+dateModified: YYYY-MM-DD
+url: https://bc1pzzfnxl.com/nom-de-l-article/
+image: https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c
+imageAlt: Description descriptive de l'image de couverture
 ---
 
 ## Contexte
@@ -53,11 +57,15 @@ date: YYYY-MM-DD
    - Ne pas mettre de titre H1 (`#`) dans le Markdown.
    - Démarrer directement au niveau H2 (`##`), puis sous-sections H3 (`###`).
 
-3. **Optimisation SEO** :
+3. **Optimisation SEO & Données structurées (Rich Results)** :
    - **Méta-description** : Rédiger un premier paragraphe captivant d'au moins 160 caractères contenant le mot-clé principal.
-   - **Images** : Toujours ajouter un texte alternatif descriptif (ex: `![Description précise de l'image](url)`).
+   - **Photo de couverture automatique** : Le champ `image` du frontmatter est automatiquement inséré et affiché sous le titre H1 de la page.
+   - **Images dans le corps du texte** : Toujours ajouter un texte alternatif descriptif (ex: `![Description précise de l'image](url)`).
    - **Liens internes / externes** : Formater les liens au format Markdown `[Texte du lien](URL)`.
 
-4. **Frontmatter YAML** :
+4. **Frontmatter YAML (Obligatoire pour Google Rich Results)** :
    - `author`: toujours `bc1pzzfnxl`.
    - `date`: format `YYYY-MM-DD`.
+   - `url`: URL canonique de l'article (ex: `https://bc1pzzfnxl.com/nom-de-l-article/`).
+   - `image`: URL de l'image affichée sous le H1, utilisée pour `BlogPosting`, OpenGraph et Twitter Card.
+   - `imageAlt`: Description textuelle / balise `alt` de l'image affichée sous le H1.
