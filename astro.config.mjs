@@ -20,6 +20,18 @@ export default defineConfig({
   integrations: [mdx(), icon(), sitemap(), react()],
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      exclude: [
+        "@astrojs/cloudflare",
+        "@astrojs/cloudflare/entrypoints/server",
+      ],
+    },
+    ssr: {
+      external: [
+        "@astrojs/cloudflare",
+        "@astrojs/cloudflare/entrypoints/server",
+      ],
+    },
     resolve: {
       alias: {
         "@": fileURLToPath(new URL("./src", import.meta.url)),

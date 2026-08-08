@@ -1,4 +1,5 @@
 ---
+title: Les 613 Lois de la Torah
 author: bc1pzzfnxl
 date: 2026-07-03
 dateModified: 2026-08-07

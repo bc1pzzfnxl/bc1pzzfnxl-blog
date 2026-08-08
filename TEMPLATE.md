@@ -1,4 +1,5 @@
 ---
+title: Titre de l'article avec accents
 author: bc1pzzfnxl
 date: YYYY-MM-DD
 dateModified: YYYY-MM-DD
@@ -59,8 +60,8 @@ imageAlt: Description descriptive de l'image de couverture
 
 3. **Optimisation SEO & Données structurées (Rich Results)** :
    - **Méta-description** : Rédiger un premier paragraphe captivant d'au moins 160 caractères contenant le mot-clé principal.
-   - **Photo de couverture automatique** : Le champ `image` du frontmatter est automatiquement inséré et affiché sous le titre H1 de la page.
-   - **Images dans le corps du texte** : Toujours ajouter un texte alternatif descriptif (ex: `![Description précise de l'image](url)`).
+   - **Photo de couverture automatique** : Le champ `image` du frontmatter est automatiquement inséré sous le titre H1 avec un ratio fixe `16 / 9` (`width="680"` / `height="382"` pour garantir un CLS = 0).
+   - **Images dans le corps du texte** : Largeur calée sur le conteneur du texte (`width: 100%; max-width: 100%; height: auto; border-radius: 8px;`). Toujours ajouter un texte alternatif descriptif (ex: `![Description précise de l'image](url)`).
    - **Liens internes / externes** : Formater les liens au format Markdown `[Texte du lien](URL)`.
 
 4. **Frontmatter YAML (Obligatoire pour Google Rich Results)** :

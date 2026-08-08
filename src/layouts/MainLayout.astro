@@ -33,6 +33,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        <!-- Favicons & Touch Icons -->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
         <!-- Primary Meta Tags -->
         <title>{fullTitle}</title>
         <meta name="title" content={fullTitle} />
@@ -174,6 +180,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                 margin-bottom: 0.75rem;
             }
             article img {
+                width: 100%;
                 max-width: 100%;
                 height: auto;
                 border-radius: 8px;
@@ -182,11 +189,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             }
             .article-cover-wrapper {
                 margin: 1rem 0 2rem 0;
+                width: 100%;
             }
             .article-cover {
                 width: 100%;
                 height: auto;
                 max-height: 400px;
+                aspect-ratio: 16 / 9;
                 object-fit: cover;
                 border-radius: 8px;
                 margin: 0;
@@ -199,6 +208,25 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                 text-align: center;
                 font-style: italic;
             }
+            .article-meta {
+                font-size: 0.9rem;
+                color: #6b7280;
+                margin-top: -0.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .article-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 60px;
+            }
+            .article-footer .back-link {
+                margin-top: 0;
+            }
+            .article-footer .modified-date {
+                font-size: 0.85rem;
+                color: #6b7280;
+            }
             .back-link {
                 display: inline-block;
                 margin-top: 60px;
@@ -210,7 +238,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                 background-color: #111111; 
                 color: #d1d5db;
             }
-            html.dark-mode .article-cover-caption {
+            html.dark-mode .article-cover-caption,
+            html.dark-mode .article-meta,
+            html.dark-mode .article-footer .modified-date {
                 color: #9ca3af;
             }
             html.dark-mode h1, 

@@ -19,7 +19,7 @@ const { post } = Astro.props;
 const { Content, rawContent, frontmatter = {} } = post;
 
 const slug = Astro.params.slug;
-const title = decodeURIComponent(slug || "")
+const title = frontmatter.title || decodeURIComponent(slug || "")
     .toLowerCase()
     .split("-")
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -48,12 +48,18 @@ const schema = {
     "author": {
         "@type": "Person",
         "name": frontmatter.author || "bc1pzzfnxl",
-        "url": "https://bc1pzzfnxl.com"
+        "url": "https://bc1pzzfnxl.com",
+        "image": "https://bc1pzzfnxl.com/logo.png"
     },
     "publisher": {
         "@type": "Person",
         "name": "bc1pzzfnxl",
-        "url": "https://bc1pzzfnxl.com"
+        "url": "https://bc1pzzfnxl.com",
+        "image": "https://bc1pzzfnxl.com/logo.png",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://bc1pzzfnxl.com/logo.png"
+        }
     },
     "datePublished": frontmatter.date || "2026-07-03",
     "dateModified": frontmatter.dateModified || frontmatter.date || "2026-08-07",
@@ -62,18 +68,35 @@ const schema = {
         "@id": postUrl
     }
 };
+const formatDate = (dateStr?: string) => {
+    if (!dateStr) return "";
+    const date = new Date(dateStr);
+    return isNaN(date.getTime())
+        ? dateStr
+        : new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" }).format(date);
+};
+
+const publishDate = formatDate(frontmatter.date);
+const modifiedDate = formatDate(frontmatter.dateModified);
 ---
 
 <MainLayout title={title} description={description} ogType="article" image={postImage}>
     <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
     <article>
         <h1>{title}</h1>
+        {publishDate && (
+            <div class="article-meta">
+                <time datetime={frontmatter.date}>{publishDate}</time>
+            </div>
+        )}
         {frontmatter.image && (
             <figure class="article-cover-wrapper">
                 <img
                     src={frontmatter.image}
                     alt={frontmatter.imageAlt || title}
                     class="article-cover"
+                    width="680"
+                    height="382"
                     loading="eager"
                     decoding="async"
                 />
@@ -84,5 +107,10 @@ const schema = {
         )}
         <Content components={{ Icon }} />
     </article>
-    <a href="/" class="back-link">← Back</a>
+    <div class="article-footer">
+        <a href="/" class="back-link">← Retour</a>
+        {modifiedDate && (
+            <span class="modified-date">Modifié le {modifiedDate}</span>
+        )}
+    </div>
 </MainLayout>

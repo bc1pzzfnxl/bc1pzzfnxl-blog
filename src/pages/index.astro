@@ -6,22 +6,41 @@ export const prerender = true;
 const postsData = import.meta.glob("../content/*.{md,mdx}", { eager: true });
 const posts = Object.entries(postsData).map(([path, post]) => {
     const slug = path.split("/").pop().replace(/\.(md|mdx)$/, "");
-    // Méthode ultra-robuste : on sépare les mots et on capitalise juste la première lettre
-    const title = slug
+    const title = post.frontmatter?.title || slug
         .toLowerCase()
         .split("-")
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
     return { slug, title, post };
 });
+
+const siteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "bc1pzzfnxl",
+    "url": "https://bc1pzzfnxl.com",
+    "description": "Blog perso | Théologie biblique, exégèse et pensée personnelle.",
+    "inLanguage": "fr",
+    "publisher": {
+        "@type": "Person",
+        "name": "bc1pzzfnxl",
+        "url": "https://bc1pzzfnxl.com",
+        "image": "https://bc1pzzfnxl.com/logo.png",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://bc1pzzfnxl.com/logo.png"
+        }
+    }
+};
 ---
 
 <MainLayout title="Home">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(siteSchema)} />
     <section>
         <h2
             style="font-size: 0.9rem; text-transform: uppercase; color: #666; margin-bottom: 20px;"
         >
-            Posts
+            Articles
         </h2>
         {
             posts.length > 0 ? (
@@ -33,7 +52,7 @@ const posts = Object.entries(postsData).map(([path, post]) => {
                     ))}
                 </ul>
             ) : (
-                <p>No posts yet.</p>
+                <p>Aucun article pour le moment.</p>
             )
         }
     </section>
