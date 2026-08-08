@@ -4,7 +4,7 @@ author: bc1pzzfnxl
 date: 2026-07-03
 dateModified: 2026-08-07
 url: https://bc1pzzfnxl.com/le-mystere-de-barabbas/
-image: https://upload.wikimedia.org/wikipedia/commons/d/de/Ecce_homo_by_Antonio_Ciseri_%281%29.jpg
+image: https://bc1pzzfnxl.com/images/barabbas.webp
 imageAlt: Antonio Ciseri – Ecce Homo (1871)
 ---
 

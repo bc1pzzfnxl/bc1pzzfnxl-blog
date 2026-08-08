@@ -4,8 +4,8 @@ author: bc1pzzfnxl
 date: 2026-07-03
 dateModified: 2026-08-07
 url: https://bc1pzzfnxl.com/les-613-lois-de-la-torah/
-image: https://www.marcchagall.net/assets/img/paintings/solitude.jpg
-imageAlt: 5. Marc Chagall – Solitude (1933) & La Synagogue de Wilna (1914)
+image: https://bc1pzzfnxl.com/images/torah-613.webp
+imageAlt: Marc Chagall – Solitude (1933)
 ---
 
 ## Contexte

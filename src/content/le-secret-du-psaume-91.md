@@ -4,7 +4,7 @@ author: bc1pzzfnxl
 date: 2026-07-04
 dateModified: 2026-08-07
 url: https://bc1pzzfnxl.com/le-secret-du-psaume-91/
-image: https://upload.wikimedia.org/wikipedia/commons/f/f3/Sacrifice_of_Abel_and_Melchisedek_mosaic_-_San_Vitale_-_Ravenna_2016.jpg
+image: https://bc1pzzfnxl.com/images/psaume-91.webp
 imageAlt: Mosaïques de la Basilique Saint-Vital de Ravenne (VIᵉ siècle)
 ---
 
@@ -27,7 +27,7 @@ Le passage qui va nous intéresser est le 91:1 :
 - Assis au secret du Suprême, il nuite à l'ombre de Shaddaï (André Chouraqui)
 - יֹשֵׁב בְּסֵתֶר **עֶלְיוֹן** בְּצֵל **שַׁדַּי** יִתְלוֹנָן׃ (BHS)
 
-![Image](https://pbs.twimg.com/media/HIgnLBFWEAAzqS4?format=png&name=900x900)
+![Analyse hébraïque Psaume 91:1](/images/psaume-91-abris.webp)
 
 ## Genèse :
 
@@ -41,7 +41,7 @@ Je vais utiliser 2 versets :
 - Malki-Sèdèq, roi de Shalèm, a fait sortir le pain et le vin, lui, le desservant d'Él 'Éliôn (André Chouraqui)
 - וּמַלְכִּי־צֶדֶק מֶלֶךְ שָׁלֵם הוֹצִיא לֶחֶם וָיָיִן וְהוּא־כֹהֵן **לְאֵל עֶלְיוֹן**׃ (BHS)
 
-![Image](https://pbs.twimg.com/media/HIgoxw6XcAARU-o?format=jpg&name=medium)
+![Texte hébreu Genèse 14:18 - Melchisédek et El Elyon](/images/psaume-91-melchisedek.webp)
 
 ### Genèse 17:1
 
@@ -49,7 +49,7 @@ Je vais utiliser 2 versets :
 - Et c'est Abrâm : il a quatre-vingt-dix-neuf ans. YHWH se fait voir à Abrâm et lui dit : "Moi, Él Shaddaï ; va en faces de moi : sois intègre ! (André Chouraqui)
 - וַיְהִי אַבְרָם בֶּן־תִשְׁעִים שָׁנָה וְתֵשַׁע שָׁנִים וַיֵּרָא יְהוָה אֶל־אַבְרָם וַיֹּאמֶר אֵלָיו אֲנִי־**אֵל שַׁדַּי** הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים׃ (BHS)
 
-<img title="" src="https://pbs.twimg.com/media/HIgpt5mWMAA3unw?format=jpg&name=large" alt="Image" width="734">
+![Texte hébreu Genèse 17:1 - El Shaddaï](/images/psaume-91-abram.webp)
 
 ### Pourquoi ces 2 versets de Genèse ?
 
@@ -63,7 +63,7 @@ On va donc analyser le Psaume 91:1 :
 
 Il y a cette notion de position, être sous l'abri du Très-Haut, donc être dans la tente tout en étant à l'ombre du Tout-Puissant :
 
-![Image](https://pbs.twimg.com/media/HIgqDuyWYAA-qHp?format=png&name=360x360)
+![Schéma de positionnement Psaume 91:1](/images/psaume-91-ombre.webp)
 
 La Bible évoque très souvent des adjectifs et verbes de position, Dieu élève les faibles et rabaisse les orgueilleux.
 

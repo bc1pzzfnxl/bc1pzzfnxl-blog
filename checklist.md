@@ -25,6 +25,7 @@
 - [x] **Typographie & URLs sémantiques** : Titres UI (`<h1>`, `<title>`, `post.frontmatter.title`) avec accents complets pour la lisibilité et le NLP Google, et URLs (Slugs) en pur ASCII kebab-case sans accents pour éviter le pourcent-encodage (`%C3%A9`) et garantir une indexation propre.
 - [x] **Métadonnées visibles pour l'utilisateur** : Date de publication sous le titre H1 et date de dernière modification en bas de page face au lien retour.
 - [x] **Attributs de dimension & Norme images (CLS = 0)** : Ratio d'aspect défini (`aspect-ratio: 16 / 9` sur couverture, `width="680"` / `height="382"`, `width: 100%; height: auto` dans le flux de lecture) empêchant tout Cumulative Layout Shift.
+- [x] **Images locales optimisées & Préchargement LCP** : Images d'articles et de couverture hébergées localement dans `public/images/` au format WebP léger (< 100-200 KB) avec balise `<link rel="preload" as="image" href={image} fetchpriority="high">` dans le `<head>` pour éliminer tout délai DNS/TLS externe et obtenir un LCP instantané sur mobile.
 - [x] **Performance technique** :
   - Rendu statique précompilé (`prerender = true`).
   - Hébergement Edge via Cloudflare Pages (faible TTFB).

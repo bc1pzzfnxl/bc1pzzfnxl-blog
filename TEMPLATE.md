@@ -4,7 +4,7 @@ author: bc1pzzfnxl
 date: YYYY-MM-DD
 dateModified: YYYY-MM-DD
 url: https://bc1pzzfnxl.com/nom-de-l-article/
-image: https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c
+image: https://bc1pzzfnxl.com/images/nom-de-l-image.webp
 imageAlt: Description descriptive de l'image de couverture
 ---
 
@@ -50,23 +50,25 @@ imageAlt: Description descriptive de l'image de couverture
 
 ### Guide Normes & SEO du Blog
 
-1. **Nommage du fichier** :
-   - Fichier dans `src/content/nom-de-l-article.md` (en `kebab-case`).
-   - Le titre `<h1>` de la page est généré automatiquement depuis le nom du fichier.
+1. **Nommage du fichier & URL** :
+   - Fichier dans `src/content/nom-de-l-article.md` (en `kebab-case` pur sans accents).
+   - Titre dans le frontmatter `title: "Titre avec accents"` pour l'affichage UI et le NLP Google.
 
 2. **Structure des Titres** :
-   - Ne pas mettre de titre H1 (`#`) dans le Markdown.
+   - Ne pas mettre de titre H1 (`#`) dans le corps du Markdown.
    - Démarrer directement au niveau H2 (`##`), puis sous-sections H3 (`###`).
 
-3. **Optimisation SEO & Données structurées (Rich Results)** :
+3. **Optimisation SEO, Images & Performance Web (LCP / CLS)** :
    - **Méta-description** : Rédiger un premier paragraphe captivant d'au moins 160 caractères contenant le mot-clé principal.
-   - **Photo de couverture automatique** : Le champ `image` du frontmatter est automatiquement inséré sous le titre H1 avec un ratio fixe `16 / 9` (`width="680"` / `height="382"` pour garantir un CLS = 0).
-   - **Images dans le corps du texte** : Largeur calée sur le conteneur du texte (`width: 100%; max-width: 100%; height: auto; border-radius: 8px;`). Toujours ajouter un texte alternatif descriptif (ex: `![Description précise de l'image](url)`).
+   - **Image de couverture locale** : Toujours placer l'image dans `public/images/` au format WebP optimisé (< 150 KB). Elle est automatiquement préchargée via `<link rel="preload">` et insérée sous le H1 avec ratio fixe `16 / 9` (`width="680"` / `height="382"` pour garantir un CLS = 0).
+   - **Images dans le corps du texte** : Placées dans `public/images/` au format WebP, adaptées à la largeur de lecture (`width: 100%; max-width: 100%; height: auto; border-radius: 8px;`). Toujours renseigner un `alt` sémantique (ex: `![Description précise de l'image](/images/illustration.webp)`).
    - **Liens internes / externes** : Formater les liens au format Markdown `[Texte du lien](URL)`.
 
-4. **Frontmatter YAML (Obligatoire pour Google Rich Results)** :
+4. **Frontmatter YAML (Obligatoire pour Google Rich Results & E-E-A-T)** :
+   - `title`: Titre complet avec accents.
    - `author`: toujours `bc1pzzfnxl`.
-   - `date`: format `YYYY-MM-DD`.
+   - `date`: date de première publication au format `YYYY-MM-DD`.
+   - `dateModified`: date de dernière mise à jour au format `YYYY-MM-DD`.
    - `url`: URL canonique de l'article (ex: `https://bc1pzzfnxl.com/nom-de-l-article/`).
-   - `image`: URL de l'image affichée sous le H1, utilisée pour `BlogPosting`, OpenGraph et Twitter Card.
+   - `image`: URL absolue de l'image WebP (`https://bc1pzzfnxl.com/images/nom-de-l-image.webp`).
    - `imageAlt`: Description textuelle / balise `alt` de l'image affichée sous le H1.

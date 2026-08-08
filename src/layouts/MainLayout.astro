@@ -20,7 +20,7 @@ const {
 	title,
 	description = "Blog perso | Théologie Chrétienne et Juive | Pensée personnelle",
 	ogType = "website",
-	image = "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c",
+	image = "https://bc1pzzfnxl.com/images/default-cover.webp",
 } = Astro.props;
 
 const siteTitle = "bc1pzzfnxl";
@@ -38,6 +38,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+        <!-- Preload LCP Image -->
+        {image && <link rel="preload" as="image" href={image} fetchpriority="high" />}
 
         <!-- Primary Meta Tags -->
         <title>{fullTitle}</title>
