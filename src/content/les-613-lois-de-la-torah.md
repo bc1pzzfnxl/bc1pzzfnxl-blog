@@ -2,7 +2,7 @@
 title: Les 613 Lois de la Torah
 author: bc1pzzfnxl
 date: 2026-07-03
-dateModified: 2026-08-07
+dateModified: 2026-08-09
 url: https://bc1pzzfnxl.com/les-613-lois-de-la-torah/
 image: https://bc1pzzfnxl.com/images/torah-613.webp
 imageAlt: Marc Chagall – Solitude (1933)
@@ -97,7 +97,7 @@ Le mot **cultiver** (*Le'ovdah* - לעבדה) et **garder** (*Uleshomrah* - ול
 
 ## Conclusion :
 
-Les 613 commandements ont une profondeur spirituelle bien plus grande que ce que l'on pense. Abraham avait déjà connaissance de ces lois et il les appliquait d'une certaine manière. Le Jardin d'Éden est aussi le reflet de ces 613 lois. J'aurais aimé aller plus en détail, notamment sur le Pardès, en incluant une lecture Derash et Sod, mais c'est un niveau bien plus compliqué pour moi ; les réponses se trouvent dans le Zohar.
+Les 613 commandements ont une profondeur spirituelle bien plus grande que ce que l'on pense. Abraham avait déjà connaissance de ces lois et il les appliquait d'une certaine manière. Le Jardin d'Éden est aussi le reflet de ces 613 lois. J'aurais aimé aller plus en détail, notamment sur le Pardès, en incluant une lecture Derash et Sod, mais c'est un niveau bien plus compliqué pour moi, les réponses se trouvent dans le Zohar.
 
 Merci pour votre lecture, je suis ouvert à toutes formes de critiques construites et d'améliorations.
 

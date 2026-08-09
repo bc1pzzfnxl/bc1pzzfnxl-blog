@@ -51,20 +51,24 @@ imageAlt: Description descriptive de l'image de couverture
 ### Guide Normes & SEO du Blog
 
 1. **Nommage du fichier & URL** :
+   
    - Fichier dans `src/content/nom-de-l-article.md` (en `kebab-case` pur sans accents).
    - Titre dans le frontmatter `title: "Titre avec accents"` pour l'affichage UI et le NLP Google.
 
 2. **Structure des Titres** :
+   
    - Ne pas mettre de titre H1 (`#`) dans le corps du Markdown.
    - Démarrer directement au niveau H2 (`##`), puis sous-sections H3 (`###`).
 
 3. **Optimisation SEO, Images & Performance Web (LCP / CLS)** :
+   
    - **Méta-description** : Rédiger un premier paragraphe captivant d'au moins 160 caractères contenant le mot-clé principal.
    - **Image de couverture locale** : Toujours placer l'image dans `public/images/` au format WebP optimisé (< 150 KB). Elle est automatiquement préchargée via `<link rel="preload">` et insérée sous le H1 avec ratio fixe `16 / 9` (`width="680"` / `height="382"` pour garantir un CLS = 0).
    - **Images dans le corps du texte** : Placées dans `public/images/` au format WebP, adaptées à la largeur de lecture (`width: 100%; max-width: 100%; height: auto; border-radius: 8px;`). Toujours renseigner un `alt` sémantique (ex: `![Description précise de l'image](/images/illustration.webp)`).
    - **Liens internes / externes** : Formater les liens au format Markdown `[Texte du lien](URL)`.
 
 4. **Frontmatter YAML (Obligatoire pour Google Rich Results & E-E-A-T)** :
+   
    - `title`: Titre complet avec accents.
    - `author`: toujours `bc1pzzfnxl`.
    - `date`: date de première publication au format `YYYY-MM-DD`.

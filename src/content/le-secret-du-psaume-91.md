@@ -2,7 +2,7 @@
 title: Le Secret du Psaume 91
 author: bc1pzzfnxl
 date: 2026-07-04
-dateModified: 2026-08-07
+dateModified: 2026-08-09
 url: https://bc1pzzfnxl.com/le-secret-du-psaume-91/
 image: https://bc1pzzfnxl.com/images/psaume-91.webp
 imageAlt: Mosaïques de la Basilique Saint-Vital de Ravenne (VIᵉ siècle)
@@ -10,7 +10,7 @@ imageAlt: Mosaïques de la Basilique Saint-Vital de Ravenne (VIᵉ siècle)
 
 ## Contexte :
 
-J'ai écouté le sermon d'un prédicateur à Singapour, Joseph Prince qui fait une explication du Psaume 91 et de son lien avec Genèse. J'ai donc pris des notes et je vais expliquer à l'écrit son enseignement tout en rajoutant d'autres éléments, comme la guématria ou des explications rabbiniques.
+J'ai écouté le sermon d'un prédicateur à Singapour, Joseph Prince qui fait une explication du Psaume 91, de son lien avec Genèse et de ses bénédictions. J'ai donc pris des notes et je vais expliquer à l'écrit son enseignement tout en rajoutant d'autres éléments, comme la gematria ou des explications rabbiniques.
 
 ## Texte utilisé :
 
@@ -115,11 +115,11 @@ Abram refuse les cadeaux du Roi de Sodome car il ne veut pas être enrichi par l
 
 Vient ensuite la Dîme, au lieu d'accepter l'offrande du Roi de Sodome, il donne 10% (Dîme) de ce qu'il a gagné de sa guerre contre les 4 Rois pour sauver son neveu Lot. En donnant ce butin à Melchisédek, il reconnaît que la victoire ne vient pas de lui mais de Dieu. Et mieux encore, il ne garde pas le reste du butin, mais le restitue au Roi de Sodome en disant :
 
-- Je ne prendrai rien de tout ce qui est à toi, pas même un fil, ni un cordon de soulier, afin que tu ne dises pas : J'ai enrichi Abram. (Genèse 14:23 (SG21))
+- Je ne prendrai rien de tout ce qui est à toi, pas même un fil, ni un cordon de soulier, afin que tu ne dises pas : J'ai enrichi Abram. (Genèse 14:23)
 
 En refusant ce butin, Dieu fait une promesse à Abram :
 
-- Abram, ne crains point ; je suis ton bouclier, et ta récompense sera très grande (Genèse 15:1 (SG21))
+- Abram, ne crains point ; je suis ton bouclier, et ta récompense sera très grande (Genèse 15:1)
 
 En acceptant l'offrande de Melchisédek, Abram est entré dans l'abri du Très-Haut. Une fois dans cet abri, Dieu lui fait une promesse "je suis ton bouclier" et se révèle à lui par un autre nom "Tout-Puissant". Il est dans l'intimité avec Dieu, il a accès à une autre facette de Dieu, non plus le Très-Haut, l'inaccessible, mais le Tout-Puissant, celui qui protégera Abram.
 
@@ -229,6 +229,6 @@ Cette analyse est purement personnelle, je suis ouvert à toutes remarques const
 
 [Midrash Tehillim | Sefaria Library](https://www.sefaria.org/Midrash_Tehillim)
 
-https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/
+[Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
 
 [bible.com](https://www.bible.com/)

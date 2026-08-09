@@ -2,7 +2,7 @@
 title: Le Mystère de Barabbas
 author: bc1pzzfnxl
 date: 2026-07-03
-dateModified: 2026-08-07
+dateModified: 2026-08-09
 url: https://bc1pzzfnxl.com/le-mystere-de-barabbas/
 image: https://bc1pzzfnxl.com/images/barabbas.webp
 imageAlt: Antonio Ciseri – Ecce Homo (1871)
@@ -138,7 +138,7 @@ Donc "Yeshoua Barabbas" signifie la "Divinité" en grec Koinè, en utilisant la 
 
 ## Conclusion
 
-En adoptant cette lecture particulière du Tanakh et du nouveau testament, on se rend compte qu'il n'y pas de barrière de langue, tout est transposable de manière mathématique car Dieu en est le créateur.la 
+En adoptant cette lecture particulière du Tanakh et du nouveau testament, on se rend compte qu'il n'y pas de barrière de langue, tout est transposable de manière mathématique car Dieu en est le créateur.
 
 On a réussi a établir un lien claire en le prisonnier, Yeshoua Barrabas et Jesus Christ. Si le nom du prisonnier est donné c'est qu'il y'a une utilité pour nous, lecteur. On pourrait creuser encore plus, notamment sur la période du procès de Jésus-Christ, en pleine pâque juive.
 
