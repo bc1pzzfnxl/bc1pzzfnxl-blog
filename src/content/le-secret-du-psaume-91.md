@@ -217,7 +217,7 @@ Pour atteindre les promesses du Psaume 91, il faut être dans l'abri du Très-Ha
 
 En demeurant dans l'abri du Très-Haut, on a connaissance du Tout-Puissant et l'on se repose. Dieu n'est pas puissant, il est Tout-Puissant, il n'a pas besoin de notre aide et d'être assisté par nos actions, il veut seulement que nous nous reposions auprès de lui. Moïse, en allant sur le Sinaï, est allé de manière physique dans l'abri de Dieu. Moïse reçoit la Torah, la parole de Dieu, donc en quelque sorte la Cène, il va descendre du Sinaï avec un voile, l'ombre du Tout-Puissant ? Peut-être. Puis il va demeurer dans un deuxième abri de manière physique, "la fente du rocher" est l'abri puis Dieu va le "couvrir avec sa main" qui est l'ombre du Tout-Puissant. Il est dans le repos éternel, le Shéol. Je développerai plus tard le Shéol.
 
-Cette analyse est purement personnelle, je suis ouvert à toutes remarques construites, merci pour votre lecture.
+Cette analyse est purement personnelle basée sur les enseignements du sermon de Joseph Prince, je suis ouvert à toutes remarques construites, merci pour votre lecture.
 
 Source :
 
