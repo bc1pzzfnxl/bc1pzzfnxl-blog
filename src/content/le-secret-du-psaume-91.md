@@ -1,16 +1,15 @@
 ---
 title: Le Secret du Psaume 91
 author: bc1pzzfnxl
-date: 2026-07-04
-dateModified: 2026-08-09
-url: https://bc1pzzfnxl.com/le-secret-du-psaume-91/
-image: https://bc1pzzfnxl.com/images/psaume-91.webp
+date: '2026-07-04T00:00:00.000Z'
+dateModified: '2026-09-04'
+url: 'https://bc1pzzfnxl.com/le-secret-du-psaume-91/'
+image: 'https://bc1pzzfnxl.com/images/psaume-91.webp'
 imageAlt: Mosaïques de la Basilique Saint-Vital de Ravenne (VIᵉ siècle)
 ---
-
 ## Contexte :
 
-J'ai écouté le sermon d'un prédicateur à Singapour, Joseph Prince qui fait une explication du Psaume 91, de son lien avec Genèse et de ses bénédictions. J'ai donc pris des notes et je vais expliquer à l'écrit son enseignement tout en rajoutant d'autres éléments, comme la gematria ou des explications rabbiniques.
+J'ai écouté le sermon d'un prédicateur à Singapour, Joseph Prince qui fait une explication du Psaume 91, de son lien avec Genèse et de ses bénédictions. J'ai donc pris des notes et je vais expliquer à l'écrit son enseignement tout en rajoutant d'autres éléments, comme la gematria ou des explications rabbiniques pour atteindres les bénédictions du Psaume 91.
 
 ## Texte utilisé :
 
@@ -18,8 +17,7 @@ Je vais utiliser 2 textes, le Psaume 91 ainsi que Genèse. J'utiliserai diverses
 
 ## Psaume 91 :
 
-Le psaume 91 est un chapitre très connu des psaumes, il raconte une promesse divine envers ses fidèles. Ce psaume n'a pas d'auteur connu mais le précédent, 90, lui a un auteur : Moïse, donc le suivant, 91, est du même auteur (tradition rabbinique). De plus le style d'écriture du Psaume 91 est très proche du style d'écriture du Psaume 90 ce qui confirme le fait que Moïse en soit l'auteur. Donc dans notre cas, on va partir du fait que Moïse est l'auteur, puisque l'on va aussi étudier Genèse, écrit aussi par Moïse.
-*Talmud de Babylone (Bava Batra 14b)*
+Le psaume 91 est un chapitre très connu des psaumes, il raconte une promesse divine envers ses fidèles. Ce psaume n'a pas d'auteur connu mais le précédent, 90, lui a un auteur : Moïse, donc le suivant, 91, est du même auteur (tradition rabbinique). De plus le style d'écriture du Psaume 91 est très proche du style d'écriture du Psaume 90 ce qui confirme le fait que Moïse en soit l'auteur. Donc dans notre cas, on va partir du fait que Moïse est l'auteur, puisque l'on va aussi étudier Genèse, écrit aussi par Moïse. *Talmud de Babylone (Bava Batra 14b)*
 
 Le passage qui va nous intéresser est le 91:1 :
 
@@ -83,7 +81,7 @@ Melchisédek utilise ce mot dans le verset Genèse 14:19 :
 
 Le Talmud, chapitre Nedarim 32b, nous dit que Melchisédek est identifié à Sem, fils de Noé, car il bénit Abraham au nom du Très-Haut, il faut donc qu'il ait déjà reçu une bénédiction de la part de Dieu pour bénir Abraham. Sem étant le 1er à avoir reçu la bénédiction de Dieu Genèse 9:26. Mais je ne pense pas que Melchisédek soit Sem, mais plutot une préfiguration du Fils de Dieu (Trinité).
 
-#### Monter (ע-ל-ה)
+Monter (ע-ל-ה)
 
 Elyon partage la même racine que le mot monter "Alah". La racine trilitère est "ע-ל-ה" car en hébreu chaque racine de mot est formée de 3 lettres, puis on en fait des déclinaisons en ajoutant des voyelles. Elyon matérialise la grandeur de Dieu, celui qui est au-dessus de toutes choses.
 
@@ -91,19 +89,19 @@ Elyon partage la même racine que le mot monter "Alah". La racine trilitère est
 
 C'est le nom que choisit Dieu pour se révéler à Abraham lors de la circoncision. Le mot a 2 racines possibles :
 
-#### Puissance (ש-ד-ד)
+Puissance (ש-ד-ד)
 
 On peut utiliser cette racine pour donner au mot Shaddaï le sens de Tout-Puissant, c'est celui qui est utilisé dans le Tanakh.
 
-#### Le sein maternel (ש-ד-ה)
+Le sein maternel (ש-ד-ה)
 
 Le midrash relie le mot Shaddaï au mot Shad (שַׁד) qui signifie le sein maternel, en ajoutant le suffixe "Daï" on obtient celui qui nourrit, celui qui suffit. C'est une autre interprétation, recevable ou non, elle a le mérite d'exister puisqu'elle insiste sur le fait que Dieu nous suffit, celui qui nous nourrit spirituellement, et ça rejoint ce que Jésus affirme en disant qu'il est la Parole de Dieu et donc le pain de vie, car la parole de Dieu nous nourrit spirituellement.
 
-#### Synthèse du Psaume 91:1
+Synthèse du Psaume 91:1
 
 Donc pour être à l'ombre du Tout-Puissant (Shaddaï) il faut **monter** sous l'abri du Très-Haut (Elyon). Il y a la mention des 2 noms divins : Elyon et Shaddaï. Elyon cité la 1ère fois dans Genèse 14:18 et Shaddaï cité la 1ère fois dans Genèse 17:1. Le bonheur, l'intimité avec Dieu se trouve donc entre ces 2 versets.
 
-## Genèse 14:18 -> 17:1
+## Genèse 14:18 -&gt; 17:1
 
 Le bonheur, l'intimité avec Dieu se trouve donc entre le Elyon et le Shaddaï, entre Genèse 14:18 et 17:1.
 
@@ -139,12 +137,11 @@ Le reste des bénédictions sont après Genèse 17:1 donc plus entre le Elyon et
 
 ### Elyon et Shaddaï :
 
-#### El Elyon :
+El Elyon :
 
 Nombre cible : 197
 
-Texte hebreu : אל עליון (El Elyon) = Dieu Très-Haut
-Decomposition :
+Texte hebreu : אל עליון (El Elyon) = Dieu Très-Haut Decomposition :
 
 - א = 1
 
@@ -162,12 +159,11 @@ Decomposition :
 
 Calcul : 1 + 30 + 70 + 30 + 10 + 6 + 50 = 197
 
-#### El Shaddaï :
+El Shaddaï :
 
 Nombre cible : 345
 
-Texte hebreu : אל שדי (El Shaddai) = Dieu Tout-Puissant
-Decomposition :
+Texte hebreu : אל שדי (El Shaddai) = Dieu Tout-Puissant Decomposition :
 
 - א = 1
 
@@ -181,7 +177,7 @@ Decomposition :
 
 Calcul : 1 + 30 + 300 + 4 + 10 = 345
 
-##### Addition des 2 mots :
+Addition des 2 mots :
 
 En additionant El Shaddaï + El Elyon on trouve 542, qui a pour mot Mevaser :
 
@@ -223,7 +219,7 @@ En demeurant dans l'abri du Très-Haut, on a connaissance du Tout-Puissant et l'
 
 Cette analyse est purement personnelle, je suis ouvert à toutes remarques construites, merci pour votre lecture.
 
-##### Source :
+Source :
 
 [Talmud | Sefaria Library](https://www.sefaria.org/texts/Talmud)
 

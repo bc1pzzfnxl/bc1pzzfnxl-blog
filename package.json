@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "astro build && wrangler pages deploy ./dist",
-    "wrangler:dev": "astro dev --host --port 4321 & wrangler pages dev ./dist --proxy 4321"
+    "wrangler:dev": "astro dev --host --port 4321 & wrangler pages dev ./dist --proxy 4321",
+    "editor": "bun run --cwd editor dev"
   },
   "dependencies": {
     "@astrojs/cloudflare": "14.1.4",
