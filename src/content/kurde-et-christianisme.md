@@ -5,7 +5,7 @@ date: '2026-08-30T00:00:00.000Z'
 dateModified: '2026-09-05'
 url: 'https://bc1pzzfnxl.com/kurde-et-christianisme/'
 image: 'https://bc1pzzfnxl.com/images/kurds-and-orthodox-priest-1873-1788598994581.webp'
-imageAlt: Kurde et Christianisme
+imageAlt: Deux Kurdes avec un prêtre catholique arménien en 1873
 ---
 ## Première présence chrétienne au sein des Kurdes
 
@@ -25,7 +25,8 @@ Si ces trois missionnaires ont évangélisé des territoires intégrés aujourd'
 
 L’affaiblissement du califat abbasside (861–870) a incité les pasteurs kurdes du Zagros — qui effectuaient traditionnellement des transhumances hivernales vers les plaines — à s’y implanter durablement. Les émirs arabes locaux, notamment la dynastie chiite des Hamdanides (905–979), ont intégré ces contingents pour sécuriser les routes commerciales et les marges territoriales en échange de concessions foncières. Au nord de Mossoul, ces groupes côtoient alors directement les chrétiens syriaques relevant de l’Église jacobite (syro-orthodoxe). L’historien arabe al-Mas'ûdî rapporte dans son ouvrage *Murūj al-Dhahab wa-Ma'ādin al-Jawhar* (achevé vers 947) que certaines tribus kurdes établies au nord de Mossoul, identifiées sous le nom d'al-Jurqân (Guran), adhéraient à la foi chrétienne. Il s’agit de la plus ancienne attestation textuelle explicite d'une présence chrétienne au sein d'une communauté kurde.
 
-![Carte des provinces ecclésiastiques et diocèses de l'Église de l'Orient au Xᵉ siècle (Haute-Mésopotamie et piémonts du Zagros)](/images/church-of-the-east-10c.webp)
+![Provinces ecclésiastiques et évêchés de l'Église de l'Orient au Xᵉ siècle (Haute-Mésopotamie, Mossoul, Arbèle, Beth Garmaï et Zagros)](/images/church-of-the-east-10c.webp)
+*Provinces ecclésiastiques et diocèses de l'Église de l'Orient au Xᵉ siècle (Haute-Mésopotamie et Zagros).*
 
 ### Conversions de chefs et enjeux géopolitiques
 
@@ -37,7 +38,8 @@ Ces conversions s'inscrivent avant tout dans des impératifs d'opportunisme mili
 
 Du XIIᵉ au XIVᵉ siècle, la dynastie arméno-géorgienne des Zakarides, qui administre le nord de l’Arménie, présente également un ancrage kurde. L'historien, théologien et géographe arménien Vardan Areveltsi consigne dans son *Havak'umn Patmut'yan* (achevé vers 1267) que Sargis, aïeul des princes Zakare et Ivané, était d'ascendance kurde. Cette lignée chrétienne s'illustre notamment par la reprise de la cité historique d'Ani aux Chaddadites, dynastie kurde musulmane, marquant l'un des premiers affrontements armés documentés opposant des entités kurdes chrétiennes et musulmanes, ainsi que l'a analysé l'orientaliste Vladimir Minorsky.
 
-![Carte de la principauté arméno-géorgienne des Zakarides vers 1200 après la libération d'Ani](/images/zakarid-armenia-1200.webp)
+![Carte de l'Arménie zakaride vers 1200 après la libération d'Ani sous les princes Zakare et Ivané (George A. Bournoutian, 2006)](/images/zakarid-armenia-1200.webp)
+*Carte de l'Arménie zakaride vers 1200 après la libération d'Ani (Source : G. A. Bournoutian, 2006).*
 
 Par la suite, l'histoire n'enregistre que des conversions individuelles et dispersées, suscitées par des cheminements spirituels personnels ou des missions locales. Il ne s'est jamais constitué d'« Église kurde » institutionnelle autonome — à l'instar de l'Église apostolique arménienne ou de l'Église d'Orient — car la rencontre entre les Kurdes et le christianisme s'est toujours opérée dans des espaces où les hiérarchies ecclésiastiques syriaques, arméniennes ou byzantines étaient déjà solidement structurées.
 
