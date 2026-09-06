@@ -80,9 +80,9 @@ L'équipe a suivi les protocoles modernes de l'Alliance biblique universelle (AB
 
 L'Ancien Testament parle d'un peuple qui a grandi dans un contexte agro-pastoral montagnard et semi-aride ce qui est assez proche des Kurdes, le Kurmandji possède donc naturellement un vocabulaire très précis sur la vie pastorale à l'inverse des langues modernes.
 
-Le Kurmandji est une langue à **alignement ergatif scindé au passé** ce qui permet d'apporter une précision dans des récits complexes tels que la Genèse ou les livres historiques comme Rois ou Samuel.
+Le kurmandji est une langue à alignement ergatif au passé, ce qui offre une grande clarté pour distinguer l'auteur d'une action de celui qui la subit dans des récits narratifs complexes comme la Genèse, Samuel ou les Rois. Par ailleurs, la tradition orale des *dengbêj*, incarnée par des figures comme Şakiro, partage de profondes ressemblances avec la poésie de l'Ancien Testament (Psaumes, Lamentations). Dans les deux cultures, l'art poétique repose sur le parallélisme qui est la reprise d'une même idée sous des formes synonymes ou antithétiques  et sur une scansion naturelle qui se prête remarquablement au registre de la plainte et de la lamentation.
 
-Comme l'hébreu, le Kurmandji est une langue de transmission orale poétique (**Dengbêjî**), il a été donc facile de conserver le rythme des poèmes comme les Psaumes, Job et Proverbes.
+### Où lire la Bible en Kurmandji ?
 
 Ces corpus sont aujourd'hui intégrés aux bibliothèques scripturaires numériques, notamment sous l'identifiant « KURNT », complétant un parcours éditorial qui a également compté des publications en caractères cyrilliques destinées aux communautés kurdes et yézidies d'ex-Union soviétique.
 
