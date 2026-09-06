@@ -2,7 +2,7 @@
 title: Les 613 Lois de la Torah
 author: bc1pzzfnxl
 date: '2026-07-03T00:00:00.000Z'
-dateModified: '2026-09-04'
+dateModified: '2026-09-06'
 url: 'https://bc1pzzfnxl.com/les-613-lois-de-la-torah/'
 image: 'https://bc1pzzfnxl.com/images/torah-613.webp'
 imageAlt: Marc Chagall – Solitude (1933)
@@ -98,16 +98,11 @@ Le mot **cultiver** (*Le'ovdah* - לעבדה) et **garder** (*Uleshomrah* - ול
 
 Les 613 commandements ont une profondeur spirituelle bien plus grande que ce que l'on pense. Abraham avait déjà connaissance de ces lois et il les appliquait d'une certaine manière. Le Jardin d'Éden est aussi le reflet de ces 613 lois. J'aurais aimé aller plus en détail, notamment sur le Pardès, en incluant une lecture Derash et Sod, mais c'est un niveau bien plus compliqué pour moi, les réponses se trouvent dans le Zohar.
 
-Merci pour votre lecture, je suis ouvert à toutes formes de critiques construites et d'améliorations.
+## Sources
 
-Source :
-
-[Rav Ron Chaya](https://myleava.fr/)
-
-[Talmud | Sefaria Library](https://www.sefaria.org/texts/Talmud)
-
-[Midrash Tehillim | Sefaria Library](https://www.sefaria.org/Midrash_Tehillim)
-
-[Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
-
-[bible.com](https://www.bible.com/)
+- **Talmud de Babylone** : traités *Makkot 23b-24a* (transmission des 613 lois par R. Simlaï et équivalence numérique de *Torah* = 611 par R. Hamnuna), *Yoma 28b* (l'observance de la Torah par Abraham), et *Kiddoushin 30b* (respect des parents et partenariat créateur), via [Sefaria Library](https://www.sefaria.org/texts/Talmud).
+- **Moïse Maïmonide (Rambam)**, *Le Guide des Égarés* (*Moreh Nevoukhim*, livre II, chap. 33 sur la proclamation sinaïtique des deux premières paroles du Décalogue) et *Sefer Ha-Mitzvot* (dénombrement des 613 commandements).
+- **Zohar** (I, 27a) et **Pirkei de-Rabbi Eliezer** (chapitre 12 sur le sens symbolique de *Le'ovdah* et *Uleshomrah* dans le Jardin d'Éden, Genèse 2:15).
+- **Biblia Hebraica Stuttgartensia (BHS)**, éd. K. Elliger et W. Rudolph (Deutsche Bibelgesellschaft, textes d'Exode 20, Genèse 2:15, 26:5 et Deutéronome 33:4).
+- **Rav Ron Chaya**, enseignements et cours talmudiques sur les 613 Mitzvot et la pensée juive ([Myleava](https://myleava.fr/)).
+- **Traductions et textes de référence** : André Chouraqui (*La Bible*, Desclée de Brouwer) et [Bible.com](https://www.bible.com/).

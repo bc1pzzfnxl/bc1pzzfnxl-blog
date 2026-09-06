@@ -2,7 +2,7 @@
 title: Le Mystère de Barabbas
 author: bc1pzzfnxl
 date: 2026-07-03
-dateModified: 2026-08-09
+dateModified: '2026-09-06'
 url: https://bc1pzzfnxl.com/le-mystere-de-barabbas/
 image: https://bc1pzzfnxl.com/images/barabbas.webp
 imageAlt: Antonio Ciseri – Ecce Homo (1871)
@@ -148,8 +148,12 @@ On peut aussi dire que le prisonnier est un "faux Yeshoua" car il a désobéi a 
 
 Finalement, tout un tas de lecture, de leçon, d'enseignement peuvement émerger, je ne detiens pas toute la vérité et je suis ouvert au débat et a toute remarques, avis, correction etc..
 
-##### Source :
+## Sources
 
-[Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
-
-[bible.com](https://www.bible.com/)
+- **Novum Testamentum Graece**, Nestle-Aland (28ᵉ éd.) & United Bible Societies (UBS 5ᵉ éd.) : apparat critique sur Matthieu 27:16-17 (variante textuelle *Ἰησοῦν Βαραββᾶν* / *Jésus Barabbas* dans le Codex Koridethi $\Theta$, Minuscule 1 et manuscrits syriaques).
+- **Origène**, *Commentarius in Matthaeum* (*Commentaire sur l'Évangile selon Matthieu*, Série de commentaires, chap. 121, attestant la présence ancienne du nom « Jésus Barabbas »).
+- **Bruce M. Metzger**, *A Textual Commentary on the Greek New Testament* (United Bible Societies, 1994, pp. 56-57).
+- **Biblia Hebraica Stuttgartensia (BHS)**, éd. K. Elliger et W. Rudolph (Deutsche Bibelgesellschaft / Society of Biblical Literature).
+- **Wilhelm Gesenius**, *Hebrew and Chaldee Lexicon to the Old Testament Scriptures* (racines et valeurs sémantiques de *Davar*, *Lashon* et *Yerushalayim*).
+- **H. G. Liddell & R. Scott**, *A Greek-English Lexicon* (Oxford University Press, entrée *θεότης* / *Theotēs*, Colossiens 2:9).
+- **Manuscrits et corpus bibliques numériques** ([SBL BHS](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/) et [Bible.com](https://www.bible.com/)).

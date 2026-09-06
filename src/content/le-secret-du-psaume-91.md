@@ -2,7 +2,7 @@
 title: Le Secret du Psaume 91
 author: bc1pzzfnxl
 date: '2026-07-04T00:00:00.000Z'
-dateModified: '2026-09-04'
+dateModified: '2026-09-06'
 url: 'https://bc1pzzfnxl.com/le-secret-du-psaume-91/'
 image: 'https://bc1pzzfnxl.com/images/psaume-91.webp'
 imageAlt: Mosaïques de la Basilique Saint-Vital de Ravenne (VIᵉ siècle)
@@ -217,14 +217,11 @@ Pour atteindre les promesses du Psaume 91, il faut être dans l'abri du Très-Ha
 
 En demeurant dans l'abri du Très-Haut, on a connaissance du Tout-Puissant et l'on se repose. Dieu n'est pas puissant, il est Tout-Puissant, il n'a pas besoin de notre aide et d'être assisté par nos actions, il veut seulement que nous nous reposions auprès de lui. Moïse, en allant sur le Sinaï, est allé de manière physique dans l'abri de Dieu. Moïse reçoit la Torah, la parole de Dieu, donc en quelque sorte la Cène, il va descendre du Sinaï avec un voile, l'ombre du Tout-Puissant ? Peut-être. Puis il va demeurer dans un deuxième abri de manière physique, "la fente du rocher" est l'abri puis Dieu va le "couvrir avec sa main" qui est l'ombre du Tout-Puissant. Il est dans le repos éternel, le Shéol. Je développerai plus tard le Shéol.
 
-Cette analyse est purement personnelle basée sur les enseignements du sermon de Joseph Prince, je suis ouvert à toutes remarques construites, merci pour votre lecture.
+## Sources
 
-Source :
-
-[Talmud | Sefaria Library](https://www.sefaria.org/texts/Talmud)
-
-[Midrash Tehillim | Sefaria Library](https://www.sefaria.org/Midrash_Tehillim)
-
-[Biblica Hebraica Stuttgartensia - Society of Biblical Literature](https://www.sbl-site.org/resources/digital-texts/biblica-hebraica-stuttgartensia/)
-
-[bible.com](https://www.bible.com/)
+- **Talmud de Babylone** : traités *Bava Batra 14b-15a* (attribution du Psaume 91 à Moïse), *Nedarim 32b* (identification de Melchisédek à Sem), *Sanhedrin 38a* (gématrie *Nichnas yayin, yatsa sod*), et *Hagigah 12a* (étymologie de *Shaddaï* / *She-amar le-olamo daï*), via [Sefaria Library](https://www.sefaria.org/texts/Talmud).
+- **Midrash Tehillim (Shocher Tov)**, commentaire classique sur le Psaume 91:1 (Moïse entrant dans l'abri de la nuée sur le Sinaï), via [Sefaria Library](https://www.sefaria.org/Midrash_Tehillim).
+- **Rachi (Rabbi Chlomo ben Itzhak)**, *Commentaires sur le Tanakh* (notes exégétiques sur Psaumes 90:1, 91:1 et Genèse 14:18).
+- **Biblia Hebraica Stuttgartensia (BHS)**, éd. K. Elliger et W. Rudolph (Deutsche Bibelgesellschaft / Society of Biblical Literature, textes de Genèse 14:18, 17:1, Psaume 91 et Isaïe 40/52).
+- **Joseph Prince Ministries**, série d'enseignements *The Secret Place – Psalm 91* (Singapour).
+- **Corpus scripturaires et traductions bibliques** : Louis Segond 21 (Genève, Société Biblique de Genève) et André Chouraqui (*La Bible*, Desclée de Brouwer, 1989).
