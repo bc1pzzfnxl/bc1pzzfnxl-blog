@@ -86,31 +86,17 @@ Voici un extrait de *Bavê Fexo* interprété par le dengbêj Şakiro et un extr
 
 #### *Bavê Fexo* — Şakiro (chant dengbêj)
 
-> **Gidî salê me çû mane zeman**  
-> *Hélas nos années s'en sont allées, reste le temps*
->
-> **Kalê me çûn pîrê me man**  
-> *Nos vieillards s'en sont allés, nos vieilles femmes sont restées*
->
-> **Qîzê me çûn xortê me man**  
-> *Nos jeunes filles s'en sont allées, nos jeunes hommes sont restés*
->
-> **Qewl û qirar ji bo însanê van sal û zemana neman**  
-> *La parole et le pacte pour les hommes de ces années et de ces temps ont disparu*
+> **Gidî salê me çû mane zeman***Hélas nos années s'en sont allées, reste le temps*
+> **Kalê me çûn pîrê me man***Nos vieillards s'en sont allés, nos vieilles femmes sont restées*
+> **Qîzê me çûn xortê me man***Nos jeunes filles s'en sont allées, nos jeunes hommes sont restés*
+> **Qewl û qirar ji bo însanê van sal û zemana neman***La parole et le pacte pour les hommes de ces années et de ces temps ont disparu*
 
 #### Psaume 12, verset 2 (Tehillim)
 
-> **Hoshi’ah Adonaï**  
-> *Sauve, Éternel !*
->
-> **Ki-gamar khasid**  
-> *Car l'homme loyal a disparu*
->
-> **Ki-fassu emunim**  
-> *Car la fidélité / les hommes de confiance ont cessé*
->
-> **Mi-bnei adam**  
-> *D'entre les fils de l'homme*
+> **Hoshi’ah Adonaï***Sauve, Éternel !*
+> **Ki-gamar khasid***Car l'homme loyal a disparu*
+> **Ki-fassu emunim***Car la fidélité / les hommes de confiance ont cessé*
+> **Mi-bnei adam***D'entre les fils de l'homme*
 
 Bien qu'issus d'époques et de familles linguistiques très différentes, ces deux textes partagent une même base : la tragédie et la lamentation. Dans les deux cas, l'auteur constate l'abandon des siens et la disparition des repères moraux. À l'opposé de la poésie latine ou occidentale moderne, ces poèmes sont entièrement façonnés par l'oralité : le rythme n'est pas dicté par un nombre égal de syllabes ou des rimes, mais par le souffle, l'alternance de vers de longueurs variées et la répétition d'une même idée.
 
