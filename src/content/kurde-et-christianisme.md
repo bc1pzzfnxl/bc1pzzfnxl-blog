@@ -86,11 +86,31 @@ Voici un extrait de *Bavê Fexo* interprété par le dengbêj Şakiro et un extr
 
 #### *Bavê Fexo* — Şakiro (chant dengbêj)
 
-> **Gidî salê me çû mane zeman***Hélas nos années s'en sont allées, reste le temps***Kalê me çûn pîrê me man***Nos vieillards s'en sont allés, nos vieilles femmes sont restées***Qîzê me çûn xortê me man***Nos jeunes filles s'en sont allées, nos jeunes hommes sont restés***Qewl û qirar ji bo însanê van sal û zemana neman***La parole et le pacte pour les hommes de ces années et de ces temps ont disparu*
+> **Gidî salê me çû mane zeman**  
+> *Hélas nos années s'en sont allées, reste le temps*
+>
+> **Kalê me çûn pîrê me man**  
+> *Nos vieillards s'en sont allés, nos vieilles femmes sont restées*
+>
+> **Qîzê me çûn xortê me man**  
+> *Nos jeunes filles s'en sont allées, nos jeunes hommes sont restés*
+>
+> **Qewl û qirar ji bo însanê van sal û zemana neman**  
+> *La parole et le pacte pour les hommes de ces années et de ces temps ont disparu*
 
 #### Psaume 12, verset 2 (Tehillim)
 
-> **Hoshi’ah Adonaï***Sauve, Éternel* !**Ki-gamar khasid***Car l'homme loyal a disparu***Ki-fassu emunim***Car la fidélité / les hommes de confiance ont cessé***Mi-bnei adam***D'entre les fils de l'homme*
+> **Hoshi’ah Adonaï**  
+> *Sauve, Éternel !*
+>
+> **Ki-gamar khasid**  
+> *Car l'homme loyal a disparu*
+>
+> **Ki-fassu emunim**  
+> *Car la fidélité / les hommes de confiance ont cessé*
+>
+> **Mi-bnei adam**  
+> *D'entre les fils de l'homme*
 
 Bien qu'issus d'époques et de familles linguistiques très différentes, ces deux textes partagent une même base : la tragédie et la lamentation. Dans les deux cas, l'auteur constate l'abandon des siens et la disparition des repères moraux. À l'opposé de la poésie latine ou occidentale moderne, ces poèmes sont entièrement façonnés par l'oralité : le rythme n'est pas dicté par un nombre égal de syllabes ou des rimes, mais par le souffle, l'alternance de vers de longueurs variées et la répétition d'une même idée.
 
@@ -100,15 +120,28 @@ Ces corpus sont aujourd'hui intégrés aux bibliothèques scripturaires numériq
 
 ## Sources
 
-- **Jean-Maurice Fiey**, *Pour un Orient chrétien neutre : Assyriens et Chaldéens* (1975) et *Assyrie chrétienne* (3 vol., Beyrouth, 1965-1968).
-- **David Wilmshurst**, *The Ecclesiastical Organisation of the Church of the East, 1318–1913* (Peeters, 2000).
-- **Al-Mas'ûdî**, *Murūj al-Dhahab wa-Ma'ādin al-Jawhar* (*Les Prairies d'or*, éd. et trad. Barbier de Meynard, t. III, chap. 66).
-- **Ibn al-Athir**, *Al-Kāmil fī al-Tārīkh* (*L'Histoire complète*, vol. VIII, événements de 315 H / 927).
-- **Vardan Areveltsi**, *Havak'umn Patmut'yan* (*Compilation historique*, trad. R. W. Thomson, Dumbarton Oaks, 1989).
-- **Vladimir Minorsky**, article fondateur *« Kurdes »* dans l'*Encyclopédie de l'Islam* (1re et 2e éditions), *The Gūrān* (BSOAS, 1943), ainsi que ses *Studies in Caucasian History* (Cambridge Oriental Series, 1953).
-- **Boris James**, *« Le “territoire tribal des Kurdes” et l’aire d’expansion kurde du Moyen Âge à l’époque ottomane »* (REMMM 117-118, 2007).
-- **American Bible Society (ABS)**, *Annual Reports of the American Bible Society* (41e rapport, 1857 et 57e rapport, 1873, New York / Constantinople).
-- **Kitêba Pîroz** (éd. Gute Botschaft Verlag / GBV-Dillenburg & GDK, 2004).
-- Les rapports et manuels de **l'Alliance Biblique Universelle (ABU / UBS)** et **Eugène Nida** (*The Theory and Practice of Translation*, Brill, 1969).
-- **Geoffrey Haig**, *Alignment in Kurdish: A diachronic perspective* (Max Niemeyer Verlag, Tübingen, 2008).
-- **Travaux universitaires sur la littérature et l'oralité kurdes** (Joyce Blau / Chercheurs de l'INALCO / Institut Kurde de Paris ; Christine Allison, *The Yezidi Oral Tradition in Iraqi Kurdistan*, 2001).
+- **Jean-Maurice Fiey**, *Pour un Orient chrétien neutre : Assyriens et Chaldéens* (1975) et *Assyrie chrétienne* (3 vol., Beyrouth, 1965-1968) : cartographie et géographie ecclésiastique des évêchés de Mésopotamie et du Zagros.
+- **David Wilmshurst**, *The Ecclesiastical Organisation of the Church of the East, 1318–1913* (Peeters, 2000, pp. 15-28) : organisation diocésaine de l'Église de l'Orient en Haute-Mésopotamie et au piémont du Zagros.
+- **Al-Mas'ûdî**, *Murūj al-Dhahab wa-Ma'ādin al-Jawhar* (*Les Prairies d'or*, éd. et trad. Barbier de Meynard et Pavet de Courteille, t. III, chap. 66) :
+  > « ومنهم اليعقوبية والنصارى وهم الجورقان... وأما الجورقان فهم بطن من الكرد... »  
+  > *« Parmi eux [les Kurdes] se trouvent des chrétiens jacobites, tels que les Djordjan [Gūrān]... qui sont une tribu kurde établie dans les cantons de Mossoul. »*
+- **Ibn al-Athir**, *Al-Kāmil fī al-Tārīkh* (*L'Histoire complète*, éd. C. J. Tornberg, vol. VIII, événements de l'an 315 H / 927 apr. J.-C.) :
+  > « وفيها قُتِل ابن الضحاك الكردي، وكان قد تنصّر ولحق بالروم... فقصدَهُ ثَمَل في عسكره فقتله وأسر أهله وأولاده »  
+  > *« En cette année [315 H / 927], fut tué Ibn al-Dahhak le Kurde, qui s'était converti au christianisme et avait rallié les Byzantins... Thamal marcha contre lui avec son armée, le tua et fit prisonniers sa famille et ses enfants. »*
+- **Théophane Continué (*Theophanes Continuatus*) & Joseph Génésios**, *Chronique byzantine* (règne de l'empereur Théophile, 829–842) : conversion et baptême de Nasr sous le nom de Théophobos (*Theophobus*), ralliement de ses contingents, mariage impérial et exécution en 842.
+- **Vardan Areveltsi**, *Havak'umn Patmut'yan* (*Compilation historique*, trad. R. W. Thomson, Dumbarton Oaks, 1989, p. 82) :
+  > « In these times there lived the glorious princes Zak'are' and Iwane', sons of Sargis, son of Vahram, son of Zak'are', son of Sargis of Kurdish nationality (i K'urd azge') »  
+  > *« En ces temps vivaient les glorieux princes Zakaré et Ivané, fils de Sargis, fils de Vahram, fils de Zakaré, fils de Sargis de nationalité kurde (*i K'urd azge'*). »*
+- **Vladimir Minorsky**, *Studies in Caucasian History* (Cambridge University Press, 1953, chap. II « The Shaddadids of Ani », p. 102) & *The Gūrān* (BSOAS, 1943) :
+  > « According to a tradition which has every reason to be true, their ancestors were Mesopotamian Kurds of the tribe (xel) Babirakan... »  
+  > *« D'après une tradition qui a tout lieu d'être exacte, leurs ancêtres étaient des Kurdes mésopotamiens de la tribu (xel) des Babirakan... »*
+- **Boris James**, *« Le “territoire tribal des Kurdes” et l’aire d’expansion kurde du Moyen Âge à l’époque ottomane »* (REMMM 117-118, 2007) : dynamique des migrations pastorales du Zagros vers la Haute-Mésopotamie sous les Abbassides et les Hamdanides.
+- **American Bible Society (ABS)**, *Forty-First Annual Report of the American Bible Society* (New York, 1857, p. 111) & *Fifty-Seventh Annual Report* (1873, p. 94) :
+  > « The translation of the four Gospels into the Kurdish language, written in the Armenian character, has been completed by Stepan, an Armenian helper... and printed at Constantinople. » (1857)  
+  > « The Kurdish New Testament, in the Armenian character, translated by Deacon Tamo, has at length been carried through the press at Constantinople. » (1873, imprimerie A. H. Boyadjian)
+- **Kamuran Alî Bedirxan & Thomas Bois**, *Metelokên Silêman* (Livre des Proverbes, Beyrouth, 1947) et *Mizgînî lîgor Lûqa* (Évangile selon saint Luc, Beyrouth, 1953) : première standardisation scripturaire en alphabet Hawar latin.
+- **Kitêba Pîroz**, Gute Botschaft Verlag (GBV-Dillenburg / GDK, 2004) : première traduction complète de la Bible en kurmandji par Resûlê Qereqoçanî et Seîdê Dewrêş d'après les textes originaux (Texte massorétique et Nouveau Testament grec).
+- **Alliance Biblique Universelle (ABU / UBS)** & **Eugène Nida**, *The Theory and Practice of Translation* (E. J. Brill, Leiden, 1969, p. 12) :
+  > « Dynamic equivalence is therefore to be defined in terms of the degree to which the receptors of the message in the receptor language respond to it in substantially the same manner as the receptors in the source language. »
+- **Geoffrey Haig**, *Alignment in Kurdish: A diachronic perspective* (Max Niemeyer Verlag, Tübingen, 2008, pp. 89-92) : analyse de la scission d'ergativité (*split ergativity*) au passé en kurmandji et clarté des rôles actanciels agent / patient.
+- **Şakiro (dengbêj)**, *Bavê Fexo* (enregistrements d'archives de tradition orale kurde) & **Biblia Hebraica Stuttgartensia (BHS)** sur Tehillim 12:2 (Psaume 12:2).
