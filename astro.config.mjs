@@ -1,5 +1,5 @@
-// @ts-check
 import { defineConfig } from "astro/config";
+import { unified } from "@astrojs/markdown-remark";
 import mdx from "@astrojs/mdx";
 import icon from "astro-icon";
 import cloudflare from "@astrojs/cloudflare";
@@ -19,16 +19,11 @@ export default defineConfig({
     "/le-mystère-de-barabbas/": "/le-mystere-de-barabbas/",
   },
   markdown: {
-    rehypePlugins: [rehypeOptimizedImages],
-  },
-  integrations: [
-    mdx({
+    processor: unified({
       rehypePlugins: [rehypeOptimizedImages],
     }),
-    icon(),
-    sitemap(),
-    react(),
-  ],
+  },
+  integrations: [mdx(), icon(), sitemap(), react()],
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {

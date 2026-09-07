@@ -81,7 +81,14 @@ const publishDate = formatDate(frontmatter.date);
 const modifiedDate = formatDate(frontmatter.dateModified);
 ---
 
-<MainLayout title={title} description={description} ogType="article" image={postImage}>
+<MainLayout
+    title={title}
+    description={description}
+    ogType="article"
+    image={postImage}
+    publishedTime={frontmatter.date}
+    modifiedTime={frontmatter.dateModified || frontmatter.date}
+>
     <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
     <article>
         <h1>{title}</h1>

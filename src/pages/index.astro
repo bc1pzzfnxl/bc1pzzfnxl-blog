@@ -4,15 +4,18 @@ import MainLayout from "../layouts/MainLayout.astro";
 export const prerender = true;
 
 const postsData = import.meta.glob("../content/*.{md,mdx}", { eager: true });
-const posts = Object.entries(postsData).map(([path, post]) => {
-    const slug = path.split("/").pop().replace(/\.(md|mdx)$/, "");
-    const title = post.frontmatter?.title || slug
-        .toLowerCase()
-        .split("-")
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
-    return { slug, title, post };
-});
+const posts = Object.entries(postsData)
+    .map(([path, post]) => {
+        const slug = path.split("/").pop().replace(/\.(md|mdx)$/, "");
+        const title = post.frontmatter?.title || slug
+            .toLowerCase()
+            .split("-")
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
+        const date = post.frontmatter?.date || "";
+        return { slug, title, date, post };
+    })
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 const siteSchema = {
     "@context": "https://schema.org",
