@@ -12,7 +12,7 @@ imageAlt: Deux Kurdes avec un prêtre catholique arménien en 1873
 
 ### Contexte géographique et historique
 
-Le Kurdistan dans ses frontières contemporaines ne reflète pas la répartition géographique des populations lors de l'Antiquité tardive et du haut Moyen Âge. Les cités et provinces telles que Ninive, Erbil ou Amed (Diyarbakır) étaient alors majoritairement peuplées d'Assyriens et d'Arméniens. Les populations kurdes étaient quant à elles établies dans le massif du Zagros, avant d'amorcer leur expansion territoriale vers les plaines et les plateaux environnants à partir du Xᵉ siècle.
+Le Kurdistan dans ses frontières contemporaines ne reflète pas la répartition géographique des populations lors de l'Antiquité tardive et du haut Moyen Âge. Les cités et provinces telles que Ninive, Hewlêr (Erbil) ou Amed (Diyarbakır) étaient alors majoritairement peuplées d'Assyriens et d'Arméniens. Les populations kurdes étaient quant à elles établies dans le massif du Zagros, avant d'amorcer leur expansion territoriale vers les plaines et les plateaux environnants à partir du Xᵉ siècle.
 
 La christianisation de la Mésopotamie s'est historiquement articulée autour de trois figures majeures :
 
@@ -48,7 +48,7 @@ Par la suite, l'histoire n'enregistre que des conversions individuelles et dispe
 
 En 1856, les quatre Évangiles sont traduits pour la première fois en kurde kurmandji au moyen de l'alphabet arménien par Stepan, un lettré arménien d'Amed (Diyarbakır) collaborant avec l'American Bible Society (ABS). Cette initiative s'inscrit dans le contexte confessionnel de l'Empire ottoman au milieu du XIXᵉ siècle : la mission protestante ne pouvant évangéliser directement les sujets musulmans sunnites de la Sublime Porte, l'ABS a orienté ses travaux vers les minorités chrétiennes et les populations périphériques, parmi lesquelles figuraient des communautés kurdophones.
 
-Après l'édition des Évangiles imprimée à Constantinople en 1857, Isaac Grout Bliss (responsable régional de l'ABS) supervise l'achèvement de la traduction du Nouveau Testament avec le concours du diacre Tamo, érudit polyglotte. Le Nouveau Testament complet paraît finalement en 1872 sur les presses de l'imprimerie d'A. H. Boyadjian à Constantinople.
+Après l'édition des Évangiles imprimée à Constantinople en 1857, Isaac Grout Bliss (responsable régional de l'ABS) supervise l'achèvement de la traduction du Nouveau Testament avec le concours du diacre Tamo, érudit polyglotte. Le Nouveau Testament complet paraît finalement en 1872 sur les presses de l'imprimerie d'*A. H. Boyadjian Printing Press* à Constantinople, cette dernière est fondée dans les années 1860 par **Alexander H. Boyadjian**, un éditeur arménien protestant étroitement associé à la *Bible House* américaine, cet atelier typographique assura la composition et la diffusion de nombreuses publications scripturaires destinées aux minorités de l'Empire ottoman.
 
 Le recours à l'alphabet arménien constituait un choix pragmatique et linguistique : à cette époque, le kurde kurmandji ne disposait pas d'orthographe standardisée, variant selon les influences persanes, arabes ou arméniennes locales. L'alphabet arménien classique, doté de 38 caractères phonétiquement précis, offrait une transcription fidèle du parler kurmandji tout en étant directement déchiffrable par les chrétiens locaux. Ce support textuel permettait aux chrétiens kurdophones alphabétisés de proclamer oralement les Écritures dans leur langue maternelle auprès de leur entourage.
 
@@ -86,17 +86,11 @@ Voici un extrait de *Bavê Fexo* interprété par le dengbêj Şakiro et un extr
 
 #### *Bavê Fexo* — Şakiro (chant dengbêj)
 
-> **Gidî salê me çû mane zeman***Hélas nos années s'en sont allées, reste le temps*
-> **Kalê me çûn pîrê me man***Nos vieillards s'en sont allés, nos vieilles femmes sont restées*
-> **Qîzê me çûn xortê me man***Nos jeunes filles s'en sont allées, nos jeunes hommes sont restés*
-> **Qewl û qirar ji bo însanê van sal û zemana neman***La parole et le pacte pour les hommes de ces années et de ces temps ont disparu*
+> **Gidî salê me çû mane zeman***Hélas nos années s'en sont allées, reste le temps***Kalê me çûn pîrê me man***Nos vieillards s'en sont allés, nos vieilles femmes sont restées***Qîzê me çûn xortê me man***Nos jeunes filles s'en sont allées, nos jeunes hommes sont restés***Qewl û qirar ji bo însanê van sal û zemana neman***La parole et le pacte pour les hommes de ces années et de ces temps ont disparu*
 
 #### Psaume 12, verset 2 (Tehillim)
 
-> **Hoshi’ah Adonaï***Sauve, Éternel !*
-> **Ki-gamar khasid***Car l'homme loyal a disparu*
-> **Ki-fassu emunim***Car la fidélité / les hommes de confiance ont cessé*
-> **Mi-bnei adam***D'entre les fils de l'homme*
+> **Hoshi’ah Adonaï***Sauve, Éternel* !**Ki-gamar khasid***Car l'homme loyal a disparu***Ki-fassu emunim***Car la fidélité / les hommes de confiance ont cessé***Mi-bnei adam***D'entre les fils de l'homme*
 
 Bien qu'issus d'époques et de familles linguistiques très différentes, ces deux textes partagent une même base : la tragédie et la lamentation. Dans les deux cas, l'auteur constate l'abandon des siens et la disparition des repères moraux. À l'opposé de la poésie latine ou occidentale moderne, ces poèmes sont entièrement façonnés par l'oralité : le rythme n'est pas dicté par un nombre égal de syllabes ou des rimes, mais par le souffle, l'alternance de vers de longueurs variées et la répétition d'une même idée.
 
