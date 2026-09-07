@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Icon } from "astro-icon/components";
+import ArticleImage from "../components/ArticleImage.astro";
 
 export const prerender = true;
 
@@ -106,7 +107,7 @@ const modifiedDate = formatDate(frontmatter.dateModified);
                 )}
             </figure>
         )}
-        <Content components={{ Icon }} />
+        <Content components={{ Icon, img: ArticleImage }} />
     </article>
     <div class="article-footer">
         <a href="/" class="back-link">← Retour</a>

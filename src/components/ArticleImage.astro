@@ -1,7 +1,5 @@
 ---
-import fs from "node:fs";
-import path from "node:path";
-import sharp from "sharp";
+import { getImageDimensions } from "../lib/imageMeta";
 
 interface Props {
   src: string;
@@ -23,22 +21,9 @@ const {
   ...rest
 } = Astro.props;
 
-let width = propWidth;
-let height = propHeight;
-
-if ((!width || !height) && typeof src === "string" && src.startsWith("/")) {
-  try {
-    const publicPath = path.join(process.cwd(), "public", src.replace(/^\//, ""));
-    if (fs.existsSync(publicPath)) {
-      const metadata = await sharp(publicPath).metadata();
-      if (metadata.width && metadata.height) {
-        width = metadata.width;
-        height = metadata.height;
-      }
-    }
-  } catch (err) {
-  }
-}
+const dimensions = (!propWidth || !propHeight) ? getImageDimensions(src) : {};
+const width = propWidth || dimensions.width;
+const height = propHeight || dimensions.height;
 ---
 
 <img

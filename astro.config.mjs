@@ -8,6 +8,7 @@ import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 
 import { fileURLToPath } from "node:url";
+import { rehypeOptimizedImages } from "./src/lib/rehype-optimized-images.ts";
 
 export default defineConfig({
   site: "https://bc1pzzfnxl.com",
@@ -17,7 +18,17 @@ export default defineConfig({
   redirects: {
     "/le-mystère-de-barabbas/": "/le-mystere-de-barabbas/",
   },
-  integrations: [mdx(), icon(), sitemap(), react()],
+  markdown: {
+    rehypePlugins: [rehypeOptimizedImages],
+  },
+  integrations: [
+    mdx({
+      rehypePlugins: [rehypeOptimizedImages],
+    }),
+    icon(),
+    sitemap(),
+    react(),
+  ],
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
