@@ -2,7 +2,7 @@
 title: Kurde et Christianisme
 author: bc1pzzfnxl
 date: '2026-08-30T00:00:00.000Z'
-dateModified: '2026-09-06'
+dateModified: '2026-09-07'
 url: 'https://bc1pzzfnxl.com/kurde-et-christianisme/'
 image: >-
   https://bc1pzzfnxl.com/images/kurds-and-orthodox-priest-1873-1788598994581.webp
@@ -80,7 +80,33 @@ L'équipe a suivi les protocoles modernes de l'Alliance biblique universelle (AB
 
 L'Ancien Testament parle d'un peuple qui a grandi dans un contexte agro-pastoral montagnard et semi-aride ce qui est assez proche des Kurdes, le Kurmandji possède donc naturellement un vocabulaire très précis sur la vie pastorale à l'inverse des langues modernes.
 
-Le kurmandji est une langue à alignement ergatif au passé, ce qui offre une grande clarté pour distinguer l'auteur d'une action de celui qui la subit dans des récits narratifs complexes comme la Genèse, Samuel ou les Rois. Par ailleurs, la tradition orale des *dengbêj*, incarnée par des figures comme Şakiro, partage de profondes ressemblances avec la poésie de l'Ancien Testament (Psaumes, Lamentations). Dans les deux cultures, l'art poétique repose sur le parallélisme qui est la reprise d'une même idée sous des formes synonymes ou antithétiques  et sur une scansion naturelle qui se prête remarquablement au registre de la plainte et de la lamentation.
+Le kurmandji est une langue à alignement ergatif au passé, ce qui offre une grande clarté pour distinguer l'auteur d'une action de celui qui la subit dans des récits narratifs complexes comme la Genèse, Samuel ou les Rois. Par ailleurs, la tradition orale des *dengbêj*, incarnée par des figures comme Şakiro, partage de profondes ressemblances avec la poésie de l'Ancien Testament (Psaumes, Lamentations). Dans les deux cultures, l'art poétique repose sur le parallélisme qui est la reprise d'une même idée sous des formes synonymes ou antithétiques et sur une scansion naturelle qui se prête parfaitement au registre de la plainte et de la lamentation.
+
+Voici un extrait de *Bavê Fexo* interprété par le dengbêj Şakiro et un extrait du Psaume 12 (verset 2) :
+
+*Bavê Fexo* — Şakiro (chant dengbêj)
+
+> **Gidî salê me çû mane zeman**\
+ **Hélas nos années s'en sont allées, reste le temps*
+> ****Kalê me çûn pîrê me man**\
+ **Nos vieillards s'en sont allés, nos vieilles femmes sont restées*
+> ****Qîzê me çûn xortê me man**\
+ **Nos jeunes filles s'en sont allées, nos jeunes hommes sont restés*
+> ****Qewl û qirar ji bo însanê van sal û zemana neman**\
+ **La parole et le pacte pour les hommes de ces années et de ces temps ont disparu*
+
+Psaume 12, verset 2 (Tehillim)
+
+> **Hoshi’ah Adonaï**\
+ **Sauve, Éternel !*
+> ****Ki-gamar khasid**\
+ **Car l'homme loyal a disparu*
+> ****Ki-fassu emunim**\
+ **Car la fidélité / les hommes de confiance ont cessé*
+> ****Mi-bnei adam**\
+ **D'entre les fils de l'homme*
+
+Bien qu'issus d'époques et de familles linguistiques très différentes, ces deux textes partagent une même base : la tragédie et la lamentation. Dans les deux cas, l'auteur constate l'abandon des siens et la disparition des repères moraux. À l'opposé de la poésie latine ou occidentale moderne, ces poèmes sont entièrement façonnés par l'oralité : le rythme n'est pas dicté par un nombre égal de syllabes ou des rimes, mais par le souffle, l'alternance de vers de longueurs variées et la répétition d'une même idée.
 
 ### Où lire la Bible en Kurmandji ?
 
