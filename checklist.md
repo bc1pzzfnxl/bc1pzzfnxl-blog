@@ -13,7 +13,7 @@
   - `author` & `publisher` (type `Person`)
   - `datePublished` & `dateModified` (norme ISO 8601)
   - `mainEntityOfPage` (ID WebPage)
-- [x] **Protocole Open Graph & Twitter Cards** : Balises `og:title`, `og:description`, `og:image`, `og:url`, `og:type` et `twitter:card="summary_large_image"`.
+- [x] **Protocole Open Graph & Twitter Cards** : Balises `og:title`, `og:description`, `og:image`, `og:url`, `og:type="article"`, `article:published_time`, `article:modified_time` et `twitter:card="summary_large_image"`.
 - [x] **Structure sémantique HTML5** :
   - Balise `lang="fr"` déclarée sur l'élément racine `<html>`.
   - Un seul `<h1>` par page.
@@ -21,11 +21,13 @@
 - [x] **Accessibilité & Images** :
   - Balises `alt` descriptives sur toutes les images.
   - Balises sémantiques `<figure>` et `<figcaption>` pour les légendes d'images.
-  - Attributs `loading="eager"` et `decoding="async"` sur l'image principale au-dessus de la ligne de flottaison (LCP).
+  - Attributs `loading="eager"`, `fetchpriority="high"` et `decoding="async"` sur l'image principale au-dessus de la ligne de flottaison (LCP).
+  - Attributs `loading="lazy"`, `decoding="async"` et dimensions intrinsèques `width`/`height` injectés automatiquement sur toutes les images du corps d'article (CLS = 0).
 - [x] **Typographie & URLs sémantiques** : Titres UI (`<h1>`, `<title>`, `post.frontmatter.title`) avec accents complets pour la lisibilité et le NLP Google, et URLs (Slugs) en pur ASCII kebab-case sans accents pour éviter le pourcent-encodage (`%C3%A9`) et garantir une indexation propre.
 - [x] **Métadonnées visibles pour l'utilisateur** : Date de publication sous le titre H1 et date de dernière modification en bas de page face au lien retour.
-- [x] **Attributs de dimension & Norme images (CLS = 0)** : Ratio d'aspect défini (`aspect-ratio: 16 / 9` sur couverture, `width="680"` / `height="382"`, `width: 100%; height: auto` dans le flux de lecture) empêchant tout Cumulative Layout Shift.
+- [x] **Attributs de dimension & Norme images (CLS = 0)** : Ratio d'aspect défini (`aspect-ratio: 16 / 9` sur couverture, `width="680"` / `height="382"`, `width: 100%; height: auto` dans le flux de lecture) et dimensions réelles sur les images Markdown empêchant tout Cumulative Layout Shift.
 - [x] **Images locales optimisées & Préchargement LCP** : Images d'articles et de couverture hébergées localement dans `public/images/` au format WebP léger (< 100-200 KB) avec balise `<link rel="preload" as="image" href={image} fetchpriority="high">` dans le `<head>` pour éliminer tout délai DNS/TLS externe et obtenir un LCP instantané sur mobile.
+- [x] **Tri chronologique automatique** : Classement par date de publication décroissante sur la page d'accueil.
 - [x] **Performance technique** :
   - Rendu statique précompilé (`prerender = true`).
   - Hébergement Edge via Cloudflare Pages (faible TTFB).

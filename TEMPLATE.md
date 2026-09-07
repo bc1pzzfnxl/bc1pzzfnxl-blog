@@ -64,7 +64,7 @@ imageAlt: Description descriptive de l'image de couverture
    
    - **Méta-description** : Rédiger un premier paragraphe captivant d'au moins 160 caractères contenant le mot-clé principal.
    - **Image de couverture locale** : Toujours placer l'image dans `public/images/` au format WebP optimisé (< 150 KB). Elle est automatiquement préchargée via `<link rel="preload">` et insérée sous le H1 avec ratio fixe `16 / 9` (`width="680"` / `height="382"` pour garantir un CLS = 0).
-   - **Images dans le corps du texte** : Placées dans `public/images/` au format WebP, adaptées à la largeur de lecture (`width: 100%; max-width: 100%; height: auto; border-radius: 8px;`). Toujours renseigner un `alt` sémantique (ex: `![Description précise de l'image](/images/illustration.webp)`).
+   - **Images dans le corps du texte** : Placées dans `public/images/` au format WebP, adaptées à la largeur de lecture (`width: 100%; max-width: 100%; height: auto; border-radius: 8px;`). Toujours renseigner un `alt` sémantique (ex: `![Description précise de l'image](/images/illustration.webp)`). Elles reçoivent automatiquement `loading="lazy"`, `decoding="async"` et leurs dimensions intrinsèques `width`/`height` via le processeur Rehype (CLS = 0).
    - **Liens internes / externes** : Formater les liens au format Markdown `[Texte du lien](URL)`.
 
 4. **Frontmatter YAML (Obligatoire pour Google Rich Results & E-E-A-T)** :
