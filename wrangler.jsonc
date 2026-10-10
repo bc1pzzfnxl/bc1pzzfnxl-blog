@@ -1,11 +1,14 @@
 {
   // Runtime config for the blog. This repository is private, so real
   // Cloudflare IDs are fine here (see the CMS repo's ADR 0006).
-  // The Worker entrypoint and assets are added by the Cloudflare adapter; the
-  // deploy config (wrangler.deploy.jsonc) points at the built output.
   "name": "bc1pzzfnxl-blog",
   "compatibility_date": "2026-03-17",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "main": "@astrojs/cloudflare/entrypoints/server",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist/client"
+  },
   "d1_databases": [
     {
       "binding": "DB",
