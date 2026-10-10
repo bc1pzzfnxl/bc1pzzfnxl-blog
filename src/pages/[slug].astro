@@ -1,125 +1,118 @@
 ---
+import { env } from "cloudflare:workers";
+import { createContent } from "../content";
 import MainLayout from "../layouts/MainLayout.astro";
-import { Icon } from "astro-icon/components";
-import ArticleImage from "../components/ArticleImage.astro";
+import { absoluteUrl, blogPostingSchema, breadcrumbSchema } from "../lib/seo";
+import { mediaKeysInHtml, mediaPublicPath, optimizeBodyImages } from "../lib/media";
+import { site } from "../lib/site";
 
-export const prerender = true;
+const content = createContent(env.DB);
+const slug = Astro.params.slug ?? "";
 
-export async function getStaticPaths() {
-    const posts = import.meta.glob("../content/*.{md,mdx}", { eager: true });
-    return Object.entries(posts).map(([path, post]) => {
-        const slug = path.split("/").pop().replace(/\.(md|mdx)$/, "");
-        return {
-            params: { slug },
-            props: { post },
-        };
-    });
+const article = await content.getPublishedBySlug(slug);
+
+if (!article) {
+  const redirect = await content.getRedirect(Astro.url.pathname);
+  if (redirect) {
+    return Astro.redirect(redirect.toPath, 301);
+  }
+  Astro.response.status = 404;
 }
 
-const { post } = Astro.props;
-const { Content, rawContent, frontmatter = {} } = post;
+const cover = article?.ogImageKey ? await content.getMediaByKey(article.ogImageKey) : null;
 
-const slug = Astro.params.slug;
-const title = frontmatter.title || decodeURIComponent(slug || "")
-    .toLowerCase()
-    .split("-")
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+const dimensions = new Map<string, { width: number; height: number }>();
+if (article) {
+  for (const key of mediaKeysInHtml(article.bodyHtml)) {
+    const media = await content.getMediaByKey(key);
+    if (media?.width && media?.height) dimensions.set(key, { width: media.width, height: media.height });
+  }
+}
 
-const description = rawContent()
-    .replace(/^---[\s\S]*?---\s*/m, '')
-    .replace(/[#*`_\[\]>]/g, '')
-    .replace(/!\[.*?\]\(.*?\)/g, '')
-    .replace(/\n+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .substring(0, 160) + "...";
+const title = article?.title ?? "Page introuvable";
+const description = article?.description ?? "La page demandée n'existe pas ou a été déplacée.";
+const url = absoluteUrl(site.url, `/${slug}/`);
+const image = article?.ogImageKey
+  ? absoluteUrl(site.url, mediaPublicPath(article.ogImageKey))
+  : site.defaultCover;
 
-const postUrl = frontmatter.url || new URL(Astro.url.pathname, Astro.site || "https://bc1pzzfnxl.com").href;
-const postImage = frontmatter.image || "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c";
-
-const schema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": title,
-    "description": description,
-    "image": [postImage],
-    "url": postUrl,
-    "inLanguage": "fr",
-    "author": {
-        "@type": "Person",
-        "name": frontmatter.author || "bc1pzzfnxl",
-        "url": "https://bc1pzzfnxl.com",
-        "image": "https://bc1pzzfnxl.com/logo.png"
-    },
-    "publisher": {
-        "@type": "Person",
-        "name": "bc1pzzfnxl",
-        "url": "https://bc1pzzfnxl.com",
-        "image": "https://bc1pzzfnxl.com/logo.png",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://bc1pzzfnxl.com/logo.png"
-        }
-    },
-    "datePublished": frontmatter.date || "2026-07-03",
-    "dateModified": frontmatter.dateModified || frontmatter.date || "2026-08-07",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": postUrl
-    }
-};
-const formatDate = (dateStr?: string) => {
-    if (!dateStr) return "";
-    const date = new Date(dateStr);
-    return isNaN(date.getTime())
-        ? dateStr
-        : new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" }).format(date);
+const formatDate = (dateStr?: string | null) => {
+  if (!dateStr) return "";
+  const date = new Date(dateStr);
+  return Number.isNaN(date.getTime())
+    ? dateStr
+    : new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" }).format(date);
 };
 
-const publishDate = formatDate(frontmatter.date);
-const modifiedDate = formatDate(frontmatter.dateModified);
+const publishDate = formatDate(article?.publishedAt);
+const modifiedDate = formatDate(article?.updatedAt);
+
+const schemas = article
+  ? [
+      blogPostingSchema({
+        title: article.title,
+        description: article.description,
+        url,
+        image,
+        locale: site.locale,
+        publishedAt: article.publishedAt,
+        modifiedAt: article.updatedAt,
+        author: { name: site.author.name, url: site.author.url },
+        publisher: { name: site.name, url: site.url, logo: site.logo },
+      }),
+      breadcrumbSchema(site, article.title, url),
+    ]
+  : [];
 ---
 
 <MainLayout
     title={title}
     description={description}
-    ogType="article"
-    image={postImage}
-    publishedTime={frontmatter.date}
-    modifiedTime={frontmatter.dateModified || frontmatter.date}
+    ogType={article ? "article" : "website"}
+    image={image}
+    publishedTime={article?.publishedAt ?? undefined}
+    modifiedTime={article?.updatedAt ?? undefined}
 >
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
+    {schemas.map((schema) => <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />)}
     <article>
-        <h1>{title}</h1>
-        {publishDate && (
-            <div class="article-meta">
-                <time datetime={frontmatter.date}>{publishDate}</time>
-            </div>
-        )}
-        {frontmatter.image && (
-            <figure class="article-cover-wrapper">
-                <img
-                    src={frontmatter.image}
-                    alt={frontmatter.imageAlt || title}
-                    class="article-cover"
-                    width="680"
-                    height="382"
-                    loading="eager"
-                    fetchpriority="high"
-                    decoding="async"
-                />
-                {frontmatter.imageAlt && (
-                    <figcaption class="article-cover-caption">{frontmatter.imageAlt}</figcaption>
-                )}
-            </figure>
-        )}
-        <Content components={{ Icon, img: ArticleImage }} />
+        {
+            article ? (
+                <>
+                    <h1>{article.title}</h1>
+                    {publishDate && (
+                        <div class="article-meta">
+                            <time datetime={article.publishedAt ?? undefined}>{publishDate}</time>
+                        </div>
+                    )}
+                    {
+                        article.ogImageKey && (
+                            <figure class="article-cover-wrapper">
+                                <img
+                                    src={mediaPublicPath(article.ogImageKey)}
+                                    alt={cover?.alt ?? article.title}
+                                    class="article-cover"
+                                    width={cover?.width ?? undefined}
+                                    height={cover?.height ?? undefined}
+                                    loading="eager"
+                                    fetchpriority="high"
+                                    decoding="async"
+                                />
+                                {cover?.alt && <figcaption class="article-cover-caption">{cover.alt}</figcaption>}
+                            </figure>
+                        )
+                    }
+                    <div set:html={optimizeBodyImages(article.bodyHtml, dimensions)} />
+                </>
+            ) : (
+                <>
+                    <h1>Page introuvable</h1>
+                    <p>La page demandée n'existe pas ou a été déplacée.</p>
+                </>
+            )
+        }
     </article>
     <div class="article-footer">
         <a href="/" class="back-link">← Retour</a>
-        {modifiedDate && (
-            <span class="modified-date">Modifié le {modifiedDate}</span>
-        )}
+        {article && modifiedDate && <span class="modified-date">Modifié le {modifiedDate}</span>}
     </div>
 </MainLayout>

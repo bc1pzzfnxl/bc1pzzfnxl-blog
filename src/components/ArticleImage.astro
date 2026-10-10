@@ -21,7 +21,7 @@ const {
   ...rest
 } = Astro.props;
 
-const dimensions = (!propWidth || !propHeight) ? getImageDimensions(src) : {};
+const dimensions = !propWidth || !propHeight ? getImageDimensions(src) : {};
 const width = propWidth || dimensions.width;
 const height = propHeight || dimensions.height;
 ---

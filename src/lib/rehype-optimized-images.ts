@@ -1,23 +1,22 @@
+import type { Element, Root } from "hast";
 import { visit } from "unist-util-visit";
 import { getImageDimensions } from "./imageMeta";
 
 export function rehypeOptimizedImages() {
-  return (tree: any) => {
-    visit(tree, "element", (node: any) => {
-      if (node.tagName === "img" && node.properties) {
-        if (!node.properties.loading) {
-          node.properties.loading = "lazy";
-        }
-        if (!node.properties.decoding) {
-          node.properties.decoding = "async";
-        }
-        const src = node.properties.src;
-        if ((!node.properties.width || !node.properties.height) && typeof src === "string") {
-          const dims = getImageDimensions(src);
-          if (dims.width && dims.height) {
-            node.properties.width = dims.width;
-            node.properties.height = dims.height;
-          }
+  return (tree: Root) => {
+    visit(tree, "element", (node: Element) => {
+      if (node.tagName !== "img") return;
+
+      const props = node.properties;
+      if (!props.loading) props.loading = "lazy";
+      if (!props.decoding) props.decoding = "async";
+
+      const src = props.src;
+      if ((!props.width || !props.height) && typeof src === "string") {
+        const dims = getImageDimensions(src);
+        if (dims.width && dims.height) {
+          props.width = dims.width;
+          props.height = dims.height;
         }
       }
     });
