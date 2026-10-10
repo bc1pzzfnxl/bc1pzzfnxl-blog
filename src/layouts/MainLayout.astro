@@ -1,38 +1,39 @@
 ---
+import { ClientRouter } from "astro:transitions";
 // src/layouts/MainLayout.astro
 import { Icon } from "astro-icon/components";
-import { ClientRouter } from "astro:transitions";
 import "@fontsource/geist-sans/400.css";
 import "@fontsource/geist-sans/500.css";
 import "@fontsource/geist-sans/700.css";
 import "@fontsource/geist-mono/400.css";
 import "../styles/global.css";
 import ScrollProgress from "../components/ui/scroll-progress";
+import { site } from "../lib/site";
 
 interface Props {
-	title: string;
-	description?: string;
-	ogType?: string;
-	image?: string;
-	publishedTime?: string;
-	modifiedTime?: string;
+  title: string;
+  description?: string;
+  ogType?: string;
+  image?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
 }
 
 const {
-	title,
-	description = "Blog perso | Théologie Chrétienne et Juive | Pensée personnelle",
-	ogType = "website",
-	image = "https://bc1pzzfnxl.com/images/default-cover.webp",
-	publishedTime,
-	modifiedTime,
+  title,
+  description = site.description,
+  ogType = "website",
+  image = site.defaultCover,
+  publishedTime,
+  modifiedTime,
 } = Astro.props;
 
-const siteTitle = "bc1pzzfnxl";
-const fullTitle = title === "Home" ? `${siteTitle} | Théologie biblique, exégèse et pensée personnelle.` : `${title} | ${siteTitle}`;
+const siteTitle = site.name;
+const fullTitle = title === "Home" ? `${siteTitle} | ${site.tagline}` : `${title} | ${siteTitle}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<html lang="fr">
+<html lang={site.locale}>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -373,9 +374,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <header>
             <div class="header-left">
                 {title === "Home" ? (
-                    <h1 class="site-title"><a href="/">bc1pzzfnxl</a></h1>
+                    <h1 class="site-title"><a href="/">{siteTitle}</a></h1>
                 ) : (
-                    <div class="site-title"><a href="/">bc1pzzfnxl</a></div>
+                    <div class="site-title"><a href="/">{siteTitle}</a></div>
                 )}
             </div>
             <button class="theme-toggle-button" id="theme-toggle" aria-label="Changer de thème">

@@ -1,0 +1,29 @@
+{
+  // Deploy config: points at the built Worker. Committed because this
+  // repository is private. `bun run deploy` uses it.
+  "name": "bc1pzzfnxl-blog",
+  "compatibility_date": "2026-03-17",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "main": "./dist/server/entry.mjs",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist/client"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "pzz-cms",
+      "database_id": "8876df59-7bbc-4b56-811b-0a9404ea9184",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "pzz-cms-media"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

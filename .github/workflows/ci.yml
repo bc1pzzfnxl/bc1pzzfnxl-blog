@@ -1,0 +1,111 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      PLAYWRIGHT_BASE_URL: http://127.0.0.1:8787
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Biome
+        run: bun run lint
+
+      - name: Typecheck
+        run: bun run typecheck
+
+      - name: Unit tests
+        run: bun run test
+
+      - name: Build
+        run: bun run build
+
+      - name: Prepare local D1
+        run: |
+          PERSIST="$PWD/.wrangler/state"
+          bunx wrangler d1 migrations apply DB --local --persist-to "$PERSIST"
+          bunx wrangler d1 execute DB --local --persist-to "$PERSIST" --file=./scripts/seed.sql
+
+      # Boots the built Worker on the real workerd runtime. This is the
+      # execution gate the local sandbox cannot provide. See PLAN.md,
+      # "Environment note".
+      - name: Start preview server (workerd)
+        run: |
+          nohup bunx wrangler dev --config dist/server/wrangler.json \
+            --persist-to "$PWD/.wrangler/state" --port 8787 --ip 127.0.0.1 \
+            > /tmp/wrangler.log 2>&1 &
+          echo $! > /tmp/server.pid
+          for _ in $(seq 1 60); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 2 http://127.0.0.1:8787/ || true)
+            [ "$code" = "200" ] && exit 0
+            sleep 1
+          done
+          cat /tmp/wrangler.log
+          echo "::error::Worker did not answer on / within 60s"
+          exit 1
+
+      - name: Runtime smoke test (workerd)
+        run: |
+          set -euo pipefail
+          fail() { echo "::error::$1"; cat /tmp/wrangler.log; exit 1; }
+          check() {
+            local path="$1" want="$2" got
+            got=$(curl -s -o /dev/null -w '%{http_code}' --max-time 5 "http://127.0.0.1:8787$path" || true)
+            echo "GET $path -> $got (want $want)"
+            [ "$got" = "$want" ] || fail "Expected $want for $path, got $got"
+          }
+          check "/" 200
+          check "/premier-article/" 200
+          check "/brouillon/" 404
+          check "/ancien-slug/" 301
+          check "/auteur/" 200
+          check "/sitemap.xml" 200
+          check "/sitemap-index.xml" 200
+          check "/rss.xml" 200
+          check "/robots.txt" 200
+          check "/llms.txt" 200
+
+          sitemap=$(curl -s --max-time 5 http://127.0.0.1:8787/sitemap.xml)
+          echo "$sitemap" | grep -q "/premier-article/" || fail "sitemap missing a published article"
+          if echo "$sitemap" | grep -q "/brouillon/"; then fail "sitemap leaked a draft"; fi
+
+          feed=$(curl -s --max-time 5 http://127.0.0.1:8787/rss.xml)
+          echo "$feed" | grep -q "premier-article" || fail "rss missing a published article"
+          if echo "$feed" | grep -q "brouillon"; then fail "rss leaked a draft"; fi
+
+          printf 'RIFF0000WEBPVP8 ' > /tmp/t.webp
+          upload=$(curl -s --max-time 10 -X POST \
+            -H "Origin: http://127.0.0.1:8787" \
+            -F "file=@/tmp/t.webp;type=image/webp" \
+            -F "width=4" -F "height=4" -F "alt=smoke" \
+            http://127.0.0.1:8787/admin/api/media/)
+          media_key=$(echo "$upload" | sed -E 's/.*"key":"([^"]+)".*/\1/')
+          echo "media key: $media_key"
+          [ -n "$media_key" ] || fail "media upload returned no key: $upload"
+          slash=$(curl -s -o /tmp/media.out -w '%{http_code}' --max-time 5 "http://127.0.0.1:8787/media/$media_key/")
+          echo "GET /media/$media_key/ -> $slash"
+          [ "$slash" = "200" ] || fail "media not served (got $slash)"
+
+          echo "Runtime smoke test passed."
+
+      - name: Install Playwright browser
+        run: bunx playwright install --with-deps chromium
+
+      - name: E2E (Playwright)
+        run: bun run e2e
+
+      - name: Stop preview server
+        if: always()
+        run: kill "$(cat /tmp/server.pid)" 2>/dev/null || true
