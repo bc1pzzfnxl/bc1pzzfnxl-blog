@@ -293,18 +293,56 @@ Notes from the build:
   images). The cover has intrinsic dimensions from D1; body images rely on the
   media table, which is not consulted at render time.
 
-### P7 — Switch
+### P7 — Switch — DONE
 
 - Copy the CMS code into `bc1pzzfnxl-blog` on `feat/cms`, open a PR, review with `code-review`, describe with `pr`.
 - Remove the Pages `deploy` script and the `editor` script.
 - Final `shadscan` audit. DNS switch and Search Console check (`wizard`).
 - **Exit:** the domain serves the new engine, and the parity check passes against production.
 
-### P8 — Optional enhancements
+Done:
+
+- PR [bc1pzzfnxl-blog#1](https://github.com/bc1pzzfnxl/bc1pzzfnxl-blog/pull/1) merged into `main`.
+- The blog's `src/content/*.md` were removed (content lives in D1; kept in git history).
+- The Pages `deploy` script and the `editor` script are gone; `bun run deploy`
+  uses the adapter entrypoint (`@astrojs/cloudflare/entrypoints/server`), so a
+  plain `wrangler deploy` works.
+- Deployed manually to the existing blog Worker. **No DNS change**: the domain
+  already pointed there, so nothing was lost.
+- Verified on production: the 5 original URLs return 200 with JSON-LD;
+  `/admin/` still redirects to Cloudflare Access; `/sitemap.xml` and `/rss.xml`
+  return 200; parity between staging and production is OK.
+- **Follow-up:** the Cloudflare "Workers Builds" integration on the blog repo
+  fails (it does not use Bun). It should be reconfigured (`bun install && bun run
+  build` / `bunx wrangler deploy`) or disconnected. The switch was done manually.
+
+### P8 — Optional enhancements — PARTIAL
 
 - `numbers` and `kugiri` as MDX components for article content (counters, scroll and typewriter text).
 - Design improvements to the blog (after the switch).
 - **Exit:** each component has a unit test and renders in MDXEditor and on the public page.
+
+Done:
+
+- `Stat` (numbers): a number that counts up on view. Uses Intl formatting
+  (`src/lib/format-number.ts`); the final value is in the markup for SEO and
+  no-JS.
+- `Reveal` (kugiri): text that reveals word by word. The text is in the markup;
+  `src/lib/enhance-articles.ts` splits it with kugiri and reveals it on view.
+- Both are wired into the MDX component map; the enhancer is loaded by
+  `MainLayout`, respects `prefers-reduced-motion`, and keeps text visible
+  without JS. Unit tests cover formatting and the SSR output.
+
+Not done:
+
+- The MDXEditor preview does not render custom JSX components (it needs a
+  `jsxPlugin` config). Authors write `<Stat>` / `<Reveal>` as raw JSX; the
+  published page renders them. A preview is a later refinement.
+- `@sfinterface/numbers` was not adopted: it animates on value change
+  (interactive dashboards), not on view, and would need React hydration on the
+  public page. `Stat` is self-contained and SEO-safe.
+- Design improvements to the blog: still open.
+- The blog repository has not been synced with P8 yet; it needs another small PR.
 
 ## 7. Open points
 
