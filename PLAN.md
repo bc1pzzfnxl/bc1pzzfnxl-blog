@@ -1,14 +1,14 @@
 # pzz-cms — Implementation Plan
 
-A light, MDX-first CMS built on Astro and Cloudflare Workers. It is developed as a **public open-source project** in this repository. Once it is stable, its code is pushed into `bc1pzzfnxl-blog` (private, it holds the Markdown articles), which replaces the rendering engine of https://bc1pzzfnxl.com. The blog's design and URLs stay the same.
+A light, MDX-first CMS built on Astro and Cloudflare Workers. It is developed as a **public open-source project** in this repository. Once it is stable, its code is pushed into `your-blog` (private, it holds the Markdown articles), which replaces the rendering engine of https://example.com. The blog's design and URLs stay the same.
 
 ## 1. Decisions
 
 | Topic | Decision |
 |---|---|
-| Goal | Build `pzz-cms` first as a public open-source CMS, then swap the engine of `bc1pzzfnxl-blog`. |
+| Goal | Build `pzz-cms` first as a public open-source CMS, then swap the engine of `your-blog`. |
 | Repository | `pzz-cms`, **public**, on GitHub. Holds code only. No article, no personal data, no secret. |
-| Blog repository | `bc1pzzfnxl-blog`, **private**. Holds the Markdown articles. Receives the CMS code in phase P7 via a `feat/cms` branch and a PR. |
+| Blog repository | `your-blog`, **private**. Holds the Markdown articles. Receives the CMS code in phase P7 via a `feat/cms` branch and a PR. |
 | License | MIT (proposed, see section 6). |
 | Content storage | Cloudflare D1. Code and articles are separated: code goes through Git, articles go through the admin. |
 | Content format | Pure MDX. Components from mdxcn, plus optional `numbers` and `kugiri`, are available inside articles. Pre-rendered to HTML at save time (ADR 0005). |
@@ -18,7 +18,7 @@ A light, MDX-first CMS built on Astro and Cloudflare Workers. It is developed as
 | Admin access | Cloudflare Access, single user (the owner). |
 | Slugs | ASCII kebab-case generated from the title. Editable before publication. A change creates a 301 in the `redirects` table and updates the sitemap. |
 | Titles | `title` in frontmatter, with accents. It feeds `<h1>`, `<title>` and JSON-LD. File names are ASCII slugs. |
-| URLs | Domain `bc1pzzfnxl.com` unchanged. `trailingSlash: "always"` kept. Sitemap at the same address. |
+| URLs | Domain `example.com` unchanged. `trailingSlash: "always"` kept. Sitemap at the same address. |
 | Language | French UI and content. Code and docs in English. Multilingual support is v2. |
 | Media | Cloudflare R2. WebP conversion in the browser (canvas) before upload. Dimensions stored in D1. |
 | SEO | Modules from `skill-seo-astro` are added one by one. The blog layout is not overwritten. |
@@ -178,8 +178,8 @@ Notes from the build:
 
 ### P2 — Admin — DONE
 
-- `/admin` protected by Cloudflare Access. **Done:** a self-hosted (Public DNS) app on `bc1pzzfnxl.com` path `admin`, with an allow-policy on the owner's email. Verified: `/` stays 200, `/admin/` redirects to the Cloudflare login.
-- The staging Worker (`pzz-cms.bc1pzzfnxl.workers.dev`) stays **open** on purpose: CI runs Playwright against it, and a login gate would break the E2E run. Protecting it would need an Access service token.
+- `/admin` protected by Cloudflare Access. **Done:** a self-hosted (Public DNS) app on `example.com` path `admin`, with an allow-policy on the owner's email. Verified: `/` stays 200, `/admin/` redirects to the Cloudflare login.
+- The staging Worker (`your-worker.workers.dev`) stays **open** on purpose: CI runs Playwright against it, and a login gate would break the E2E run. Protecting it would need an Access service token.
 - MDXEditor with mdxcn components. Draft and published states.
 - **Exit:** create, edit and publish an article end to end (Playwright).
 
@@ -202,6 +202,26 @@ Notes from the build:
   `jsx: preserve` for Astro, so `.tsx` components need a real JSX transform in
   tests.
 - E2E: create, publish and read back an article; a draft stays 404.
+
+### P2b — Authentication — DONE
+
+- Passkeys (Better Auth) behind a small auth seam (`AuthProvider`).
+- **Exit:** the admin is protected in-app; the owner registers a passkey and
+  signs in; tested in CI with a virtual WebAuthn authenticator.
+
+Notes from the build:
+
+- `AUTH_PROVIDER` selects `passkey` (default), `access`, or `none`.
+- No signup; `/admin/setup` (guarded by `SETUP_TOKEN`) creates the owner and
+  registers the first passkey, then creates a session.
+- Sessions live in D1, 30 days. Recovery: `bun run auth:reset`.
+- Two Astro traps, both load-bearing:
+  - Astro emits the `trailingSlash` redirect **before** middleware, so the auth
+    API must be served from middleware; `trailingSlash` is now `"ignore"` with a
+    canonical redirect for pages.
+  - `addPasskey` needs `createSession: true`; sign-in must not use
+    `autoFill: true` without a `autocomplete="webauthn"` input.
+- E2E uses a CDP virtual authenticator (`WebAuthn.addVirtualAuthenticator`).
 
 ### P3 — Slugs and redirects — DONE
 
@@ -270,7 +290,7 @@ Notes from the build:
 - Parity script: crawls every URL of the blog's sitemap on staging and compares status codes, titles, canonical tags and JSON-LD.
 - **Exit:** parity report has no difference. chrome-devtools is used for visual checks.
 
-Result: **parity OK** against production (`https://bc1pzzfnxl.com` vs the
+Result: **parity OK** against production (`https://example.com` vs the
 staging Worker) for all 5 URLs. Titles, canonicals, `<h1>` and status match;
 `BreadcrumbList` is an allowed addition.
 
@@ -295,14 +315,14 @@ Notes from the build:
 
 ### P7 — Switch — DONE
 
-- Copy the CMS code into `bc1pzzfnxl-blog` on `feat/cms`, open a PR, review with `code-review`, describe with `pr`.
+- Copy the CMS code into `your-blog` on `feat/cms`, open a PR, review with `code-review`, describe with `pr`.
 - Remove the Pages `deploy` script and the `editor` script.
 - Final `shadscan` audit. DNS switch and Search Console check (`wizard`).
 - **Exit:** the domain serves the new engine, and the parity check passes against production.
 
 Done:
 
-- PR [bc1pzzfnxl-blog#1](https://github.com/bc1pzzfnxl/bc1pzzfnxl-blog/pull/1) merged into `main`.
+- PR [your-blog#1](https://github.com/your-org/your-blog/pull/1) merged into `main`.
 - The blog's `src/content/*.md` were removed (content lives in D1; kept in git history).
 - The Pages `deploy` script and the `editor` script are gone; `bun run deploy`
   uses the adapter entrypoint (`@astrojs/cloudflare/entrypoints/server`), so a
@@ -312,9 +332,12 @@ Done:
 - Verified on production: the 5 original URLs return 200 with JSON-LD;
   `/admin/` still redirects to Cloudflare Access; `/sitemap.xml` and `/rss.xml`
   return 200; parity between staging and production is OK.
-- **Follow-up:** the Cloudflare "Workers Builds" integration on the blog repo
-  fails (it does not use Bun). It should be reconfigured (`bun install && bun run
-  build` / `bunx wrangler deploy`) or disconnected. The switch was done manually.
+- **Follow-up resolved:** the Cloudflare "Workers Builds" integration on the blog
+  repo now succeeds. It needed the `BUN_VERSION` build variable (`1.4.3`): the
+  build image ships Bun 1.2, which cannot read the `bun.lock` lockfile
+  (lockfileVersion 2). The blog's deploy command is `npx wrangler versions
+  upload` (a preview upload, not a live deploy), so production still deploys
+  manually.
 
 ### P8 — Optional enhancements — PARTIAL
 
@@ -348,13 +371,11 @@ Not done:
 
 1. **License.** MIT is in place.
 2. **Repo creation.** Done: `bc1pzzfnxl/pzz-cms` is public.
-3. **Cloudflare Access (P2).** Done: app on `bc1pzzfnxl.com` path `admin`.
+3. **Cloudflare Access (P2).** Done: app on `example.com` path `admin`.
 4. **Hosting on Raspberry Pi.** Not part of this plan. Revisit after P7.
 5. **Blog transition (P7).** Timing, to decide when P6 parity is green.
-6. **App-level auth (OIDC).** Deferred. Cloudflare Access is used now (ADR 0003).
-   For open-source portability, a provider-agnostic OIDC seam (VoidAuth, Keycloak,
-   Authentik) is the candidate after P7; a built-in passkey option is the longer
-   term ideal (EmDash does this).
+6. **App-level auth — DONE (ADR 0007).** Passkeys (Better Auth) behind a
+   provider seam; `access` kept as an option. See "P2b — Authentication".
 
 ## 8. Repository layout (target)
 
