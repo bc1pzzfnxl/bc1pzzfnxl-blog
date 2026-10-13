@@ -23,6 +23,11 @@
       "bucket_name": "pzz-cms-media"
     }
   ],
+  "vars": {
+    "AUTH_PROVIDER": "passkey",
+    "BETTER_AUTH_URL": "https://bc1pzzfnxl.com",
+    "OWNER_EMAIL": "bc1pzzfnxl@proton.me"
+  },
   "observability": {
     "enabled": true
   }
