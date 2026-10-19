@@ -6,6 +6,13 @@ test.beforeEach(async ({ page }) => {
   await signInWithPassword(page);
 });
 
+/** Save a new article and return the editor URL once the app navigates to it. */
+async function saveNewArticle(page: Page): Promise<string> {
+  await page.getByTestId("save").click();
+  await page.waitForURL(/\/admin\/[0-9a-f-]{36}\/?$/, { timeout: 30_000 });
+  return page.url();
+}
+
 /** Publish the open article and wait for the status API to confirm it. */
 async function publish(page: Page) {
   const published = page.waitForResponse(
@@ -30,9 +37,7 @@ test("create, publish and read back an article", async ({ page }) => {
   await page.keyboard.type("Bonjour depuis le test.");
   await expect(editor).toContainText("Bonjour");
 
-  await page.getByTestId("save").click();
-  await expect(page).toHaveURL(/\/admin\/[0-9a-f-]{36}\/?$/);
-
+  await saveNewArticle(page);
   await publish(page);
 
   await page.goto("/article-de-test-e2e/");
@@ -45,8 +50,7 @@ test("a draft is not visible on the public site", async ({ page }) => {
   await page.getByRole("link", { name: "Nouvel article" }).click();
 
   await page.getByTestId("title").fill("Brouillon E2E");
-  await page.getByTestId("save").click();
-  await expect(page).toHaveURL(/\/admin\/[0-9a-f-]{36}\/?$/);
+  await saveNewArticle(page);
 
   const response = await page.request.get("/brouillon-e2e/");
   expect(response.status()).toBe(404);
@@ -61,9 +65,7 @@ test("changing a published slug creates a 301", async ({ page }) => {
   await editor.click();
   await page.keyboard.type("Corps de l'article.");
 
-  await page.getByTestId("save").click();
-  await expect(page).toHaveURL(/\/admin\/[0-9a-f-]{36}\/?$/);
-  const editUrl = page.url();
+  const editUrl = await saveNewArticle(page);
 
   await publish(page);
   expect((await page.request.get("/article-slug-test/")).status()).toBe(200);
@@ -100,9 +102,7 @@ test("upload a cover: it becomes WebP and serves on the public page", async ({ p
   });
   await expect(page.getByTestId("message")).toContainText("Image envoyée");
 
-  await page.getByTestId("save").click();
-  await expect(page).toHaveURL(/\/admin\/[0-9a-f-]{36}\/?$/);
-
+  await saveNewArticle(page);
   await publish(page);
 
   const article = await page.request.get("/article-avec-image/");
