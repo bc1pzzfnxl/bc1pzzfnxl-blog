@@ -5,22 +5,38 @@ import { getMigrations } from "better-auth/db/migration";
 import { site } from "../../lib/site";
 import type { AuthProvider } from "../types";
 
+function ownerEmail(): string {
+  return env.OWNER_EMAIL ?? `${site.author.name}@localhost`;
+}
+
 /**
- * Passkey provider (Better Auth). Portable: the database is the D1 binding
- * here, but the seam keeps it swappable for another host. No signup; the owner
- * registers the first passkey through the one-shot setup route, guarded by
- * `SETUP_TOKEN`.
+ * Passkey provider (Better Auth), with an email/password fallback for machines
+ * without a passkey. The database is the D1 binding here; the seam keeps it
+ * swappable for another host. No signup: the owner is seeded once from
+ * `OWNER_EMAIL` + `ADMIN_PASSWORD`, and the first passkey is registered through
+ * the one-shot setup route, guarded by `SETUP_TOKEN`.
  */
 function buildAuth() {
   const origin = env.BETTER_AUTH_URL ?? site.url;
-  const ownerEmail = env.OWNER_EMAIL ?? site.author.name;
 
   return betterAuth({
     baseURL: origin,
     secret: env.BETTER_AUTH_SECRET,
     // D1 binding. Better Auth ships a Kysely D1 dialect.
     database: env.DB as never,
-    emailAndPassword: { enabled: false },
+    emailAndPassword: { enabled: true },
+    databaseHooks: {
+      user: {
+        create: {
+          // Single owner: never allow a second account.
+          before: async (_user, ctx) => {
+            if (!ctx) return false;
+            const users = await ctx.context.internalAdapter.listUsers(1);
+            return users.length === 0;
+          },
+        },
+      },
+    },
     session: { expiresIn: 60 * 60 * 24 * 30 },
     advanced: {
       database: {
@@ -37,21 +53,28 @@ function buildAuth() {
         origin,
         registration: {
           requireSession: false,
-          resolveUser: async ({ context }) => {
+          resolveUser: async ({ ctx, context }) => {
             if (!env.SETUP_TOKEN || context !== env.SETUP_TOKEN) {
               throw new Error("Invalid setup token.");
             }
+            const found = await ctx.context.internalAdapter.findUserByEmail(ownerEmail());
+            if (found) return { id: found.user.id, name: found.user.name };
             return { id: "owner", name: site.author.name };
           },
           // The owner row must exist before the passkey is stored (foreign key).
           afterVerification: async ({ ctx, user }) => {
             const adapter = ctx.context.internalAdapter;
-            if (!(await adapter.findUserById(user.id))) {
-              await adapter.createUser(
+            let existing = await adapter.findUserById(user.id);
+            if (!existing) {
+              const found = await adapter.findUserByEmail(ownerEmail());
+              existing = found?.user ?? null;
+            }
+            if (!existing) {
+              existing = await adapter.createUser(
                 {
                   id: user.id,
                   name: user.name,
-                  email: ownerEmail,
+                  email: ownerEmail(),
                   emailVerified: true,
                   createdAt: new Date(),
                   updatedAt: new Date(),
@@ -59,7 +82,7 @@ function buildAuth() {
                 { method: "passkey" },
               );
             }
-            return { userId: user.id };
+            return { userId: existing.id };
           },
         },
       }),
@@ -97,4 +120,24 @@ export async function migrateAuthSchema(): Promise<{ created: string[]; added: s
     created: toBeCreated.map((table) => table.table),
     added: toBeAdded.map((table) => table.table),
   };
+}
+
+/**
+ * Seed the single owner account from `OWNER_EMAIL` + `ADMIN_PASSWORD` so the
+ * password fallback works. Idempotent: a second signup is blocked by the hook.
+ */
+export async function ensureOwnerAccount(): Promise<void> {
+  if (!env.ADMIN_PASSWORD) return;
+  const auth = buildAuth();
+  try {
+    await auth.api.signUpEmail({
+      body: {
+        email: ownerEmail(),
+        password: env.ADMIN_PASSWORD,
+        name: site.author.name,
+      },
+    });
+  } catch {
+    // The owner already exists; password sign-in still works.
+  }
 }
