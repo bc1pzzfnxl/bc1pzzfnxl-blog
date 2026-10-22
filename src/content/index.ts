@@ -182,9 +182,20 @@ export function createContent(db: Database): Content {
     async listPublished() {
       const { results } = await db
         .prepare(
-          "SELECT slug, title, description, published_at FROM articles WHERE status = 'published' ORDER BY published_at DESC",
+          "SELECT slug, title, description, published_at, created_at, og_image_key, substr(body_mdx, 1, 1200) AS body_mdx FROM articles WHERE status = 'published' ORDER BY published_at DESC",
         )
-        .all<Pick<ArticleRow, "slug" | "title" | "description" | "published_at">>();
+        .all<
+          Pick<
+            ArticleRow,
+            | "slug"
+            | "title"
+            | "description"
+            | "published_at"
+            | "created_at"
+            | "og_image_key"
+            | "body_mdx"
+          >
+        >();
 
       return results.map(
         (row): ArticleSummary => ({
@@ -192,6 +203,9 @@ export function createContent(db: Database): Content {
           title: row.title,
           description: row.description,
           publishedAt: row.published_at,
+          createdAt: row.created_at,
+          ogImageKey: row.og_image_key,
+          bodyMdx: row.body_mdx,
         }),
       );
     },

@@ -40,6 +40,10 @@ export interface ArticleSummary {
   title: string;
   description: string;
   publishedAt: string | null;
+  createdAt?: string;
+  ogImageKey?: string | null;
+  /** Start of the MDX, for the home hover preview. */
+  bodyMdx?: string;
 }
 
 /** Admin listing row: includes drafts and status. */

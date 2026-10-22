@@ -9,20 +9,110 @@ const content = createContent(env.DB);
 const posts = await content.listPublished();
 
 const siteSchema = websiteSchema(site);
+
+const formatDate = (dateStr?: string | null) => {
+  if (!dateStr) return "";
+  const date = new Date(dateStr);
+  return Number.isNaN(date.getTime())
+    ? dateStr
+    : new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" }).format(date);
+};
+
+/** First meaningful paragraph of the article, stripped of Markdown. */
+function previewOf(mdx: string): string {
+  const paragraph: string[] = [];
+  for (const raw of mdx.split("\n")) {
+    const line = raw.trim();
+    if (!line) {
+      if (paragraph.length > 0) break;
+      continue;
+    }
+    if (
+      line.startsWith("#") ||
+      line.startsWith("![") ||
+      line.startsWith(">") ||
+      line.startsWith("- ") ||
+      line.startsWith("* ") ||
+      line.startsWith("<")
+    ) {
+      continue;
+    }
+    paragraph.push(line);
+  }
+
+  const text = paragraph
+    .join(" ")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/[*_`]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return text.length > 220 ? `${text.slice(0, 220).trimEnd()}…` : text;
+}
 ---
 
 <MainLayout title="Home">
     <script type="application/ld+json" is:inline set:html={JSON.stringify(siteSchema)} />
-    <section>
-        <h2 style="font-size: 0.9rem; text-transform: uppercase; color: #666; margin-bottom: 20px;">
-            Articles
-        </h2>
+    <section class="home">
+        <h2 class="home-title">Articles</h2>
         {
             posts.length > 0 ? (
-                <ul>
-                    {posts.map((post) => (
-                        <li>
-                            <a href={`/${post.slug}/`}>{post.title}</a>
+                <ul class="home-list">
+                    {posts.map((post, index) => (
+                        <li class="home-item">
+                            <a class="home-link" href={`/${post.slug}/`} title={post.title}>
+                                <span class="home-slug">/{post.slug}/</span>
+                                <time class="home-date" datetime={post.publishedAt ?? undefined}>
+                                    {formatDate(post.publishedAt)}
+                                </time>
+                            </a>
+
+                            {/* A — première lignes en carte texte (1er article) */}
+                            {index === 0 && (
+                                <span class="home-preview home-preview--text" aria-hidden="true">
+                                    <strong>{post.title}</strong>
+                                    <span>{previewOf(post.bodyMdx ?? "")}</span>
+                                </span>
+                            )}
+
+                            {/* B — la page dans un micro cadre (2e article) */}
+                            {index === 1 && (
+                                <span class="home-preview home-preview--frame" aria-hidden="true">
+                                    <span class="home-frame-bar">/{post.slug}/</span>
+                                    <iframe
+                                        src={`/${post.slug}/`}
+                                        loading="lazy"
+                                        tabindex="-1"
+                                        title={`Aperçu de ${post.title}`}
+                                    />
+                                </span>
+                            )}
+
+                            {/* C — micro cadre sur desktop, carte texte au toucher (3e article) */}
+                            {index === 2 && (
+                                <>
+                                    <span
+                                        class="home-preview home-preview--text home-preview--touch"
+                                        aria-hidden="true"
+                                    >
+                                        <strong>{post.title}</strong>
+                                        <span>{previewOf(post.bodyMdx ?? "")}</span>
+                                    </span>
+                                    <span
+                                        class="home-preview home-preview--frame home-preview--hover"
+                                        aria-hidden="true"
+                                    >
+                                        <span class="home-frame-bar">/{post.slug}/</span>
+                                        <iframe
+                                            src={`/${post.slug}/`}
+                                            loading="lazy"
+                                            tabindex="-1"
+                                            title={`Aperçu de ${post.title}`}
+                                        />
+                                    </span>
+                                </>
+                            )}
                         </li>
                     ))}
                 </ul>
@@ -31,4 +121,126 @@ const siteSchema = websiteSchema(site);
             )
         }
     </section>
+    <style is:global>
+        .home-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .home-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .home-item {
+            position: relative;
+        }
+        .home-link {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f3f4f6;
+            text-decoration: none;
+        }
+        .home-slug {
+            font-family: var(--mono-font);
+            font-size: 0.95rem;
+        }
+        .home-date {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            white-space: nowrap;
+        }
+        .home-preview {
+            position: absolute;
+            z-index: 20;
+            top: calc(100% + 8px);
+            left: 0;
+            width: min(380px, 90vw);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(4px);
+            transition:
+                opacity 0.15s ease,
+                transform 0.15s ease,
+                visibility 0.15s;
+            pointer-events: none;
+        }
+        .home-item:hover .home-preview,
+        .home-item:focus-within .home-preview {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+        .home-preview--text {
+            padding: 14px 16px;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #4b5563;
+        }
+        .home-preview--text strong {
+            display: block;
+            margin-bottom: 4px;
+            color: #111827;
+            font-weight: 600;
+        }
+        .home-preview--frame {
+            height: 258px;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        .home-frame-bar {
+            display: block;
+            padding: 6px 10px;
+            background: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+            font-family: var(--mono-font);
+            font-size: 0.7rem;
+            color: #9ca3af;
+        }
+        .home-preview--frame iframe {
+            display: block;
+            width: 760px;
+            height: 460px;
+            border: 0;
+            transform: scale(0.5);
+            transform-origin: top left;
+            pointer-events: none;
+        }
+        @media (hover: none) {
+            .home-preview--hover {
+                display: none;
+            }
+        }
+        @media (hover: hover) {
+            .home-preview--touch {
+                display: none;
+            }
+        }
+        html.dark-mode .home-preview--text,
+        html.dark-mode .home-preview--frame {
+            background: #18181b;
+            border-color: #27272a;
+        }
+        html.dark-mode .home-preview--text strong {
+            color: #fff;
+        }
+        html.dark-mode .home-frame-bar {
+            background: #141416;
+            border-color: #27272a;
+        }
+        html.dark-mode .home-link {
+            border-bottom-color: #27272a;
+        }
+    </style>
 </MainLayout>
