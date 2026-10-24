@@ -2,13 +2,13 @@
   {
     "slug": "bible",
     "name": "Théologie",
-    "description": null,
+    "description": "Études bibliques, exégèse et lectures du texte sacré.",
     "position": 0
   },
   {
     "slug": "histoire",
     "name": "Histoire des religions",
-    "description": null,
+    "description": "Histoire du christianisme et des traditions religieuses.",
     "position": 2
   }
 ]
