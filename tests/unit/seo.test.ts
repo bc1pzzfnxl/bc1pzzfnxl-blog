@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { blogPostingSchema, breadcrumbSchema, personSchema, websiteSchema } from "@/lib/seo";
+import {
+  blogPostingSchema,
+  breadcrumbSchema,
+  collectionPageSchema,
+  personSchema,
+  websiteSchema,
+} from "@/lib/seo";
 import { site } from "@/lib/site";
 
 describe("seo schemas", () => {
@@ -15,12 +21,12 @@ describe("seo schemas", () => {
     const schema = blogPostingSchema({
       title: "Le Mystère de Barabbas",
       description: "Résumé.",
-      url: "https://bc1pzzfnxl.com/le-mystere-de-barabbas/",
-      image: "https://bc1pzzfnxl.com/images/default-cover.webp",
+      url: "https://example.com/le-mystere-de-barabbas/",
+      image: "https://example.com/images/default-cover.webp",
       locale: "fr",
       publishedAt: "2026-01-02T00:00:00Z",
       modifiedAt: "2026-03-04T00:00:00Z",
-      author: { name: "bc1pzzfnxl", url: site.url },
+      author: { name: "example", url: site.url },
       publisher: { name: site.name, url: site.url, logo: site.logo },
     });
 
@@ -47,7 +53,7 @@ describe("seo schemas", () => {
   });
 
   it("builds a BreadcrumbList with home then article", () => {
-    const schema = breadcrumbSchema(site, "Titre", "https://bc1pzzfnxl.com/titre/");
+    const schema = breadcrumbSchema(site, "Titre", "https://example.com/titre/");
     expect(schema["@type"]).toBe("BreadcrumbList");
     expect(schema.itemListElement).toHaveLength(2);
     expect(schema.itemListElement[0]).toMatchObject({
@@ -56,6 +62,24 @@ describe("seo schemas", () => {
       item: site.url,
     });
     expect(schema.itemListElement[1]).toMatchObject({ position: 2, name: "Titre" });
+  });
+
+  it("builds a CollectionPage with an ItemList", () => {
+    const schema = collectionPageSchema({
+      name: "Bible",
+      description: "Études bibliques.",
+      url: "https://example.com/categorie/bible/",
+      locale: "fr",
+      articles: [
+        { title: "Premier", url: "https://example.com/premier/" },
+        { title: "Second", url: "https://example.com/second/" },
+      ],
+    });
+
+    expect(schema["@type"]).toBe("CollectionPage");
+    expect(schema.mainEntity["@type"]).toBe("ItemList");
+    expect(schema.mainEntity.itemListElement).toHaveLength(2);
+    expect(schema.mainEntity.itemListElement[1]).toMatchObject({ position: 2, name: "Second" });
   });
 
   it("builds a Person schema for the author", () => {
