@@ -32,3 +32,6 @@ migration-output/
 
 # Real Cloudflare ids, created locally
 wrangler.deploy.jsonc
+
+# Dry-run SQL from content:import
+content-import.sql
