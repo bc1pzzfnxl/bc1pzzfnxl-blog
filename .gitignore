@@ -29,3 +29,6 @@ playwright-report/
 
 # Migration output (private content, never committed)
 migration-output/
+
+# Real Cloudflare ids, created locally
+wrangler.deploy.jsonc
